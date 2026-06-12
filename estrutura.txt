@@ -1,0 +1,1670 @@
+dosvox-historico/
+├── .gitignore
+├── README.md
+├── STATUS_DO_PROJETO.md
+├── context.json
+├── context.md
+├── context_builder.py
+├── docs
+│   ├── arquitetura.md
+│   ├── autores.md
+│   ├── projetos.md
+│   └── timeline.md
+├── dosvox-apps
+│   ├── Braivox
+│   │   ├── BRAIVOX.DPR
+│   │   ├── BRANTIGO.PAS
+│   │   ├── BRCOM.PAS
+│   │   ├── BRDEVICE.PAS
+│   │   ├── BRIMPRIM.PAS
+│   │   ├── BRLEBUF.PAS
+│   │   ├── BRLPT.PAS
+│   │   ├── BRMSG.PAS
+│   │   ├── BRUNIF.PAS
+│   │   ├── BRVARS.PAS
+│   │   ├── T.PAS
+│   │   ├── brConfig.pas
+│   │   └── brUtil.pas
+│   ├── Cartavox
+│   │   ├── CARAPELI.PAS
+│   │   ├── CARCC.PAS
+│   │   ├── CARCONF.PAS
+│   │   ├── CARCOPIA.PAS
+│   │   ├── CARDECOD.PAS
+│   │   ├── CAREMUDO.PAS
+│   │   ├── CARENVIA.PAS
+│   │   ├── CAREST.PAS
+│   │   ├── CARFOLHE.PAS
+│   │   ├── CARLEIT.PAS
+│   │   ├── CARLIST.PAS
+│   │   ├── CARMONIT.PAS
+│   │   ├── CARREDE.PAS
+│   │   ├── CARTAVOX.DPR
+│   │   ├── CARUTIL.PAS
+│   │   ├── CARVARS.PAS
+│   │   ├── PRELISTA.DPR
+│   │   ├── T.PAS
+│   │   ├── carAjuda.pas
+│   │   ├── carArq.pas
+│   │   ├── carBusca.pas
+│   │   ├── carCont.pas
+│   │   ├── carFolInt.pas
+│   │   ├── carIMAP.pas
+│   │   ├── carMsg.pas
+│   │   ├── carPop3.pas
+│   │   ├── carRecad.pas
+│   │   ├── carRegras.pas
+│   │   ├── carResp.pas
+│   │   ├── carSMTP.pas
+│   │   ├── carSpam.pas
+│   │   ├── carTela.pas
+│   │   ├── carbloque.pas
+│   │   ├── cargerat.pas
+│   │   ├── carssl.pas
+│   │   ├── lame_export.pas
+│   │   └── syssllib.pas
+│   ├── Edivox
+│   │   ├── ALTERDIC.DPR
+│   │   ├── EDACENTO.PAS
+│   │   ├── EDBUSCA.PAS
+│   │   ├── EDCADEIA.PAS
+│   │   ├── EDCONFIG.PAS
+│   │   ├── EDDICION.PAS
+│   │   ├── EDLINHA.PAS
+│   │   ├── EDMARGEM.PAS
+│   │   ├── EDMENSAG.PAS
+│   │   ├── EDTRANSF.PAS
+│   │   ├── EDVARS.PAS
+│   │   ├── LIMPAEXC.DPR
+│   │   ├── LISTACOM.PAS
+│   │   ├── T.PAS
+│   │   ├── edArq.pas
+│   │   ├── edBlbTxt.pas
+│   │   ├── edBraille.pas
+│   │   ├── edCursor.pas
+│   │   ├── edDesfaz.pas
+│   │   ├── edDicSite.pas
+│   │   ├── edDicio.pas
+│   │   ├── edDicvox.pas
+│   │   ├── edDoc.pas
+│   │   ├── edDocUti.pas
+│   │   ├── edEmbel.pas
+│   │   ├── edEpub.pas
+│   │   ├── edFala.pas
+│   │   ├── edPagina.pas
+│   │   ├── edPdf.pas
+│   │   ├── edRd50.pas
+│   │   ├── edReform.pas
+│   │   ├── edTela.pas
+│   │   ├── edTraduvox.pas
+│   │   ├── edUtil.pas
+│   │   ├── edbloco.pas
+│   │   ├── edcalcul.pas
+│   │   ├── edivox.dpr
+│   │   ├── edmd5.pas
+│   │   ├── edretoma.pas
+│   │   ├── sonoraMat.pas
+│   │   └── umd5.pas
+│   ├── Jogavox
+│   │   ├── Setup_jogavox.iss
+│   │   ├── backup.pas
+│   │   ├── joEdLugs.pas
+│   │   ├── joImport.pas
+│   │   ├── joUpload.pas
+│   │   ├── joUtil.pas
+│   │   ├── joarq.pas
+│   │   ├── jobaixa.pas
+│   │   ├── joconfig.pas
+│   │   ├── joedjogo.pas
+│   │   ├── joefeito.pas
+│   │   ├── joexibe.pas
+│   │   ├── joexibe_erro.pas
+│   │   ├── jogavox.dpr
+│   │   ├── jogavox.res
+│   │   ├── jojoga.pas
+│   │   ├── jomci.pas
+│   │   ├── jomsg.pas
+│   │   ├── joprglug.pas
+│   │   ├── joprog.pas
+│   │   ├── joroteir.pas
+│   │   ├── josimtec.pas
+│   │   ├── joslides.pas
+│   │   ├── jovars.pas
+│   │   ├── testaAleat.dpr
+│   │   ├── testaPost.dpr
+│   │   ├── testaflash.dpr
+│   │   ├── testalista.dpr
+│   │   └── tmci.dpr
+│   ├── Papovox
+│   │   ├── PAPOVOX.DPR
+│   │   ├── PPARQ.PAS
+│   │   ├── PPCONEC.PAS
+│   │   ├── PPCONF.PAS
+│   │   ├── PPCONV.PAS
+│   │   ├── PPDIC.PAS
+│   │   ├── PPLIGA.PAS
+│   │   ├── PPMSG.PAS
+│   │   ├── PPREDE.PAS
+│   │   ├── PPSNOMES.PAS
+│   │   ├── PPSOM.PAS
+│   │   ├── PPURGENT.PAS
+│   │   ├── PPVARS.PAS
+│   │   ├── T.PAS
+│   │   └── ppcontro.pas
+│   └── Webvox
+│       ├── ELSE.PAS
+│       ├── T.PAS
+│       ├── THEN.PAS
+│       ├── WEBBMARK.PAS
+│       ├── WEBBUSCA.PAS
+│       ├── WEBCARTA.PAS
+│       ├── WEBCATAL.PAS
+│       ├── WEBCOMP.PAS
+│       ├── WEBCONF.PAS
+│       ├── WEBFTP.PAS
+│       ├── WEBJAVA.PAS
+│       ├── WEBLEIT.PAS
+│       ├── WEBTELA.PAS
+│       ├── WEBTRAZ.PAS
+│       ├── WEBURL.PAS
+│       ├── WEBUTIL.PAS
+│       ├── WEBVARS.PAS
+│       ├── webCabec.pas
+│       ├── webCook.pas
+│       ├── webGrArq.pas
+│       ├── webGrava.pas
+│       ├── webMail.pas
+│       ├── webmsg.pas
+│       └── webvox.dpr
+├── dosvox-core
+│   ├── src
+│   │   ├── dvarq.pas
+│   │   ├── dvcrt.pas
+│   │   ├── dvexec.pas
+│   │   ├── dvform.pas
+│   │   ├── dvhora.pas
+│   │   ├── dvinet.pas
+│   │   ├── dvsapi.pas
+│   │   ├── dvsapi4.pas
+│   │   ├── dvtradut.pas
+│   │   ├── dvwav.pas
+│   │   └── dvwin.pas
+│   └── tts
+│       └── lianetts
+│           ├── Mbrplay.pas
+│           ├── dosvox.py
+│           ├── instala_nvda.bat
+│           ├── liane.py
+│           ├── lianelib.dpr
+│           ├── lianetts.reg
+│           ├── lista_de_difones.txt
+│           ├── manual_lianelib.txt
+│           ├── mbr.dpr
+│           ├── mbrola.dll
+│           ├── mbrola.pas
+│           ├── numExtenso.pas
+│           ├── sapiserv.dpr
+│           ├── t.pas
+│           ├── testelib.dpr
+│           ├── uttsExcessoes.pas
+│           ├── uttsInic.pas
+│           ├── uttsLiane.pas
+│           ├── uttsPortug.pas
+│           ├── uttsPreproc.pas
+│           ├── uttsProsodia.pas
+│           ├── uttsTonica.pas
+│           └── uttsUtils.pas
+├── dosvox-history
+│   ├── Fontes
+│   │   ├── AGENVOX
+│   │   │   ├── AGARQ.PAS
+│   │   │   ├── AGDADOS.PAS
+│   │   │   ├── AGENVOX.DPR
+│   │   │   ├── AGESTDAD.PAS
+│   │   │   ├── AGMENSAG.PAS
+│   │   │   └── T.PAS
+│   │   ├── Apague.bat
+│   │   ├── Apague_wv_mini.bat
+│   │   ├── Atuvox
+│   │   │   ├── AtuVox.dpr
+│   │   │   └── atuMsg.pas
+│   │   ├── BARONVOX
+│   │   │   └── baronvox.dpr
+│   │   ├── BRAIVOX
+│   │   │   ├── BRAIVOX.DPR
+│   │   │   ├── BRANTIGO.PAS
+│   │   │   ├── BRCOM.PAS
+│   │   │   ├── BRDEVICE.PAS
+│   │   │   ├── BRIMPRIM.PAS
+│   │   │   ├── BRLEBUF.PAS
+│   │   │   ├── BRLPT.PAS
+│   │   │   ├── BRMSG.PAS
+│   │   │   ├── BRUNIF.PAS
+│   │   │   ├── BRVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── brConfig.pas
+│   │   │   └── brUtil.pas
+│   │   ├── CALCUVOX
+│   │   │   ├── CalMsg.pas
+│   │   │   ├── calExpressao.pas
+│   │   │   ├── calFunc.pas
+│   │   │   ├── calajuda.pas
+│   │   │   ├── calcuvox.dpr
+│   │   │   ├── calfala.pas
+│   │   │   ├── calfita.pas
+│   │   │   ├── calmem.pas
+│   │   │   ├── calopera.pas
+│   │   │   ├── calrevisao.pas
+│   │   │   ├── caltecla.pas
+│   │   │   ├── caltela.pas
+│   │   │   ├── calvars.pas
+│   │   │   └── formulaCalc.pas
+│   │   ├── CARTAVOX
+│   │   │   ├── CARAPELI.PAS
+│   │   │   ├── CARCC.PAS
+│   │   │   ├── CARCONF.PAS
+│   │   │   ├── CARCOPIA.PAS
+│   │   │   ├── CARDECOD.PAS
+│   │   │   ├── CAREMUDO.PAS
+│   │   │   ├── CARENVIA.PAS
+│   │   │   ├── CAREST.PAS
+│   │   │   ├── CARFOLHE.PAS
+│   │   │   ├── CARLEIT.PAS
+│   │   │   ├── CARLIST.PAS
+│   │   │   ├── CARMONIT.PAS
+│   │   │   ├── CARREDE.PAS
+│   │   │   ├── CARTAVOX.DPR
+│   │   │   ├── CARUTIL.PAS
+│   │   │   ├── CARVARS.PAS
+│   │   │   ├── PRELISTA.DPR
+│   │   │   ├── T.PAS
+│   │   │   ├── carAjuda.pas
+│   │   │   ├── carArq.pas
+│   │   │   ├── carBusca.pas
+│   │   │   ├── carCont.pas
+│   │   │   ├── carFolInt.pas
+│   │   │   ├── carIMAP.pas
+│   │   │   ├── carMsg.pas
+│   │   │   ├── carPop3.pas
+│   │   │   ├── carRecad.pas
+│   │   │   ├── carRegras.pas
+│   │   │   ├── carResp.pas
+│   │   │   ├── carSMTP.pas
+│   │   │   ├── carSpam.pas
+│   │   │   ├── carTela.pas
+│   │   │   ├── carbloque.pas
+│   │   │   ├── cargerat.pas
+│   │   │   ├── carssl.pas
+│   │   │   ├── lame_export.pas
+│   │   │   └── syssllib.pas
+│   │   ├── CASINO
+│   │   │   └── CASINO.DPR
+│   │   ├── CATAVOX
+│   │   │   ├── CATAMSG.PAS
+│   │   │   ├── CATAPOS.PAS
+│   │   │   ├── CATAVARS.PAS
+│   │   │   ├── CATAVOX.DPR
+│   │   │   └── T.PAS
+│   │   ├── CDMP3
+│   │   │   ├── CDCONFIG.PAS
+│   │   │   ├── CDCONVER.pas
+│   │   │   ├── CDDIR.PAS
+│   │   │   ├── CDDIVID.PAS
+│   │   │   ├── CDMP3.DPR
+│   │   │   ├── CDMSG.PAS
+│   │   │   ├── CDRECORD.PAS
+│   │   │   ├── CDSCRIPT.PAS
+│   │   │   ├── CDSELEC.PAS
+│   │   │   ├── CDUTIL.PAS
+│   │   │   ├── CDVARS.PAS
+│   │   │   ├── CDjunta.pas
+│   │   │   ├── DVKBM32.DLL
+│   │   │   ├── GRAMOST.PAS
+│   │   │   ├── T.PAS
+│   │   │   └── dvkbl32.dll
+│   │   ├── CHEQVOX
+│   │   │   ├── CHCONFIG.PAS
+│   │   │   ├── CHEMITE.PAS
+│   │   │   ├── CHEQVOX.DPR
+│   │   │   ├── CHFOLHE.PAS
+│   │   │   ├── CHIMPRIM.PAS
+│   │   │   ├── CHLANC.PAS
+│   │   │   ├── CHMSG.PAS
+│   │   │   ├── CHPRINT.PAS
+│   │   │   ├── CHUTIL.PAS
+│   │   │   ├── CHVARS.PAS
+│   │   │   ├── ELSE.PAS
+│   │   │   └── MENSAGEM.PAS
+│   │   ├── CLOCKVOX
+│   │   │   ├── CKARQ.PAS
+│   │   │   ├── CKCALEND.PAS
+│   │   │   ├── CKFOLHEI.PAS
+│   │   │   ├── CKJAN.PAS
+│   │   │   ├── CKPROG.PAS
+│   │   │   ├── CLOCKVOX.DPR
+│   │   │   ├── Readme.clockvox.txt
+│   │   │   ├── ckajusdh.pas
+│   │   │   ├── ckutil.pas
+│   │   │   └── ckvars.pas
+│   │   ├── COLOSSAL
+│   │   │   ├── COLCAVE.PAS
+│   │   │   ├── COLDESCR.PAS
+│   │   │   ├── COLDWARF.PAS
+│   │   │   ├── COLFINAL.PAS
+│   │   │   ├── COLGLOB.PAS
+│   │   │   ├── COLMOVE.PAS
+│   │   │   ├── COLMSG.PAS
+│   │   │   ├── COLOSSAL.DPR
+│   │   │   ├── COLSAVE.PAS
+│   │   │   ├── COLSCORE.PAS
+│   │   │   ├── COLTIMER.PAS
+│   │   │   ├── COLVARS.PAS
+│   │   │   ├── COLVERBI.PAS
+│   │   │   ├── COLVERBT.PAS
+│   │   │   ├── COLVOCAB.PAS
+│   │   │   └── T.PAS
+│   │   ├── COMP.BAT
+│   │   ├── COMPARE.BAT
+│   │   ├── CONTAVOX
+│   │   │   └── CONTAVOX.DPR
+│   │   ├── CRIAICON
+│   │   │   └── CRIAICON.DPR
+│   │   ├── CRONOVOX
+│   │   │   └── CRONOVOX.DPR
+│   │   ├── DELBAK.BAT
+│   │   ├── DIALUP
+│   │   │   ├── DIALUP.DPR
+│   │   │   └── DIMSG.PAS
+│   │   ├── DICIO
+│   │   │   ├── DICTESTE.DPR
+│   │   │   ├── EDITADIC.DPR
+│   │   │   ├── EDITADIC.RES
+│   │   │   ├── ELIMREP.PAS
+│   │   │   ├── PREPDIC.DPR
+│   │   │   ├── PREPDIC.PAS
+│   │   │   ├── UEDDIC.DFM
+│   │   │   ├── UEDDIC.PAS
+│   │   │   ├── UEDITA~1.DFM
+│   │   │   ├── UEDITA~1.PAS
+│   │   │   ├── UESCOL~1.DFM
+│   │   │   ├── UESCOL~1.PAS
+│   │   │   └── dicio.dpr
+│   │   ├── DIF.bat
+│   │   ├── Dosvox
+│   │   │   ├── DOSDOS.PAS
+│   │   │   ├── DOSED.PAS
+│   │   │   ├── DOSJANEL.PAS
+│   │   │   ├── DOSPREF.PAS
+│   │   │   ├── DOSUTIL.PAS
+│   │   │   ├── DOSVOX.RES
+│   │   │   ├── EjectUSB.pas
+│   │   │   ├── T.PAS
+│   │   │   ├── dosBuscaArq.pas
+│   │   │   ├── dosConf.pas
+│   │   │   ├── dosEmail.pas
+│   │   │   ├── dosHoraDia.pas
+│   │   │   ├── dosImgToTxt.pas
+│   │   │   ├── dosTxtToWav.pas
+│   │   │   ├── dosarq.pas
+│   │   │   ├── dosconvert.pas
+│   │   │   ├── doscopia.pas
+│   │   │   ├── dosdir.pas
+│   │   │   ├── dosdisco.pas
+│   │   │   ├── dosform.pas
+│   │   │   ├── dosgeral.pas
+│   │   │   ├── dosgrava.pas
+│   │   │   ├── doshabil.PAS
+│   │   │   ├── dosimpr.pas
+│   │   │   ├── doslogo.pas
+│   │   │   ├── dosmonit.pas
+│   │   │   ├── dosmsg.pas
+│   │   │   ├── dosproc.pas
+│   │   │   ├── dosquem.pas
+│   │   │   ├── dostec.pas
+│   │   │   ├── dostoca.pas
+│   │   │   ├── dosupdat.pas
+│   │   │   ├── dosvars.pas
+│   │   │   ├── dosvox.dpr
+│   │   │   ├── dosvox_logo.jpg
+│   │   │   └── gerasonsutil.dpr
+│   │   ├── Edivox
+│   │   │   ├── ALTERDIC.DPR
+│   │   │   ├── EDACENTO.PAS
+│   │   │   ├── EDBUSCA.PAS
+│   │   │   ├── EDCADEIA.PAS
+│   │   │   ├── EDCONFIG.PAS
+│   │   │   ├── EDDICION.PAS
+│   │   │   ├── EDLINHA.PAS
+│   │   │   ├── EDMARGEM.PAS
+│   │   │   ├── EDMENSAG.PAS
+│   │   │   ├── EDTRANSF.PAS
+│   │   │   ├── EDVARS.PAS
+│   │   │   ├── LIMPAEXC.DPR
+│   │   │   ├── LISTACOM.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── edArq.pas
+│   │   │   ├── edBlbTxt.pas
+│   │   │   ├── edBraille.pas
+│   │   │   ├── edCursor.pas
+│   │   │   ├── edDesfaz.pas
+│   │   │   ├── edDicSite.pas
+│   │   │   ├── edDicio.pas
+│   │   │   ├── edDicvox.pas
+│   │   │   ├── edDoc.pas
+│   │   │   ├── edDocUti.pas
+│   │   │   ├── edEmbel.pas
+│   │   │   ├── edEpub.pas
+│   │   │   ├── edFala.pas
+│   │   │   ├── edPagina.pas
+│   │   │   ├── edPdf.pas
+│   │   │   ├── edRd50.pas
+│   │   │   ├── edReform.pas
+│   │   │   ├── edTela.pas
+│   │   │   ├── edTraduvox.pas
+│   │   │   ├── edUtil.pas
+│   │   │   ├── edbloco.pas
+│   │   │   ├── edcalcul.pas
+│   │   │   ├── edivox.dpr
+│   │   │   ├── edmd5.pas
+│   │   │   ├── edretoma.pas
+│   │   │   ├── sonoraMat.pas
+│   │   │   └── umd5.pas
+│   │   ├── FICHAVOX
+│   │   │   ├── FICHAVOX.DPR
+│   │   │   ├── FVARQUI.PAS
+│   │   │   ├── FVCOPIA.PAS
+│   │   │   ├── FVDIR.PAS
+│   │   │   ├── FVED.PAS
+│   │   │   ├── FVEDITA.PAS
+│   │   │   ├── FVEXECUT.PAS
+│   │   │   ├── FVFOLHE.PAS
+│   │   │   ├── FVIMPRI.PAS
+│   │   │   ├── FVLERARQ.PAS
+│   │   │   ├── FVMONTFI.PAS
+│   │   │   ├── FVMSG.PAS
+│   │   │   ├── FVPROC.PAS
+│   │   │   ├── FVSELECT.PAS
+│   │   │   └── FVVARS.PAS
+│   │   ├── FORCAVOX
+│   │   │   └── FORCAVOX.DPR
+│   │   ├── FORMVOX
+│   │   │   └── FORMVOX.DPR
+│   │   ├── FTPVOX
+│   │   │   ├── FTPARQ.PAS
+│   │   │   ├── FTPDECOD.PAS
+│   │   │   ├── FTPDIR.PAS
+│   │   │   ├── FTPDLG.PAS
+│   │   │   ├── FTPLOGIN.PAS
+│   │   │   ├── FTPMSG.PAS
+│   │   │   ├── FTPPORT.PAS
+│   │   │   ├── FTPREDE.PAS
+│   │   │   ├── FTPVARS.PAS
+│   │   │   └── FTPVOX.DPR
+│   │   ├── Forca2
+│   │   │   ├── FORCA2-antigo.DPR
+│   │   │   └── FORCA2.DPR
+│   │   ├── GERASIST.BAT
+│   │   ├── GOVOX
+│   │   │   ├── ELSE.PAS
+│   │   │   ├── GOJOGA.PAS
+│   │   │   ├── GOMSG.PAS
+│   │   │   ├── GOVOX.DPR
+│   │   │   ├── GOVOX.RES
+│   │   │   ├── T.PAS
+│   │   │   └── THEN.PAS
+│   │   ├── ICHINVOX
+│   │   │   ├── ICHCALC.PAS
+│   │   │   ├── ICHDISCO.PAS
+│   │   │   ├── ICHINTER.PAS
+│   │   │   ├── ICHINVOX.DPR
+│   │   │   ├── ICHMENS.PAS
+│   │   │   ├── ICHTELA.PAS
+│   │   │   ├── ICHVARS.PAS
+│   │   │   └── T.PAS
+│   │   ├── IMPRIVOX
+│   │   │   ├── IMPCONF.PAS
+│   │   │   ├── IMPFORM.PAS
+│   │   │   ├── IMPINIPR.PAS
+│   │   │   ├── IMPMSG.PAS
+│   │   │   ├── IMPRIVOX.DPR
+│   │   │   ├── IMPRODAP.PAS
+│   │   │   ├── IMPVARS.PAS
+│   │   │   ├── REGRAS.PAS
+│   │   │   └── TTAMFNT.PAS
+│   │   ├── INTERVOX
+│   │   │   ├── INMSG.PAS
+│   │   │   ├── INTERVOX.DPR
+│   │   │   └── webtraz.pas
+│   │   ├── Jogavox
+│   │   │   ├── Setup_jogavox.iss
+│   │   │   ├── backup.pas
+│   │   │   ├── joEdLugs.pas
+│   │   │   ├── joImport.pas
+│   │   │   ├── joUpload.pas
+│   │   │   ├── joUtil.pas
+│   │   │   ├── joarq.pas
+│   │   │   ├── jobaixa.pas
+│   │   │   ├── joconfig.pas
+│   │   │   ├── joedjogo.pas
+│   │   │   ├── joefeito.pas
+│   │   │   ├── joexibe.pas
+│   │   │   ├── joexibe_erro.pas
+│   │   │   ├── jogavox.dpr
+│   │   │   ├── jogavox.res
+│   │   │   ├── jojoga.pas
+│   │   │   ├── jomci.pas
+│   │   │   ├── jomsg.pas
+│   │   │   ├── joprglug.pas
+│   │   │   ├── joprog.pas
+│   │   │   ├── joroteir.pas
+│   │   │   ├── josimtec.pas
+│   │   │   ├── joslides.pas
+│   │   │   ├── jovars.pas
+│   │   │   ├── testaAleat.dpr
+│   │   │   ├── testaPost.dpr
+│   │   │   ├── testaflash.dpr
+│   │   │   ├── testalista.dpr
+│   │   │   └── tmci.dpr
+│   │   ├── LETRAVOX
+│   │   │   ├── PCXWIN.PAS
+│   │   │   ├── PCXWIN2.PAS
+│   │   │   ├── T.PAS
+│   │   │   └── letravox.DPR
+│   │   ├── LETRIX
+│   │   │   ├── LETRIX.DPR
+│   │   │   └── T.PAS
+│   │   ├── LEVOX
+│   │   │   ├── LEMSG.PAS
+│   │   │   ├── LEVOX.DPR
+│   │   │   ├── leRetoma.pas
+│   │   │   └── levars.pas
+│   │   ├── LIGAVOX
+│   │   │   ├── LIGAVOX.DPR
+│   │   │   ├── LIGMSG.PAS
+│   │   │   ├── LIGUTIL.PAS
+│   │   │   └── T.PAS
+│   │   ├── LUNARVOX
+│   │   │   ├── lueventos.pas
+│   │   │   ├── lufisica.pas
+│   │   │   ├── lumsg.pas
+│   │   │   ├── lunarvox.dpr
+│   │   │   ├── luscores.pas
+│   │   │   └── luvars.pas
+│   │   ├── Lembretevox
+│   │   │   ├── T.PAS
+│   │   │   ├── lbtBusca.pas
+│   │   │   ├── lbtControle.pas
+│   │   │   ├── lbtMsg.pas
+│   │   │   ├── lbtVars.pas
+│   │   │   └── lembretevox.dpr
+│   │   ├── MANVOX
+│   │   │   ├── manvox.dpr
+│   │   │   ├── manvox.res
+│   │   │   ├── mnAudio.pas
+│   │   │   ├── mnCateg.pas
+│   │   │   ├── mnLeInst.pas
+│   │   │   ├── mnLstAlf.pas
+│   │   │   └── mnMsg.pas
+│   │   ├── MEMOJOGO
+│   │   │   ├── memojogo.dpr
+│   │   │   ├── memojogo.res
+│   │   │   └── mjmsg.pas
+│   │   ├── MEMOVOX
+│   │   │   └── MEMOVOX.DPR
+│   │   ├── MIDIAVOX
+│   │   │   ├── MCICTL.DPR
+│   │   │   ├── MINIMID.DPR
+│   │   │   ├── miAudio.pas
+│   │   │   ├── miLegendas.pas
+│   │   │   ├── miconfig.pas
+│   │   │   ├── midiavox.dpr
+│   │   │   ├── mimsg.pas
+│   │   │   ├── miparam.pas
+│   │   │   ├── miplayer.pas
+│   │   │   ├── miplaylist.pas
+│   │   │   ├── miproc.pas
+│   │   │   ├── mireprod.pas
+│   │   │   ├── mireprod2.pas
+│   │   │   └── mivars.pas
+│   │   ├── MINIED
+│   │   │   ├── T.PAS
+│   │   │   ├── meMsg.pas
+│   │   │   └── minied.dpr
+│   │   ├── MINIGRAV
+│   │   │   ├── JUNTAWAV.DPR
+│   │   │   ├── MGMP3.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── TESTAMIC.DPR
+│   │   │   ├── TGRAMOST.DPR
+│   │   │   ├── UAUDIO.PAS
+│   │   │   ├── grAmost.pas
+│   │   │   ├── mgArquivo.pas
+│   │   │   ├── mgEfeito.pas
+│   │   │   ├── mgGrava.pas
+│   │   │   ├── mgMistura.pas
+│   │   │   ├── mgMsg.pas
+│   │   │   ├── mgToca.pas
+│   │   │   ├── mgVars.pas
+│   │   │   ├── mgconfig.pas
+│   │   │   ├── mgdivide.pas
+│   │   │   ├── mgefeitoSox.pas
+│   │   │   ├── mgremove.pas
+│   │   │   └── minigrav.dpr
+│   │   ├── MINIWEB
+│   │   │   ├── COMPARTE.PAS
+│   │   │   ├── ELSE.PAS
+│   │   │   ├── LISTASIT.DPR
+│   │   │   ├── MINIWEB.DPR
+│   │   │   ├── MWMSG.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── TCORREIO.PAS
+│   │   │   ├── THEN.PAS
+│   │   │   └── X.PAS
+│   │   ├── MIRCVOX
+│   │   │   ├── MIRCVOX.DPR
+│   │   │   ├── MVCONTRO.PAS
+│   │   │   ├── MVMSG.PAS
+│   │   │   └── MVVARS.PAS
+│   │   ├── MISTUVOX
+│   │   │   └── mistuvox.dpr
+│   │   ├── MIXERVOX
+│   │   │   ├── MIXERVOX.DPR
+│   │   │   ├── MXAJUST.PAS
+│   │   │   ├── MXLINE.PAS
+│   │   │   ├── MXMSG.PAS
+│   │   │   ├── MXSELMIX.PAS
+│   │   │   ├── MXVARS.PAS
+│   │   │   └── T.PAS
+│   │   ├── MONIT32
+│   │   │   ├── DVKBL32.DPR
+│   │   │   ├── DVKBM32.DLL
+│   │   │   ├── MONIT32.DPR
+│   │   │   ├── MONIT32.RES
+│   │   │   ├── MVCONFIG.PAS
+│   │   │   ├── MVEDITA.PAS
+│   │   │   ├── MVJANELA.PAS
+│   │   │   ├── MVMOUSE.PAS
+│   │   │   ├── MVMSAA.PAS
+│   │   │   ├── MVMSG.PAS
+│   │   │   ├── MVPIOLHO.PAS
+│   │   │   ├── MVPOSJAN.PAS
+│   │   │   ├── MVREGIST.PAS
+│   │   │   ├── MVSCRIPT.PAS
+│   │   │   ├── MVTECLAS.PAS
+│   │   │   ├── MVTRANSF.PAS
+│   │   │   ├── PROCTECL.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── mvMonit.pas
+│   │   │   ├── mvhotkey.pas
+│   │   │   ├── mvmostra.pas
+│   │   │   └── mvvars.pas
+│   │   ├── MataSpam
+│   │   │   ├── T.PAS
+│   │   │   ├── mataspam.dpr
+│   │   │   ├── msbloque.pas
+│   │   │   └── msmsg.pas
+│   │   ├── Monta_DV_mini.bat
+│   │   ├── NIMVOX
+│   │   │   ├── NIMMSG.PAS
+│   │   │   ├── NIMVARS.PAS
+│   │   │   └── NIMVOX.DPR
+│   │   ├── PACIENCI
+│   │   │   ├── CARTAS.RES
+│   │   │   ├── PACDESEN.PAS
+│   │   │   ├── PACIENCI.DPR
+│   │   │   ├── PACIENCI.RES
+│   │   │   ├── PACMENS.PAS
+│   │   │   ├── PACVARS.PAS
+│   │   │   ├── PTEST.PAS
+│   │   │   └── TBITMAP.PAS
+│   │   ├── PAPOVOX
+│   │   │   ├── PAPOVOX.DPR
+│   │   │   ├── PPARQ.PAS
+│   │   │   ├── PPCONEC.PAS
+│   │   │   ├── PPCONF.PAS
+│   │   │   ├── PPCONV.PAS
+│   │   │   ├── PPDIC.PAS
+│   │   │   ├── PPLIGA.PAS
+│   │   │   ├── PPMSG.PAS
+│   │   │   ├── PPREDE.PAS
+│   │   │   ├── PPSNOMES.PAS
+│   │   │   ├── PPSOM.PAS
+│   │   │   ├── PPURGENT.PAS
+│   │   │   ├── PPVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   └── ppcontro.pas
+│   │   ├── PIRATVOX
+│   │   │   └── PIRATVOX.DPR
+│   │   ├── PLANIVOX
+│   │   │   ├── Boletim Escolar Erro.csv
+│   │   │   ├── Boletim Escolar.csv
+│   │   │   ├── PLCALC.PAS
+│   │   │   ├── PLCELULA.PAS
+│   │   │   ├── PLCURSOR.PAS
+│   │   │   ├── PLFORMUL.PAS
+│   │   │   ├── PLMSG.PAS
+│   │   │   ├── PLVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── TCOMP.DPR
+│   │   │   ├── a1.PLA
+│   │   │   ├── plBloco.pas
+│   │   │   ├── planivox.dpr
+│   │   │   ├── plarq.pas
+│   │   │   ├── plcomp.pas
+│   │   │   ├── plcomput.pas
+│   │   │   ├── plopera.pas
+│   │   │   └── pltela.pas
+│   │   ├── PPTVOX
+│   │   │   ├── Alarme_PPTVOX.cmd
+│   │   │   ├── Modelo_Real.cmd
+│   │   │   ├── Modelo_Wmplayer.cmd
+│   │   │   ├── PPDESEN.PAS
+│   │   │   ├── PPDIC.PAS
+│   │   │   ├── PPJANELA.PAS
+│   │   │   ├── PPMSG.DFM
+│   │   │   ├── PPMSG.PAS
+│   │   │   ├── PPMSSG.DFM
+│   │   │   ├── PPMSSG.PAS
+│   │   │   ├── PPNAVEGA.pas
+│   │   │   ├── PPTGERAL.PAS
+│   │   │   ├── PPTMAIN.DFM
+│   │   │   ├── PPTMAIN.PAS
+│   │   │   ├── PPTVARS.PAS
+│   │   │   ├── PPTVOX.DPR
+│   │   │   ├── PPVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── ppExport.pas
+│   │   │   ├── pparq.pas
+│   │   │   ├── ppauto.pas
+│   │   │   ├── ppconf.pas
+│   │   │   ├── ppcria.pas
+│   │   │   ├── ppedita.pas
+│   │   │   ├── ppestilo.pas
+│   │   │   ├── ppfolhei.pas
+│   │   │   ├── ppfonte.pas
+│   │   │   ├── ppimport.pas
+│   │   │   ├── ppimpppt.pas
+│   │   │   ├── ppinic.pas
+│   │   │   ├── ppproc.pas
+│   │   │   └── pptObject.pas
+│   │   ├── PROFETA
+│   │   │   └── PROFETA.DPR
+│   │   ├── Prepara_DV_reduzido.bat
+│   │   ├── QUESTVOX
+│   │   │   ├── QUESTVOX.DPR
+│   │   │   └── T.PAS
+│   │   ├── SAPIUTIL
+│   │   │   ├── SAPIMSG.PAS
+│   │   │   ├── T.PAS
+│   │   │   └── sapiutil.dpr
+│   │   ├── SCRIPVOX
+│   │   │   ├── DB Browser (SQLite).lnk
+│   │   │   ├── SQLite3.pas
+│   │   │   ├── SQLite3Utils.pas
+│   │   │   ├── SQLite3Wrap.pas
+│   │   │   ├── dvscript57.pas
+│   │   │   ├── scripvox.dpr
+│   │   │   ├── testesql.cmd
+│   │   │   └── testesql2.cmd
+│   │   ├── SENHAVOX
+│   │   │   ├── SENHAVOX.DPR
+│   │   │   └── senhavox.cmd
+│   │   ├── SERVSAPI
+│   │   │   └── servsapi.dpr
+│   │   ├── SITIOVOX
+│   │   │   ├── ELSE.PAS
+│   │   │   ├── SITIOVOX.DPR
+│   │   │   ├── SVDITADO.PAS
+│   │   │   ├── SVDOG.PAS
+│   │   │   ├── SVFILA.PAS
+│   │   │   ├── SVMSG.PAS
+│   │   │   ├── SVREDE.PAS
+│   │   │   ├── SVSNOMES.PAS
+│   │   │   ├── SVVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── THEN.PAS
+│   │   │   └── svproc.pas
+│   │   ├── SORTEVOX
+│   │   │   └── SORTEVOX.DPR
+│   │   ├── SQUENTIN
+│   │   │   ├── SQUENTIN.DPR
+│   │   │   └── SQUENTIN.RES
+│   │   ├── SUDOVOX
+│   │   │   ├── su_solve.dpr
+│   │   │   ├── suarq.pas
+│   │   │   ├── sucalc.pas
+│   │   │   ├── suconfig.pas
+│   │   │   ├── sudesen.pas
+│   │   │   ├── sudovox.dpr
+│   │   │   ├── sujoga.pas
+│   │   │   ├── sumsg.pas
+│   │   │   ├── susolve.pas
+│   │   │   ├── suvars.pas
+│   │   │   └── t.pas
+│   │   ├── SUECAVOX
+│   │   │   ├── SUECAVOX.DPR
+│   │   │   ├── SUECAVOX.RES
+│   │   │   ├── SVCARTAS.PAS
+│   │   │   ├── SVEMBARA.PAS
+│   │   │   ├── SVHUMANO.PAS
+│   │   │   ├── SVJOGA.PAS
+│   │   │   ├── SVMAALG.PAS
+│   │   │   ├── SVMAQJO.PAS
+│   │   │   ├── SVMAQUIN.PAS
+│   │   │   ├── SVMCARTA.PAS
+│   │   │   ├── SVMENSA.PAS
+│   │   │   ├── SVMQUINA.PAS
+│   │   │   ├── SVVARS.PAS
+│   │   │   ├── svEscolh.pas
+│   │   │   └── svresult.pas
+│   │   ├── Setup_dv.iss
+│   │   ├── Setup_dv_atualizacao.iss
+│   │   ├── Setup_dv_mini.iss
+│   │   ├── Setup_dv_mini_X86.iss
+│   │   ├── Setup_dv_reduzido.iss
+│   │   ├── Setup_jogavox.iss
+│   │   ├── SonoraMat
+│   │   │   ├── Globals.py
+│   │   │   ├── LEIA-ANTES
+│   │   │   ├── LianeVoice.py
+│   │   │   ├── MathReader.py
+│   │   │   ├── Parse.py
+│   │   │   ├── SAPIVoice.py
+│   │   │   ├── Scan.py
+│   │   │   ├── SmServer.py
+│   │   │   ├── SymbolTable.py
+│   │   │   ├── Translate.py
+│   │   │   └── smserver.spec
+│   │   ├── TELEVOX
+│   │   │   ├── T.PAS
+│   │   │   ├── TELCONF.PAS
+│   │   │   ├── TELEVOX.DPR
+│   │   │   ├── TELINIPR.PAS
+│   │   │   ├── TELMSG.PAS
+│   │   │   ├── TelImpEtq.pas
+│   │   │   ├── TelItem.pas
+│   │   │   ├── TelTela.pas
+│   │   │   ├── telAmbie.pas
+│   │   │   ├── telArq.pas
+│   │   │   ├── telFolhe.pas
+│   │   │   ├── telListag.pas
+│   │   │   ├── telUtil.pas
+│   │   │   └── telvars.pas
+│   │   ├── TMIX
+│   │   │   ├── mixer.pas
+│   │   │   ├── mmdevapi_tlb.pas
+│   │   │   └── tmix.dpr
+│   │   ├── TNETVOX
+│   │   │   ├── T.PAS
+│   │   │   ├── TNBUSCA.PAS
+│   │   │   ├── TNHP.PAS
+│   │   │   ├── TNLYNX.PAS
+│   │   │   ├── TNREDE.PAS
+│   │   │   ├── TNTERM.PAS
+│   │   │   ├── TNVARS.PAS
+│   │   │   ├── tnMsg.pas
+│   │   │   ├── tnansi.pas
+│   │   │   ├── tnbufvid.pas
+│   │   │   ├── tncmdloc.pas
+│   │   │   ├── tnconfig.pas
+│   │   │   ├── tnetvox.dpr
+│   │   │   ├── tnfala.pas
+│   │   │   ├── tnti200.pas
+│   │   │   ├── tnvideo.pas
+│   │   │   ├── tserver.dpr
+│   │   │   └── tserver.pas
+│   │   ├── TTRAD
+│   │   │   ├── OI.DPR
+│   │   │   ├── OI2.DPR
+│   │   │   ├── SUGERE.DPR
+│   │   │   ├── TTRAD2.DPR
+│   │   │   ├── ttrad.dpr
+│   │   │   └── ttradArq.dpr
+│   │   ├── UTIL
+│   │   │   ├── AtuDosvox.dpr
+│   │   │   ├── COMPARE.PAS
+│   │   │   ├── CRIAICON.DPR
+│   │   │   ├── DVTXT.DPR
+│   │   │   ├── FECHAWIN.DPR
+│   │   │   ├── GERADON.DPR
+│   │   │   ├── MINILEIT
+│   │   │   │   ├── MINILEIT.RES
+│   │   │   │   └── USAPI.PAS
+│   │   │   ├── MODSENHA.PAS
+│   │   │   ├── PRELISTA.DPR
+│   │   │   ├── TESTASOX.dpr
+│   │   │   ├── TGRAMOST.DPR
+│   │   │   ├── UUENC.PAS
+│   │   │   ├── ___testaMensagens.dpr
+│   │   │   ├── ajustaIni.dpr
+│   │   │   ├── cartex.dpr
+│   │   │   ├── cdrec.dpr
+│   │   │   ├── digitexto
+│   │   │   │   └── digitexto.dpr
+│   │   │   ├── dvplay.pas
+│   │   │   ├── dvttslib
+│   │   │   │   ├── dosvox.py
+│   │   │   │   ├── dvttslib.dll
+│   │   │   │   └── dvttslib.dpr
+│   │   │   ├── getMacAddress.dpr
+│   │   │   ├── gravadosvox
+│   │   │   │   ├── gravados
+│   │   │   │   │   ├── calcuvox2.dat
+│   │   │   │   │   ├── carta.dat
+│   │   │   │   │   ├── cartavox_gmail.dat
+│   │   │   │   │   ├── cartavox_grupos.dat
+│   │   │   │   │   ├── cartavox_novo.dat
+│   │   │   │   │   ├── dosvox.dat
+│   │   │   │   │   ├── edivox.dat
+│   │   │   │   │   ├── epubvox.dat
+│   │   │   │   │   ├── hardvox.dat
+│   │   │   │   │   ├── imaputil.dat
+│   │   │   │   │   ├── jogavox.dat
+│   │   │   │   │   ├── mecdaisy.dat
+│   │   │   │   │   ├── mecdaisy2.dat
+│   │   │   │   │   ├── minigrav.dat
+│   │   │   │   │   ├── sinal.dat
+│   │   │   │   │   └── twitvox.dat
+│   │   │   │   ├── gravadosvox.dpr
+│   │   │   │   ├── gravadosvox.res
+│   │   │   │   ├── uprinc.dfm
+│   │   │   │   └── uprinc.pas
+│   │   │   ├── mimevox.dpr
+│   │   │   ├── reduztam.dpr
+│   │   │   ├── testamd5.dpr
+│   │   │   ├── testamsg.dpr
+│   │   │   ├── testeDvForm.dpr
+│   │   │   ├── umd5.pas
+│   │   │   ├── uuvox.dpr
+│   │   │   └── varredifones.dpr
+│   │   ├── VIDAVOX
+│   │   │   └── VIDAVOX.DPR
+│   │   ├── WEBVOX
+│   │   │   ├── ELSE.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── THEN.PAS
+│   │   │   ├── WEBBMARK.PAS
+│   │   │   ├── WEBBUSCA.PAS
+│   │   │   ├── WEBCARTA.PAS
+│   │   │   ├── WEBCATAL.PAS
+│   │   │   ├── WEBCOMP.PAS
+│   │   │   ├── WEBCONF.PAS
+│   │   │   ├── WEBFTP.PAS
+│   │   │   ├── WEBJAVA.PAS
+│   │   │   ├── WEBLEIT.PAS
+│   │   │   ├── WEBTELA.PAS
+│   │   │   ├── WEBTRAZ.PAS
+│   │   │   ├── WEBURL.PAS
+│   │   │   ├── WEBUTIL.PAS
+│   │   │   ├── WEBVARS.PAS
+│   │   │   ├── webCabec.pas
+│   │   │   ├── webCook.pas
+│   │   │   ├── webGrArq.pas
+│   │   │   ├── webGrava.pas
+│   │   │   ├── webMail.pas
+│   │   │   ├── webmsg.pas
+│   │   │   └── webvox.dpr
+│   │   ├── X3VOX
+│   │   │   └── X3VOX.DPR
+│   │   ├── agenda
+│   │   │   ├── AGCALEN2.PAS
+│   │   │   ├── AGCALEND.PAS
+│   │   │   ├── AGENDA.DPR
+│   │   │   ├── AGFORM.PAS
+│   │   │   ├── AGMAIL.PAS
+│   │   │   ├── AGMSG.PAS
+│   │   │   ├── AGPROG.PAS
+│   │   │   ├── AGVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   ├── agFolhei.pas
+│   │   │   ├── agGastos.pas
+│   │   │   └── agUtil.pas
+│   │   ├── brlServer
+│   │   │   ├── brlDispositivos.pas
+│   │   │   ├── brlRede.pas
+│   │   │   ├── brlServer.dpr
+│   │   │   ├── brlVars.pas
+│   │   │   └── testes
+│   │   │       ├── TESTAHIMS.DPR
+│   │   │       ├── TESTAHIMS_CLIENTE.DPR
+│   │   │       └── TESTAHIMS_dvBrlCLIENTE.DPR
+│   │   ├── cdrec
+│   │   │   └── cdrec.dpr
+│   │   ├── chessvox
+│   │   │   ├── board.pas
+│   │   │   ├── book.pas
+│   │   │   ├── chessvox.dpr
+│   │   │   ├── chessvox.res
+│   │   │   ├── data.pas
+│   │   │   ├── defs.pas
+│   │   │   ├── eval.pas
+│   │   │   ├── fake.pas
+│   │   │   ├── main.pas
+│   │   │   ├── parse.pas
+│   │   │   ├── pecas_xadrez.bmp
+│   │   │   ├── prboard.pas
+│   │   │   ├── search.pas
+│   │   │   ├── svload.pas
+│   │   │   ├── tabpecas.bmp
+│   │   │   ├── xadmsg.pas
+│   │   │   └── xadrez2.bmp
+│   │   ├── comped.bat
+│   │   ├── compilatudo.bat
+│   │   ├── compvid.bat
+│   │   ├── compvidente.bat
+│   │   ├── convsons
+│   │   │   ├── comsg.pas
+│   │   │   └── convsons.dpr
+│   │   ├── cruzavox
+│   │   │   ├── crarq.pas
+│   │   │   ├── crcria.pas
+│   │   │   ├── crdesen.pas
+│   │   │   ├── credipal.pas
+│   │   │   ├── crimport.pas
+│   │   │   ├── crinstru.pas
+│   │   │   ├── crjoga.pas
+│   │   │   ├── crlegend.pas
+│   │   │   ├── crmsg.pas
+│   │   │   ├── cruzadas
+│   │   │   │   ├── cruzadin
+│   │   │   │   │   ├── equipe.crz
+│   │   │   │   │   ├── familia.crz
+│   │   │   │   │   └── importado.crz
+│   │   │   │   ├── dificil
+│   │   │   │   ├── facil
+│   │   │   │   ├── importados
+│   │   │   │   ├── media
+│   │   │   │   ├── modelos
+│   │   │   │   └── pendente
+│   │   │   ├── cruzavox.dpr
+│   │   │   └── crvars.pas
+│   │   ├── curiosovox
+│   │   │   └── curiosoVox.dpr
+│   │   ├── dcc32.cfg
+│   │   ├── desliga
+│   │   │   ├── DESLIGA.DPR
+│   │   │   └── dlmsg.pas
+│   │   ├── digitavox
+│   │   │   ├── T.PAS
+│   │   │   ├── dgtAjuda.pas
+│   │   │   ├── dgtConf.pas
+│   │   │   ├── dgtCursos.pas
+│   │   │   ├── dgtEstatistica.pas
+│   │   │   ├── dgtLicoes.pas
+│   │   │   ├── dgtMsg.pas
+│   │   │   ├── dgtOriDedo.pas
+│   │   │   ├── dgtPratica.pas
+│   │   │   ├── dgtRelat.pas
+│   │   │   ├── dgtTecla.pas
+│   │   │   ├── dgtTela.pas
+│   │   │   ├── dgtUsuarios.pas
+│   │   │   ├── dgtUtil.pas
+│   │   │   ├── dgtVars.pas
+│   │   │   └── digitavox.dpr
+│   │   ├── ediponte
+│   │   │   ├── HTMLPARS.PAS
+│   │   │   ├── LATIN1.PAS
+│   │   │   ├── back.gif
+│   │   │   ├── dvArq.pas
+│   │   │   ├── dvArq2.pas
+│   │   │   ├── dvFTP.pas
+│   │   │   ├── dvHTTP.pas
+│   │   │   ├── dvPonte.pas
+│   │   │   ├── dvScriptVox.pas
+│   │   │   ├── dvWin.pas
+│   │   │   ├── ediponte.dpr
+│   │   │   ├── epConvert.pas
+│   │   │   ├── epError.pas
+│   │   │   ├── epFTP.pas
+│   │   │   ├── epMsg.pas
+│   │   │   ├── epeditor.pas
+│   │   │   ├── epvars.pas
+│   │   │   ├── geraediponte.bat
+│   │   │   └── pontes.ini
+│   │   ├── epubvox
+│   │   │   ├── epExibeLivro.pas
+│   │   │   ├── epTrataXml.pas
+│   │   │   ├── epmsg.pas
+│   │   │   ├── eptrataHTML.pas
+│   │   │   ├── epubvox.dpr
+│   │   │   └── epvars.pas
+│   │   ├── googlevox
+│   │   │   ├── googlevox.dpr
+│   │   │   ├── gvbusca.pas
+│   │   │   ├── gvfolheia.pas
+│   │   │   ├── gvhtml.pas
+│   │   │   ├── gvhttp.pas
+│   │   │   ├── gvmsg.pas
+│   │   │   └── gvvars.pas
+│   │   ├── hardvox
+│   │   │   ├── hardaud.pas
+│   │   │   ├── hardcpu.pas
+│   │   │   ├── hardespd.pas
+│   │   │   ├── hardhd.pas
+│   │   │   ├── hardmbrd.pas
+│   │   │   ├── hardmem.pas
+│   │   │   ├── hardmoni.pas
+│   │   │   ├── hardmsg.pas
+│   │   │   ├── hardnome.pas
+│   │   │   ├── hardsmar.pas
+│   │   │   ├── harduser.pas
+│   │   │   ├── hardvox.dpr
+│   │   │   ├── is64.dpr
+│   │   │   └── is64.res
+│   │   ├── imaputil
+│   │   │   ├── agravar.txt
+│   │   │   ├── efeitos.txt
+│   │   │   ├── imaputil.atu
+│   │   │   ├── imaputil.dpr
+│   │   │   ├── iuBusca.pas
+│   │   │   ├── iuUtil.pas
+│   │   │   ├── iuenvel.pas
+│   │   │   ├── iufolhe.pas
+│   │   │   ├── iuleit.pas
+│   │   │   ├── iuleitin.pas
+│   │   │   ├── iumsg.pas
+│   │   │   ├── iupastas.pas
+│   │   │   ├── iuproces.pas
+│   │   │   ├── iurede.pas
+│   │   │   ├── iutela.pas
+│   │   │   ├── iuvars.pas
+│   │   │   └── rfc1730.pdf
+│   │   ├── iniOriginal
+│   │   │   ├── Buscador.ini
+│   │   │   ├── Clockvox.ini
+│   │   │   ├── Comsaci.ini
+│   │   │   ├── Santos.ini
+│   │   │   ├── Sitiovox.ini
+│   │   │   ├── Sommetro.ini
+│   │   │   ├── Webtags.ini
+│   │   │   ├── Webtags2.ini
+│   │   │   ├── apelidos.ini
+│   │   │   ├── arqTroca.ini
+│   │   │   ├── arqTroca_Br_Pt.ini
+│   │   │   ├── arqTroca_PT_BR.ini
+│   │   │   ├── arqfonte.ini
+│   │   │   ├── blb2txt.dic
+│   │   │   ├── dosvox.ini
+│   │   │   ├── dvPadrao.ini
+│   │   │   ├── dvveloz.ini
+│   │   │   ├── lunardif.ini
+│   │   │   ├── luplacar.ini
+│   │   │   ├── midiaTempos.ini
+│   │   │   ├── mircvox.ini
+│   │   │   ├── pontes.ini
+│   │   │   ├── provedor.ini
+│   │   │   ├── radio50.ini
+│   │   │   ├── sompapo.ini
+│   │   │   ├── voxnews.ini
+│   │   │   ├── webcookies.ini
+│   │   │   ├── webselec.ini
+│   │   │   └── websemproxy.ini
+│   │   ├── lianelib.dll
+│   │   ├── lianetts
+│   │   │   ├── Mbrplay.pas
+│   │   │   ├── dosvox.py
+│   │   │   ├── instala_nvda.bat
+│   │   │   ├── liane.py
+│   │   │   ├── lianelib.dpr
+│   │   │   ├── lianetts.reg
+│   │   │   ├── lista_de_difones.txt
+│   │   │   ├── manual_lianelib.txt
+│   │   │   ├── mbr.dpr
+│   │   │   ├── mbrola.dll
+│   │   │   ├── mbrola.pas
+│   │   │   ├── numExtenso.pas
+│   │   │   ├── sapiserv.dpr
+│   │   │   ├── t.pas
+│   │   │   ├── testelib.dpr
+│   │   │   ├── uttsExcessoes.pas
+│   │   │   ├── uttsInic.pas
+│   │   │   ├── uttsLiane.pas
+│   │   │   ├── uttsPortug.pas
+│   │   │   ├── uttsPreproc.pas
+│   │   │   ├── uttsProsodia.pas
+│   │   │   ├── uttsTonica.pas
+│   │   │   └── uttsUtils.pas
+│   │   ├── listavox
+│   │   │   ├── ELSE.PAS
+│   │   │   ├── LISCONF.PAS
+│   │   │   ├── LISIMPR.PAS
+│   │   │   ├── LISINIPR.PAS
+│   │   │   ├── LISMSG.PAS
+│   │   │   ├── LISTAVOX.DPR
+│   │   │   ├── LISVARS.PAS
+│   │   │   ├── T.PAS
+│   │   │   └── THEN.PAS
+│   │   ├── memojogo.sco
+│   │   ├── metrovox
+│   │   │   ├── METROVOX.DPR
+│   │   │   ├── MTCONF.PAS
+│   │   │   ├── MTEFEIT.PAS
+│   │   │   ├── MTMSG.PAS
+│   │   │   ├── MTVARS.PAS
+│   │   │   └── T.PAS
+│   │   ├── palavrox
+│   │   │   ├── Palavrox.dpr
+│   │   │   ├── filtraPalavras.dpr
+│   │   │   ├── plplacar.ini
+│   │   │   ├── plscores.pas
+│   │   │   ├── plvars.pas
+│   │   │   ├── pvBanner.pas
+│   │   │   ├── pvdiag.pas
+│   │   │   ├── pvjoga.pas
+│   │   │   ├── pvmsg.pas
+│   │   │   ├── pvscores.pas
+│   │   │   ├── pvtempo.pas
+│   │   │   └── pvvars.pas
+│   │   ├── pontevox
+│   │   │   ├── dvWin.pas
+│   │   │   ├── pontemsg.pas
+│   │   │   └── pontevox.dpr
+│   │   ├── powervox
+│   │   │   └── powervox.dpr
+│   │   ├── pptfala
+│   │   │   └── pptfala.dpr
+│   │   ├── pyvox
+│   │   │   ├── pyLetela.pas
+│   │   │   ├── pyLocal.pas
+│   │   │   ├── pyPipe.pas
+│   │   │   ├── pyTrad.pas
+│   │   │   └── pyvox.dpr
+│   │   ├── radio50
+│   │   │   ├── bass.dll
+│   │   │   ├── bass.pas
+│   │   │   ├── bass_aac.dll
+│   │   │   ├── bass_aac.pas
+│   │   │   ├── basshls.dll
+│   │   │   ├── basshls.pas
+│   │   │   ├── erros.txt
+│   │   │   ├── radio50.dpr
+│   │   │   ├── rdAjuda.pas
+│   │   │   ├── rdBusca.pas
+│   │   │   ├── rdDownld.pas
+│   │   │   ├── rdFFplay.pas
+│   │   │   ├── rdGravar.pas
+│   │   │   ├── rdPipeEx.pas
+│   │   │   ├── rdPrefer.pas
+│   │   │   ├── rdProces.pas
+│   │   │   ├── rdUtil.pas
+│   │   │   ├── rdatuIni.pas
+│   │   │   ├── rdbass.pas
+│   │   │   ├── rdmsg.pas
+│   │   │   ├── rdvars.pas
+│   │   │   └── taaa.res
+│   │   ├── recado
+│   │   │   ├── UAUDIO.PAS
+│   │   │   ├── lame_export.pas
+│   │   │   ├── modelo_mime.txt
+│   │   │   ├── recado.dpr
+│   │   │   ├── recado.jpg
+│   │   │   ├── recconfig.pas
+│   │   │   ├── recdraw.pas
+│   │   │   ├── recenvia.pas
+│   │   │   ├── recfolhe.pas
+│   │   │   ├── recmime64.pas
+│   │   │   ├── recmonit.pas
+│   │   │   ├── recmp3.pas
+│   │   │   ├── recmsg.pas
+│   │   │   ├── recsmtp.pas
+│   │   │   └── recvars.pas
+│   │   ├── sapi4cnf
+│   │   │   ├── USAPI.PAS
+│   │   │   ├── USAPI.dfm
+│   │   │   ├── sapi4cnf.DPR
+│   │   │   ├── sapi4cnf.RES
+│   │   │   ├── uformInfo.dfm
+│   │   │   ├── uformInfo.pas
+│   │   │   ├── utesta.dfm
+│   │   │   └── utesta.pas
+│   │   ├── sc
+│   │   │   ├── sc.dpr
+│   │   │   ├── sc_interp
+│   │   │   │   ├── ARITHMETIC.PAS
+│   │   │   │   ├── COMPILE.pas
+│   │   │   │   ├── EXPR.pas
+│   │   │   │   ├── FLOW.PAS
+│   │   │   │   ├── INTERP.pas
+│   │   │   │   ├── IO.PAS
+│   │   │   │   ├── LEX.PAS
+│   │   │   │   ├── NATIVE.pas
+│   │   │   │   ├── OTHERS.PAS
+│   │   │   │   ├── SCREEN.PAS
+│   │   │   │   ├── SQLite3.pas
+│   │   │   │   ├── SQLite3Utils.pas
+│   │   │   │   ├── SQLite3Wrap.pas
+│   │   │   │   ├── SYMBOLTABLE.pas
+│   │   │   │   ├── command.pas
+│   │   │   │   ├── dvscript.pas
+│   │   │   │   ├── dvscript55.pas
+│   │   │   │   ├── low.pas
+│   │   │   │   └── sql.pas
+│   │   │   ├── scb.dpr
+│   │   │   └── testes
+│   │   │       ├── script.pro
+│   │   │       ├── script_duplo.dpr
+│   │   │       ├── teste_script_controlador.dpr
+│   │   │       ├── testesql.pro
+│   │   │       └── testesql_simples.pro
+│   │   ├── setup_ini.iss
+│   │   ├── timervox
+│   │   │   └── timervox.dpr
+│   │   ├── tradutor
+│   │   │   ├── ACTIVEVOICEPROJECTLib_TLB.pas
+│   │   │   ├── ComUtils.pas
+│   │   │   ├── DVCOMM.PAS
+│   │   │   ├── DVCPDATA.PAS
+│   │   │   ├── DVDDE.PAS
+│   │   │   ├── DVDIC.PAS
+│   │   │   ├── DVEXEC.PAS
+│   │   │   ├── DVHORA.PAS
+│   │   │   ├── DVLENUM.PAS
+│   │   │   ├── DVSAPI5.PAS
+│   │   │   ├── DVSAPI54.PAS
+│   │   │   ├── DVSENHA.PAS
+│   │   │   ├── DVTRADUT.PAS
+│   │   │   ├── IMAPI2FS_TLB.pas
+│   │   │   ├── IMAPI2_TLB.pas
+│   │   │   ├── LibXmlParser.pas
+│   │   │   ├── OLEACC.PAS
+│   │   │   ├── SPEECH.PAS
+│   │   │   ├── SpeechLib54_TLB.pas
+│   │   │   ├── SpeechLib_TLB.pas
+│   │   │   ├── UUENC.PAS
+│   │   │   ├── VIDENTE
+│   │   │   │   ├── DVWIN.PAS
+│   │   │   │   └── tvidente.dpr
+│   │   │   ├── WINPRX.PAS
+│   │   │   ├── WOW16.PAS
+│   │   │   ├── WOW32.PAS
+│   │   │   ├── dvArq.pas
+│   │   │   ├── dvArqLog.pas
+│   │   │   ├── dvBrlCliente.pas
+│   │   │   ├── dvFocus80.pas
+│   │   │   ├── dvForm.pas
+│   │   │   ├── dvGrav.pas
+│   │   │   ├── dvHims.pas
+│   │   │   ├── dvItemSeq.pas
+│   │   │   ├── dvMouse.pas
+│   │   │   ├── dvWin.pas
+│   │   │   ├── dvamplia.pas
+│   │   │   ├── dvbrunif.pas
+│   │   │   ├── dvcdrec.pas
+│   │   │   ├── dvcrt.pas
+│   │   │   ├── dvcrt_sem_lb.pas
+│   │   │   ├── dvdigitexto.pas
+│   │   │   ├── dvdownload.pas
+│   │   │   ├── dvhoraSint.pas
+│   │   │   ├── dvinet.pas
+│   │   │   ├── dvinter.pas
+│   │   │   ├── dvjpeg.pas
+│   │   │   ├── dvmacro.pas
+│   │   │   ├── dvmidi.pas
+│   │   │   ├── dvmsaa.pas
+│   │   │   ├── dvogg.pas
+│   │   │   ├── dvsapglb.pas
+│   │   │   ├── dvsapi.pas
+│   │   │   ├── dvsapi4.pas
+│   │   │   ├── dvscript55.pas
+│   │   │   ├── dvserpro.pas
+│   │   │   ├── dvssl.pas
+│   │   │   ├── dvstring.pas
+│   │   │   ├── dvwav.lento
+│   │   │   ├── dvwav.pas
+│   │   │   ├── lame_export.pas
+│   │   │   ├── minireg.pas
+│   │   │   ├── obj
+│   │   │   │   ├── adler32.obj
+│   │   │   │   ├── compress.obj
+│   │   │   │   ├── crc32.obj
+│   │   │   │   ├── deflate.obj
+│   │   │   │   ├── gzio.obj
+│   │   │   │   ├── infback.obj
+│   │   │   │   ├── inffast.obj
+│   │   │   │   ├── inflate.obj
+│   │   │   │   ├── inftrees.obj
+│   │   │   │   ├── trees.obj
+│   │   │   │   ├── uncompr.obj
+│   │   │   │   └── zutil.obj
+│   │   │   ├── pipe.pas
+│   │   │   ├── pngextra.pas
+│   │   │   ├── pngimage.pas
+│   │   │   ├── pnglang.pas
+│   │   │   ├── sapi5.inc
+│   │   │   ├── ssl_openssl_lib.pas
+│   │   │   ├── superobject.pas
+│   │   │   ├── synacode.pas
+│   │   │   ├── synafpc.pas
+│   │   │   ├── synapse
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── README.md
+│   │   │   │   ├── asn1util.pas
+│   │   │   │   ├── blcksock.pas
+│   │   │   │   ├── clamsend.pas
+│   │   │   │   ├── dnssend.pas
+│   │   │   │   ├── ftpsend.pas
+│   │   │   │   ├── ftptsend.pas
+│   │   │   │   ├── httpsend.pas
+│   │   │   │   ├── imapsend.pas
+│   │   │   │   ├── jedi.inc
+│   │   │   │   ├── kylix.inc
+│   │   │   │   ├── laz_synapse.lpk
+│   │   │   │   ├── laz_synapse.pas
+│   │   │   │   ├── ldapsend.pas
+│   │   │   │   ├── mimeinln.pas
+│   │   │   │   ├── mimemess.pas
+│   │   │   │   ├── mimepart.pas
+│   │   │   │   ├── nntpsend.pas
+│   │   │   │   ├── pingsend.pas
+│   │   │   │   ├── pop3send.pas
+│   │   │   │   ├── slogsend.pas
+│   │   │   │   ├── smtpsend.pas
+│   │   │   │   ├── snmpsend.pas
+│   │   │   │   ├── sntpsend.pas
+│   │   │   │   ├── ssdotnet.inc
+│   │   │   │   ├── ssfpc.inc
+│   │   │   │   ├── ssl_cryptlib.pas
+│   │   │   │   ├── ssl_cryptlib.~pas
+│   │   │   │   ├── ssl_libssh2.pas
+│   │   │   │   ├── ssl_openssl.pas
+│   │   │   │   ├── ssl_openssl.~pas
+│   │   │   │   ├── ssl_openssl_lib.pas
+│   │   │   │   ├── ssl_openssl_lib.~pas
+│   │   │   │   ├── ssl_sbb.pas
+│   │   │   │   ├── ssl_streamsec.pas
+│   │   │   │   ├── sslinux.inc
+│   │   │   │   ├── ssos2ws1.inc
+│   │   │   │   ├── ssposix.inc
+│   │   │   │   ├── sswin32.inc
+│   │   │   │   ├── synachar.pas
+│   │   │   │   ├── synacode.pas
+│   │   │   │   ├── synacrypt.pas
+│   │   │   │   ├── synadbg.pas
+│   │   │   │   ├── synafpc.pas
+│   │   │   │   ├── synaicnv.pas
+│   │   │   │   ├── synaip.pas
+│   │   │   │   ├── synamisc.pas
+│   │   │   │   ├── synaser.pas
+│   │   │   │   ├── synautil.pas
+│   │   │   │   ├── synautil.~pas
+│   │   │   │   ├── synsock.pas
+│   │   │   │   ├── tlntsend.pas
+│   │   │   │   └── tzutil.pas
+│   │   │   ├── videovox.pas
+│   │   │   └── zlibpas.pas
+│   │   ├── traduvox
+│   │   │   ├── t.pas
+│   │   │   ├── traduvox.dpr
+│   │   │   ├── traduvox.res
+│   │   │   ├── trgoogle.pas
+│   │   │   ├── trintera.pas
+│   │   │   ├── trmsg.pas
+│   │   │   ├── trnet.pas
+│   │   │   ├── trsintet.pas
+│   │   │   ├── trtraduz.pas
+│   │   │   └── trvars.pas
+│   │   ├── txtword
+│   │   │   ├── T.PAS
+│   │   │   ├── twMsg.pas
+│   │   │   ├── twTipoFo.pas
+│   │   │   ├── twVars.pas
+│   │   │   ├── twexport.pas
+│   │   │   └── txtWord.dpr
+│   │   ├── voxnews
+│   │   │   ├── neProces.pas
+│   │   │   ├── neatom.pas
+│   │   │   ├── neleit.pas
+│   │   │   ├── nemsg.pas
+│   │   │   ├── nenavega.pas
+│   │   │   ├── nerede.pas
+│   │   │   ├── nerss.pas
+│   │   │   ├── neutil.pas
+│   │   │   ├── nevars.pas
+│   │   │   └── voxnews.dpr
+│   │   ├── voxtube
+│   │   │   ├── pipe.pas
+│   │   │   ├── voxtube.dpr
+│   │   │   ├── vt_aju.pas
+│   │   │   ├── vt_aux.pas
+│   │   │   ├── vt_bus.pas
+│   │   │   ├── vt_cfg.pas
+│   │   │   ├── vt_fol.pas
+│   │   │   ├── vt_fun.pas
+│   │   │   ├── vt_ini.pas
+│   │   │   ├── vt_men.pas
+│   │   │   ├── vt_msg.pas
+│   │   │   ├── vt_net.pas
+│   │   │   ├── vt_par.pas
+│   │   │   ├── vt_var.pas
+│   │   │   └── vtinfo.cmd
+│   │   ├── wifivox
+│   │   │   ├── DetectWifiUsingDelphi.dpr
+│   │   │   ├── nduCType.pas
+│   │   │   ├── nduEapTypes.pas
+│   │   │   ├── nduL2cmn.pas
+│   │   │   ├── nduNtDDNdis.pas
+│   │   │   ├── nduWinDot11.pas
+│   │   │   ├── nduWinNT.pas
+│   │   │   ├── nduWlanAPI.pas
+│   │   │   ├── nduWlanTypes.pas
+│   │   │   └── wifiVox.dpr
+│   │   ├── wv_Limpa.bat
+│   │   ├── wv_atualizacao_Limpa.bat
+│   │   ├── wv_mini_Limpa.bat
+│   │   └── zipFont.bat
+│   └── iniOriginal
+│       ├── Buscador.ini
+│       ├── Clockvox.ini
+│       ├── Comsaci.ini
+│       ├── Santos.ini
+│       ├── Sitiovox.ini
+│       ├── Sommetro.ini
+│       ├── Webtags.ini
+│       ├── Webtags2.ini
+│       ├── apelidos.ini
+│       ├── arqTroca.ini
+│       ├── arqTroca_Br_Pt.ini
+│       ├── arqTroca_Pt_Br.ini
+│       ├── arqfonte.ini
+│       ├── dosvox.ini
+│       ├── dvPadrao.ini
+│       ├── dvveloz.ini
+│       ├── lunardif.ini
+│       ├── luplacar.ini
+│       ├── midiaTempos.ini
+│       ├── mircvox.ini
+│       ├── pontes.ini
+│       ├── provedor.ini
+│       ├── radio50.ini
+│       ├── sompapo.ini
+│       ├── voxnews.ini
+│       ├── webcookies.ini
+│       ├── webselec.ini
+│       └── websemproxy.ini
+├── dosvox-shell
+│   ├── config
+│   │   ├── Buscador.ini
+│   │   ├── Clockvox.ini
+│   │   ├── Comsaci.ini
+│   │   ├── Santos.ini
+│   │   ├── Sitiovox.ini
+│   │   ├── Sommetro.ini
+│   │   ├── Webtags.ini
+│   │   ├── Webtags2.ini
+│   │   ├── apelidos.ini
+│   │   ├── arqTroca.ini
+│   │   ├── arqTroca_Br_Pt.ini
+│   │   ├── arqTroca_Pt_Br.ini
+│   │   ├── arqfonte.ini
+│   │   ├── dosvox.ini
+│   │   ├── dvPadrao.ini
+│   │   ├── dvveloz.ini
+│   │   ├── lunardif.ini
+│   │   ├── luplacar.ini
+│   │   ├── midiaTempos.ini
+│   │   ├── mircvox.ini
+│   │   ├── pontes.ini
+│   │   ├── provedor.ini
+│   │   ├── radio50.ini
+│   │   ├── sompapo.ini
+│   │   ├── voxnews.ini
+│   │   ├── webcookies.ini
+│   │   ├── webselec.ini
+│   │   └── websemproxy.ini
+│   └── src
+│       ├── DOSDOS.PAS
+│       ├── DOSED.PAS
+│       ├── DOSJANEL.PAS
+│       ├── DOSPREF.PAS
+│       ├── DOSUTIL.PAS
+│       ├── DOSVOX.RES
+│       ├── EjectUSB.pas
+│       ├── T.PAS
+│       ├── dosBuscaArq.pas
+│       ├── dosConf.pas
+│       ├── dosEmail.pas
+│       ├── dosHoraDia.pas
+│       ├── dosImgToTxt.pas
+│       ├── dosTxtToWav.pas
+│       ├── dosarq.pas
+│       ├── dosconvert.pas
+│       ├── doscopia.pas
+│       ├── dosdir.pas
+│       ├── dosdisco.pas
+│       ├── dosform.pas
+│       ├── dosgeral.pas
+│       ├── dosgrava.pas
+│       ├── doshabil.PAS
+│       ├── dosimpr.pas
+│       ├── doslogo.pas
+│       ├── dosmonit.pas
+│       ├── dosmsg.pas
+│       ├── dosproc.pas
+│       ├── dosquem.pas
+│       ├── dostec.pas
+│       ├── dostoca.pas
+│       ├── dosupdat.pas
+│       ├── dosvars.pas
+│       ├── dosvox.dpr
+│       ├── dosvox_logo.jpg
+│       └── gerasonsutil.dpr
+├── estrutura.txt
+├── fontes
+│   └── mapa-portal-dosvox.md
+├── imagens
+├── notas
+└── pesquisas
+    ├── analise-instalacao-winvox.md
+    ├── analise-preservacao-digital.md
+    ├── arquitetura
+    ├── motor-principal
+    │   ├── analise-arquivos-antigos.md
+    │   ├── analise-dvcrt.md
+    │   ├── analise-tecnica.md
+    │   ├── arquitetura-dependencias.md
+    │   ├── grafo-dependencias.md
+    │   ├── guia-preservacao.md
+    │   ├── linha-do-tempo-evolucao.md
+    │   └── nucleo-minimo.md
+    └── registros
+        └── log-bruto-winvox.md
