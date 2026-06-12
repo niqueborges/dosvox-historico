@@ -1,0 +1,1142 @@
+{------------------------------------------------------------------------------}
+{
+{                                  LOW.PAS
+{
+{    Rotinas de "Baixo Nível"
+{
+{    Sistema:    DosVox
+{    Módulo:     Interpretador ScriptVox
+{    Autor:      Oswaldo Vernet
+{    Data:       28/09/2015
+{    Alterações: 30/03/2016, 01/07/2016, 25/09/2018
+{
+{------------------------------------------------------------------------------}
+
+unit LOW;
+
+{--------------------------------------------------------}
+{               I N T E R F A C E
+{--------------------------------------------------------}
+
+interface
+
+uses
+    screen, lex, symboltable,
+    dvinet, dvwin, dvcrt,
+    classes, sysUtils, windows;
+
+{****************************** Arquivos Abertos ******************************}
+
+const
+    SCRIPTVOX_VERSION    = '6.5';
+    SCRIPTVOX_SUBVERSION = '';
+    MAXFILES             = 16;
+    STACK_LIMIT          = 2048;
+
+type
+    ExternalFunc         = function (str   : string) : string;
+
+    FileRec              = record
+                              isOpen       : boolean;                           { O arquivo está aberto }
+                              pbuf         : pBufRede;                          { Área temporária }
+
+                              case typeof  : (F_KEY, F_FILE, F_NET, F_SER) of
+                                   F_KEY:  ();
+                                   F_FILE: ( filefd : text   );
+                                   F_NET:  ( sockfd : integer );
+                                   F_SER:  ()
+                           end;
+
+{***************** Algumas Variáveis Globais do Interpretador *****************}
+
+var
+    files                : array [-1 .. MAXFILES-1] of FileRec;                 { Tabela de arquivos abertos }
+
+    SP                   : integer;                                             { Registrador: stack pointer }
+    BP                   : integer;                                             { Registrador: base pointer }
+    CS                   : integer;                                             { Registrador: script corrente (0 = script interativo) }
+    CF                   : PSymtbEntry;                                         { Registrador: função corrente (NIL se programa principal) }
+
+    verbose              : boolean;                                             { Mensagens de erro são mostradas }
+    compiling            : boolean;                                             { O script está sendo pré-compilado }
+
+    time0                : integer;                                             { Base de tempo }
+    week0                : word;
+
+    nDicNode,                                                                   { Alguns contadores depurativos }
+    nOperand,
+    nObjRec,
+    nNewCommands        : integer;
+
+procedure initInterpreter;
+
+function  loadScript       (script : TStringList) : integer; overload;
+function  loadScript       (name : string): integer; overload;
+function  searchscript     (name: string) : integer;
+procedure printScript      (s : integer);
+procedure freeScript       (s : integer);
+
+procedure errorMsg         (lin : integer; msg : string); overload;
+procedure errorMsg         (msg : string); overload;
+procedure appendExtraLine  (s : integer; line : string);
+procedure setCurrentLine   (s : integer; num : integer);
+
+function  execExtraLine    (cmd : string) : boolean;
+function  execLine         (s : integer; num : integer) : boolean;
+function  execScript       (s : integer; lin : integer) : boolean;
+function  execFunction     (func : PSymtbEntry) : boolean;
+
+procedure setCS            (s : integer);
+procedure setCF            (p : PSymtbEntry);
+function  incSP            () : boolean;
+
+function  isCompiled       (s : integer) : boolean;
+function  getError         (s : integer) : boolean;
+procedure setError         (s : integer; b : boolean);
+function  getName          (s : integer) : string;
+function  finalLine        (s : integer) : integer;
+function  getSilent        (s : integer) : boolean;
+procedure setSilent        (s : integer; b : boolean);
+function  isTerminated     (s : integer) : boolean;
+procedure setTerminated    (s : integer; b : boolean);
+procedure setCompiled      (s : integer; b : boolean);
+function  getIOStatus      (s : integer) : integer;
+procedure setIOStatus      (s : integer; v : integer);
+function  getDebug         (s : integer) : boolean;
+procedure setDebug         (s : integer; b : boolean);
+function  getPC            (s : integer) : integer; overload;
+function  getPC            () : integer; overload;
+procedure setPC            (s : integer; pc : integer); overload;
+procedure setPC            (pc : integer); overload;
+procedure advancePC        (s : integer);
+procedure setnPC           (s : integer; nPC : integer); overload;
+procedure setnPC           (nPC : integer); overload;
+function  getExternalFunc  (s : integer) : ExternalFunc;
+procedure setExternalFunc  (s : integer; f : ExternalFunc);
+
+function  getGoTo          (s : integer; lin : integer) : integer; overload;
+function  getGoTo          (lin : integer) : integer; overload;
+procedure setGoTo          (s : integer; lin : integer; jump : integer);
+function  getLine          (s : integer; lin : integer) : string;
+function  getCachedCommand (s : integer; lin : integer) : PSymtbEntry;
+procedure setCachedCommand (s : integer; lin : integer; cmd : PSymtbEntry);
+function  getScope         (s : integer; lin : integer) : PSymtbEntry;
+procedure setScope         (s : integer; lin : integer; sc : PSymtbEntry);
+function  getFollowing     (s : integer; lin : integer) : integer;
+procedure setFollowing     (s : integer; lin : integer; next : integer);
+function  returnSeen       (s : integer) : boolean;
+procedure setReturn        (s : integer; b : boolean);
+
+{--------------------------------------------------------}
+{             I M P L E M E N T A Ç Ã O
+{--------------------------------------------------------}
+
+implementation
+
+{********************** Estrutura da Tabela de Scripts ************************}
+
+const
+    MAXSCRIPT           = 127;                                                  { Número máximo de scripts simultâneos na memória }
+
+type
+    PCodeRec            = ^CodeRec;
+
+    CodeRec             = record
+                            line      : string;                                 { Linha }
+                            size      : integer;                                { Comprimento da linha (para não ficar chamando "length" toda hora }
+                            cont      : integer;                                { Continuações }
+                            scope     : PSymtbEntry;                            { A linha ou é do programa principal ou é de alguma função }
+                            command   : PSymtbEntry;                            { Comando a executar, para poupar consultas à tabela "hash" }
+                            jump      : integer;                                { Pulo, no caso de comandos de desvio de fluxo }
+                            next      : integer                                 { Linha seguinte a executar }
+                          end;
+
+    ScriptRec           = record
+                            empty     : boolean;                                { Entrada vazia? }
+                            path,                                               { Caminho até o arquivo }
+                            name      : string;                                 { Nome dado pelo usuário }
+                            compiled  : boolean;                                { Já foi compilado? }
+                            code      : TList;                                  { Os elementos da lista são do tipo CodeRec }
+                            final     : integer;                                { Número da última linha }
+                            extFunc   : ExternalFunc;                           { Função externa a ser invocada }
+                            PC,                                                 { Linha sendo executada }
+                            nPC,                                                { Próxima linha a executar }
+                            io        : integer;                                {        resultado da última operação de E/S }
+                            error,                                              { Flags: houve erro }
+                            return,                                             {        executou o comando RETORNA }
+                            debug,                                              {        depuração ligada }
+                            finish,                                             {        o script terminou }
+                            silent    : boolean;                                {        o script terminou silent }
+                          end;
+
+var
+    scripts             : array [0 .. MAXSCRIPT] of ScriptRec;                  { Tabela de scripts }
+
+{--------------------------------------------------------}
+{                  mensagens de erro
+{--------------------------------------------------------}
+
+procedure errorMsg (lin : integer; msg : string); overload;
+var
+    name : string;
+begin
+    if not verbose then
+        exit;
+
+    if (CS > 0) and (lin > 0) then
+    begin
+        name := getName (CS);
+
+        if name <> '' then
+            scWriteln ('Erro no script ' + name + ', linha ' + intToStr (lin) + ':')
+        else
+            scWrite   ('Erro na linha ' + intToStr (lin) + ': ')
+    end;
+
+    scWriteln (msg)
+end;
+
+procedure errorMsg (msg : string); overload;
+begin
+    if verbose then
+        errorMsg (getPC, msg)
+end;
+
+{--------------------------------------------------------}
+{        estabelece uma linha como a corrente
+{--------------------------------------------------------}
+
+procedure setCurrentLine (s : integer; num : integer);
+var
+    p : PCodeRec;
+begin
+    p := scripts[s].code.Items[num];
+    lex.setLine (num, @p^.line[1], p^.size)
+end;
+
+{--------------------------------------------------------}
+{       estabelece uma linha externa como a corrente
+{--------------------------------------------------------}
+
+procedure appendExtraLine (s : integer; line : string);
+var
+    p : PCodeRec;
+begin
+    with scripts[s].code do
+    begin
+        if Items[0] <> NIL then
+        begin
+            DISPOSE (PCodeRec (Items[0]));
+            Items[0] := NIL
+        end;
+
+        try NEW (p) except p := NIL end;
+
+        if p = NIL then
+            raise Exception.create ('Memória insuficiente');
+
+        if line = '' then
+            line   := ' ';
+
+        p^.line    := line + LF;
+        p^.size    := length (line);        { Sem o LF }
+        p^.cont    := 1;
+        p^.jump    := 0;
+        p^.command := NIL;
+        p^.scope   := NIL;
+        p^.next    := 0;
+
+        Items[0]   := p
+    end
+end;
+
+{--------------------------------------------------------}
+{      executa uma linha em processamento externo
+{--------------------------------------------------------}
+
+function execExtraLine (cmd : string) : boolean;
+begin
+    setCS (0);
+    appendExtraLine (0, cmd);
+    execExtraLine := execLine (0, 0)
+end;
+
+{--------------------------------------------------------}
+{          executa a linha "num" do script "s"
+{--------------------------------------------------------}
+
+function execLine (s : integer; num : integer) : boolean;
+label
+    out;
+var
+    p  : PSymtbEntry;
+    ok : boolean;
+begin
+    execLine := false;
+
+    if (num < 0) or (num > finalLine (s)) then
+    begin
+        setError (s, true);
+        exit
+    end;
+
+    setCurrentLine (s, num);
+
+    if num > 0 then
+        setnPC (s, getFollowing (s, num));
+
+    if getDebug (s) then
+        scWriteln (getLine (s, num));
+
+    nextToken;
+
+    if token.typeof = T_ROT then
+    begin
+        if nextToken = T_CL then
+            nextToken
+    end;
+
+    if token.typeof = T_EOL then
+    begin
+        ok := true;
+        goto out
+    end;
+
+    if token.typeof <> T_ID then
+    begin
+        p := EvaluationPtr
+    end
+    else begin
+        p := getCachedCommand (s, num);
+
+        if p = NIL then
+            p := symboltable.getSymbol (s, CF, token.id, false)
+    end;
+
+    if (p = NIL) or (p^.typeof in [S_MOD,S_VAR,S_NFUNC,S_UFUNC]) then
+    begin
+        p := AssignmentPtr;
+
+        if num > 0 then
+            setCachedCommand (s, num, p)
+    end;
+
+    ok := false;
+
+    if not (p^.typeof in [S_COMM..S_END]) then
+    begin
+        errorMsg (num, 'Esperava um comando');
+        goto out
+    end;
+
+    if (s = 0) and not (p^.typeof in [S_COMM,S_UIF,S_IF]) then
+    begin
+        errorMsg ('O comando "' + p^.id + '" não é válido no modo interativo');
+        goto out
+    end;
+
+    markToken;          { Em alguns comandos, será preciso voltar a este token }
+    nextToken;          { Avança um token }
+
+    ok := p^.exec;      { ***************** EXECUTA O COMANDO *****************}
+
+    if token.typeof <> T_EOL then
+        errorMsg ('A linha deveria terminar onde aparece "' + token.rid + '"');
+
+out:
+    setError (s, not ok);
+    execLine := ok
+end;
+
+{--------------------------------------------------------}
+{        verifica se script deve ser interrompido
+{--------------------------------------------------------}
+
+function interruptedScript : boolean;
+begin
+    if (GetKeyState (VK_CONTROL) < 0) and (GetKeyState (VK_F12) < 0) then
+    begin
+        readkey; readkey;
+        interruptedScript := true
+    end
+    else begin
+        interruptedScript := false
+    end
+end;
+
+{--------------------------------------------------------}
+{        execução sequencial de linhas do script
+{--------------------------------------------------------}
+
+function execScript (s : integer; lin : integer) : boolean;
+var
+    final : integer;
+begin
+    setCS         (s);
+    setReturn     (CS, false);
+    setPC         (CS, lin);
+    setTerminated (CS, false);
+
+    final := finalLine (CS);
+
+    while not isTerminated (CS) and (getPC (CS) <= final) do
+    begin
+        if interruptedScript then
+            raise Exception.Create ('Execução interrompida na linha ' + intToStr (getPC (CS)));
+
+        if not execLine (CS, getPC (CS)) then
+            break;
+
+        advancePC (CS)
+    end;
+
+    execScript := not getError (CS)
+end;
+
+{--------------------------------------------------------}
+{        execução de uma Função
+{--------------------------------------------------------}
+
+function execFunction (func : PSymtbEntry) : boolean;
+var
+    save       : PSymtbEntry;
+    lin, final : integer;
+begin
+    save := CF;
+    lin  := func^.start;
+
+    setReturn (CS, false);
+    setPC     (CS, lin);
+
+    final := finalLine (CS);
+
+    while not isTerminated (CS) and (getPC (CS) <= final) do
+    begin
+        if interruptedScript then
+            raise Exception.Create ('Execução interrompida na linha ' + intToStr (getPC (CS)));
+
+        if not execLine (CS, getPC (CS)) then
+            break;
+
+        if (CF = save) and (returnSeen (CS)) then
+            break;
+
+        advancePC (CS)
+    end;
+
+    execFunction := not getError (CS)
+end;
+
+{--------------------------------------------------------}
+{                 GETTERS & SETTERS
+{--------------------------------------------------------}
+
+{---------- CS ----------}
+
+procedure setCS (s : integer);
+begin
+    if (s >= 0) and (s <= MAXSCRIPT) then
+        CS := s
+end;
+
+{---------- CF ----------}
+
+procedure setCF (p : PSymtbEntry);
+begin
+    CF := p
+end;
+
+{---------- SP ----------}
+
+function incSP : boolean;
+begin
+    if SP >= STACK_LIMIT then
+    begin
+        errorMsg ('Estouro na pilha de execução');
+        incSP := false
+    end
+    else begin
+        INC (SP);
+        incSP := true
+    end
+end;
+
+{-------- nome ----------}
+
+function getName (s : integer) : string;
+begin
+    getName := scripts[s].name
+end;
+
+{-------- erro ----------}
+
+function getError (s : integer) : boolean;
+begin
+    getError := scripts[s].error
+end;
+
+procedure setError (s : integer; b : boolean);
+begin
+    scripts[s].error := b
+end;
+
+{--------- FIM ----------}
+
+function isTerminated (s : integer) : boolean;
+begin
+    isTerminated := scripts[s].finish
+end;
+
+procedure setTerminated (s : integer; b : boolean);
+begin
+    scripts[s].finish := b
+end;
+
+{-------- silent --------}
+
+function getSilent (s : integer) : boolean;
+begin
+    getSilent := scripts[s].silent
+end;
+
+procedure setSilent (s : integer; b : boolean);
+begin
+    scripts[s].silent := b
+end;
+
+{-------- debug ---------}
+
+function getDebug (s : integer) : boolean;
+begin
+    getDebug := scripts[s].debug
+end;
+
+procedure setDebug (s : integer; b : boolean);
+begin
+    scripts[s].debug := b
+end;
+
+{------ IO status -------}
+
+function getIOStatus (s : integer) : integer;
+begin
+    getIOStatus := scripts[s].io
+end;
+
+procedure setIOStatus (s : integer; v : integer);
+begin
+    scripts[s].io := v
+end;
+
+{------ compilado -------}
+
+function isCompiled (s : integer) : boolean;
+begin
+    isCompiled := scripts[s].compiled
+end;
+
+procedure setCompiled (s : integer; b : boolean);
+begin
+    scripts[s].compiled := b
+end;
+
+{---- rotina externa ----}
+
+function getExternalFunc (s : integer) : ExternalFunc;
+begin
+    getExternalFunc := @scripts[s].extFunc
+end;
+
+procedure setExternalFunc (s : integer; f : ExternalFunc);
+begin
+    scripts[s].extFunc := f
+end;
+
+{  indicador de retorno  }
+
+function returnSeen (s : integer) : boolean;
+begin
+    returnSeen := scripts[s].return;
+    scripts[s].return := false
+end;
+
+procedure setReturn (s : integer; b : boolean);
+begin
+    scripts[s].return := b
+end;
+
+{---------- PC ----------}
+
+function getPC (s : integer) : integer;
+begin
+    getPC := scripts[s].PC
+end;
+
+function getPC : integer;
+begin
+    getPC := scripts[CS].PC
+end;
+
+procedure setPC (s : integer; pc : integer);
+begin
+    scripts[s].PC := pc
+end;
+
+procedure setPC (pc : integer);
+begin
+    scripts[CS].PC := pc
+end;
+
+{----- Avança o PC ------}
+
+procedure advancePC (s : integer);
+begin
+    scripts[s].PC := scripts[s].nPC       { Isto faz a execução andar! }
+end;
+
+{------ próximo PC ------}
+
+procedure setnPC (s : integer; nPC : integer);
+begin
+    scripts[s].nPC := nPC
+end;
+
+procedure setnPC (nPC : integer);
+begin
+    scripts[CS].nPC := nPC
+end;
+
+{-------- linha ---------}
+
+function getLine (s : integer; lin : integer) : string;
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        getLine := copy (PCodeRec (scripts[s].code.Items[lin])^.line, 1, PCodeRec (scripts[s].code.Items[lin])^.size)
+    else
+        getLine := ''
+end;
+
+{-------- salto ---------}
+
+function getGoTo (s : integer; lin : integer) : integer;
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        getGoTo := PCodeRec (scripts[s].code.Items[lin])^.jump
+    else
+        getGoTo := 0
+end;
+
+function getGoTo (lin : integer) : integer;
+begin
+    if (lin > 0) and (lin < scripts[CS].code.Count) then
+        getGoTo := PCodeRec (scripts[CS].code.Items[lin])^.jump
+    else
+        getGoTo := 0
+end;
+
+procedure setGoTo (s : integer; lin : integer; jump : integer);
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        PCodeRec (scripts[s].code.Items[lin])^.jump := jump
+end;
+
+{------- comando --------}
+
+function getCachedCommand (s : integer; lin : integer) : PSymtbEntry;
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        getCachedCommand := PCodeRec (scripts[s].code.Items[lin])^.command
+    else
+        getCachedCommand := NIL
+end;
+
+procedure setCachedCommand (s : integer; lin : integer; cmd : PSymtbEntry);
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        PCodeRec (scripts[s].code.Items[lin])^.command := cmd
+    else
+        PCodeRec (scripts[0].code.Last)^.command := cmd
+end;
+
+{------- escopo ---------}
+
+function getScope (s : integer; lin : integer) : PSymtbEntry;
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        getScope := PCodeRec (scripts[s].code.Items[lin])^.scope
+    else
+        getScope := NIL
+end;
+
+procedure setScope (s : integer; lin : integer; sc : PSymtbEntry);
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        PCodeRec (scripts[s].code.Items[lin])^.scope := sc
+    else
+        PCodeRec (scripts[0].code.Last)^.scope := sc
+end;
+
+{---- próxima linha -----}
+
+function getFollowing (s : integer; lin : integer) : integer;
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        getFollowing := PCodeRec (scripts[s].code.Items[lin])^.next
+    else
+        getFollowing := -1
+end;
+
+procedure setFollowing (s : integer; lin : integer; next : integer);
+begin
+    if (lin > 0) and (lin < scripts[s].code.Count) then
+        PCodeRec (scripts[s].code.Items[lin])^.next := next
+end;
+
+{----- última linha -----}
+
+function finalLine (s : integer) : integer;
+begin
+    finalLine := scripts[s].final
+end;
+
+{--------------------------------------------------------}
+{                   limpa um script
+{--------------------------------------------------------}
+
+procedure freeScript (s : integer);
+var
+    i : integer;
+begin
+    if (s < 0) or (s > MAXSCRIPT) then exit;
+
+    symbolTable.removeAllSymbols (s);
+
+    with scripts[s] do
+    begin
+        for i := code.Count - 1 downto 1 do
+        begin
+            if code.Items[i] <> NIL then
+            begin
+                DISPOSE (code.Items[i]);
+                code.Items[i] := NIL;
+                code.Delete (i)
+            end
+        end;
+
+        empty     := true;
+        path      := '';
+        name      := '';
+        compiled  := false;
+        extFunc   := NIL;
+        PC        := 0;
+        nPC       := 0;
+        return    := false;
+        error     := false;
+        debug     := false;
+        finish    := false;
+        silent    := false;
+        io        := 0
+    end
+end;
+
+{--------------------------------------------------------}
+{             imprime um script já carregado
+{--------------------------------------------------------}
+
+procedure printScript (s : integer);
+var
+    i            : integer;
+    jump, line,
+    next         : string;
+    p            : PCodeRec;
+begin
+    if (s < 0) or (s > MAXSCRIPT) then exit;
+
+    for i := 1 to finalLine (s) do
+    begin
+        p := PCodeRec (scripts[s].code.Items[i]);
+
+        str (p^.jump : 2, jump);
+        str (p^.next : 2, next);
+        str (i : 2, line);
+
+        scWrite (line + ': (' + jump + ', ' + next + ')   ' + p^.line)
+    end
+end;
+
+{--------------------------------------------------------}
+{             carrega as linhas de um script
+{--------------------------------------------------------}
+
+function fillScript (s : integer; pathname : string; list : TStringList; cmd : boolean) : boolean;
+label
+    error;
+var
+    area, last  : PCodeRec;
+    p, len, lin : integer;
+    f           : text;
+    senao, se   : integer;
+    line, tr    : string;
+
+    {----------------------------------------------------}
+    {        verifica se chegou ao fim da fonte
+    {----------------------------------------------------}
+
+    function endOfScript : boolean;
+    begin
+        if list = NIL then
+            endOfScript := Eof (f)
+        else
+            endOfScript := lin >= list.Count
+    end;
+
+    {----------------------------------------------------}
+    {        obtém a próxima linha da fonte
+    {----------------------------------------------------}
+
+    function getLine : string;
+    var
+        s : string;
+    begin
+        if list = NIL then
+        begin
+            readln (f, s);
+        end
+        else begin
+            s := list.Strings[lin];
+            INC (lin)
+        end;
+
+        if s = '' then s := ' ';
+
+        getLine := s
+    end;
+
+begin
+    if pathname <> '' then
+    begin
+{$I-}
+        Assign (f, pathname);
+        Reset (f);
+
+        if IoResult <> 0 then goto error;
+{$I+}
+    end;
+
+    last := NIL; lin := 0; senao := -1; se := -1;
+
+    while not endOfScript do
+    begin
+        try NEW (area) except area := NIL end;
+
+        if area = NIL then goto error;
+
+        line := getLine;
+
+        if cmd then                    { Ajeita o comando SENAO SE - formato antigo }
+        begin
+            tr := lex.normalize (trim (line));
+
+            if copy (tr, 1, 5) = 'SENAO' then
+                senao := lin;
+
+            if copy (tr, 1, 3) = 'SE ' then
+                se := lin;
+
+            if senao + 1 = se then     { SENÃO SE em linhas consecutivas: a segunda vira continuação da primeira }
+            begin
+                line := '&' + line;
+                se := -1; senao := -1
+            end
+        end;
+
+        area^.line := line; len := length (line);
+
+        if (last <> NIL) and (area^.line[1] = '&') then
+        begin
+            p := 2;
+
+            while (p <= len) and (CANONIC[area^.line[p]] = BLNK) do   { Pula os separadores iniciais }
+                INC (p);
+
+            if p <= len then
+            begin
+                last^.line := copy (last^.line, 1, last^.size) + ' ' + copy (area^.line, p, len - p + 1) + LF;
+                last^.size := length (last^.line) - 1
+            end;
+
+            INC (last^.cont)
+        end
+        else begin
+            last := area
+        end;
+
+        with area^ do
+        begin
+            line    := line + LF;
+            size    := len;            { Sem o LF }
+            cont    := 1;
+            jump    := 0;
+            next    := 0;
+            command := NIL;
+            scope   := NIL
+        end;
+
+        scripts[s].code.Add (area)
+    end;
+
+    if pathname <> '' then
+        {$I-} close (f); {$I+}
+
+    with scripts[s] do
+    begin
+        empty    := false;
+        path     := pathname;
+        name     := ExtractFileName (pathname);
+        compiled := false;
+        final    := code.Count - 1;
+        extFunc  := NIL;
+        PC       := 1;
+        nPC      := 0;
+        error    := false;
+        return   := false;
+        finish   := false;
+        silent   := false;
+        debug    := false;
+        io       := 0
+    end;
+
+    fillScript := true;
+    exit;
+
+error:
+    fillScript := false
+end;
+
+{--------------------------------------------------------}
+{    verifica se um script está carregado em memória
+{--------------------------------------------------------}
+
+function searchscript (name: string) : integer;
+var
+    i    : integer;
+    path : string;
+begin
+    path := maiuscAnsi (ExpandFileName (name));
+
+    for i := 1 to MAXSCRIPT do
+    begin
+        if not scripts[i].empty and (scripts[i].path = path) then
+        begin
+            searchscript := i;     { O script já está em memória }
+            exit
+        end
+    end;
+
+    searchscript := -1
+end;
+
+{--------------------------------------------------------}
+{   carrega, na memória, o script contido em uma lista
+{--------------------------------------------------------}
+
+function loadScript (script : TStringList) : integer; overload;
+label
+    error;
+var
+    s, i : integer;
+begin
+    s := -1;                            { Procura um lugar vago na tabela de scripts }
+
+    for i := 1 to MAXSCRIPT do
+    begin
+        if scripts[i].empty then
+        begin
+            s := i;
+            break
+        end
+    end;
+
+    if s < 0 then
+    begin
+        loadScript := -1;
+        exit
+    end;
+
+    if not fillScript (s, '', script, false) then goto error;
+
+    loadScript := s;
+    exit;
+
+error:
+    freeScript (s);
+    loadScript := -1
+end;
+
+{--------------------------------------------------------}
+{  carrega, na memória, o script contido em um arquivo
+{--------------------------------------------------------}
+
+function loadScript (name: string): integer; overload;
+label
+    error;
+var
+    s, i      : integer;
+    path, ext : string;
+begin
+    path := maiuscAnsi (ExpandFileName (name));
+    ext  := maiuscAnsi (copy (name, length (name) - 3, 4));
+
+    s := -1;                         { Procura um lugar vago na tabela de scripts }
+
+    for i := 1 to MAXSCRIPT do
+    begin
+        if scripts[i].empty then
+        begin
+            if s < 0 then            { Guarda o primeiro espaço vago que achar }
+                s := i
+        end
+        else begin
+            if scripts[i].path = path then
+            begin
+                loadScript := i;     { O script já está em memória }
+                exit
+            end
+        end
+    end;
+
+    if s < 0 then
+    begin
+        loadScript := -1;            { Não achou }
+        exit
+    end;
+
+    if not fillScript (s, path, NIL, ext = '.CMD') then goto error;
+
+    loadScript := s;
+    exit;
+
+error:
+    freeScript (s);
+    loadScript := -1
+end;
+
+{--------------------------------------------------------}
+{         inicializa a tabela de scripts
+{--------------------------------------------------------}
+
+procedure initScriptTable;
+var
+    s : integer;
+begin
+    for s := 0 to MAXSCRIPT do              { Limpa inclusive o script 0 (interativo) }
+    begin
+        with scripts[s] do
+        begin
+            empty     := true;
+            path      := '';
+            name      := '';
+            compiled  := false;
+
+            code      := TList.Create;
+            code.Add (NIL);                 { A linha 0 não é usada, fica em branco }
+            final     := 0;
+
+            PC        := 1;
+            nPC       := 0;
+            error     := false;
+            finish    := false;
+            silent    := false;
+            debug     := false;
+            io        := 0
+        end
+    end;
+
+    setCS (0)
+end;
+
+{--------------------------------------------------------}
+{           declara os arquivos como fechados
+{--------------------------------------------------------}
+
+procedure initFileTable;
+var
+    fd : integer;
+begin
+    for fd := 0 to MAXFILES - 1 do
+        files[fd].isOpen := false;
+
+    { O descritor -1 corresponde ao teclado, sempre aberto }
+
+    with files[-1] do
+    begin
+        typeof := F_KEY;
+        isOpen := true
+    end
+end;
+
+{--------------------------------------------------------}
+{           inicializa o interpretador
+{--------------------------------------------------------}
+
+procedure initInterpreter;
+var
+    fd, s                       : integer;
+    year, month, day,
+    hour, minute, second, cent  : word;
+begin
+    SP           := 0;
+    BP           := 0;
+    CS           := 0;
+    CF           := NIL;
+
+    verbose      := true;
+    compiling    := false;
+
+    nDicNode     := 0;
+    nOperand     := 0;
+    nObjRec      := 0;
+    nNewCommands := 0;
+
+    for fd := 0 to MAXFILES - 1 do
+    begin
+        with files[fd] do
+        begin
+            if isOpen then
+            begin
+{$I-}
+                case typeof of
+                    F_NET:  begin
+                                fimBufRede (pbuf);
+                                fechaConexao (sockfd)
+                            end;
+                    F_SER:  begin
+                            end;
+                    F_FILE:  close (filefd)
+                end
+{$I+}
+            end;
+
+            isOpen := false
+        end
+    end;
+
+    for s := 0 to MAXSCRIPT do
+    begin
+        if scripts[s].empty then
+            continue;
+
+        freeScript (s)
+    end;
+
+    getDate (year, month,  day,    week0);
+    gettime (hour, minute, second, cent);
+
+    time0 := ((hour * 60 + minute) * 60 + second) * 100 + cent
+end;
+
+begin
+    initScriptTable;
+    initFileTable;
+    initInterpreter
+end.

@@ -1,0 +1,8 @@
+!22050
+CTADBSEL       Deseja bloquear todos os selecionados?
+CTADLSEL       Deseja liberar todos os selecionados?
+CTBLOREM       Deseja bloquear este remetente no Mata Spam?
+CTLIBREM       Deseja liberar este remetente no Mata Spam?
+CTAJFL05       U - Preparar resposta automática
+CTAJFL11       CTRL + L - Liberar o remetente no MataSpam
+CTAJFL14       CTRL + B - Bloquear o remetente no MataSpam

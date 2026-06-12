@@ -1,0 +1,334 @@
+{-------------------------------------------------------------}
+{     CartaVox - Interface de rede
+{-------------------------------------------------------------}
+
+unit CarRede;
+
+interface
+
+uses
+    dvcrt,
+    dvWin,
+    sysutils,
+    windows,
+    winSock,
+    carSsl,
+    carMsg,
+    carVars;
+
+function abreConexao (nomeComput: string; porta: integer; mudo: boolean): integer;
+function ativaSSL (sock: integer): boolean;
+procedure fechaConexao (sock: integer);
+procedure netDebug (s: pchar; tam: integer);
+function receive (sock: integer; buf: pChar; len: integer; flags: integer): integer;
+function sendBuf (sock: integer; buf: pchar; len: integer; flags: integer): integer;
+function temDadoSock (sock: integer): boolean;
+procedure abreRede;
+procedure fechaRede;
+
+implementation
+
+{-------------------------------------------------------------}
+{       abre a rede
+{-------------------------------------------------------------}
+
+procedure abreRede;
+var
+    wsaData: TWSADATA;
+begin
+    if WSAStartup ($0101, wsaData) <> 0 then
+        begin
+            msgBaixo ('CTERRCOM');  {'Não consegui ativar o sistema de comunicações do micro'}
+            exit;
+        end;
+end;
+
+{-------------------------------------------------------------}
+{       Fecha a rede
+{-------------------------------------------------------------}
+
+procedure fechaRede;
+begin
+    WSACleanup;
+end;
+
+{-------------------------------------------------------------}
+{                  ve se internet ativa
+{-------------------------------------------------------------}
+
+function internetAtiva: boolean;
+var
+    HEnt: pHostEnt;
+    HName: array [0..100] of char;
+    IPAddr: string;
+    i: integer;
+begin
+    internetAtiva := false;
+    if GetHostName(HName, SizeOf(HName)) = 0 then
+        begin
+            HEnt := GetHostByName(HName);
+            if (HEnt = NIL) or (HEnt^.h_addr_list = NIL) then
+                IPaddr := '0.0.0.0'
+            else
+                for i := 0 to HEnt^.h_length - 1 do
+                    IPaddr := Concat(IPaddr,
+                                   IntToStr(Ord(HEnt^.h_addr_list^[i])) + '.');
+            delete (IPaddr, Length(IPaddr), 1);
+            if (IPaddr <> '127.0.0.1') and (IPaddr <> '0.0.0.0') then
+                internetAtiva := true
+            else
+                 begin
+                     sintWriteln (IPaddr);
+                     sintWriteln (' - IP inválido indica internet desativada');
+                 end;
+          end;
+end;
+
+{-------------------------------------------------------------}
+{       abre a conexao
+{-------------------------------------------------------------}
+
+function abreConexao (nomeComput: string; porta: integer; mudo: boolean): integer;
+var
+    localAddr,                          { descricao dos endereços local e remoto }
+    remoteAddr: sockaddr_in;
+    enderHost: longint;
+    hip: phostent;                        { retorna o endereco IP do soquete }
+    ret: integer;
+    s: string;
+    hostName, localName: array [0..128] of char;
+    sock: integer;
+//  linger: TLinger;
+
+begin
+    abreConexao := -1;
+
+    //Retorna mais rápido quando é configuração da lixeira ou não tem nome de servidor
+    if (nomeComput= '') or (nomeComput='pop3.servidor.com') or (nomeComput='smtp.servidor.com') then
+        begin
+            mensagem ('CTSEMSRV', 1);  {'Não consegui achar um servidor com este nome'}
+            exit;
+        end;
+
+    {************ Cria soquete ***********}
+
+    if (not SOWindows) or internetAtiva then
+        sock := socket (AF_INET, SOCK_STREAM, IPPROTO_TCP)
+     else
+        sock := -1;
+
+    if sock = -1 then
+        begin
+            msgBaixo ('CTNAOCON');  {'Não consegui realizar a conexao'}
+            msgBaixo ('CTNAOSOQ');  {'Não consegui criar soquete'}
+            exit;
+        end;
+
+    {************ Aloca uma porta para o processamento ***********}
+
+    fillchar (localAddr, sizeof (localAddr), 0);
+    with localAddr do
+        begin
+            sin_family := AF_INET ;
+            sin_addr.s_addr := htonl (INADDR_ANY);
+            sin_port := htons (0);
+        end;
+
+    ret := bind (sock, localAddr, sizeof(localAddr));
+    if (ret = -1)  then
+        begin
+            mensagem ('CTERBIND', 2);  {'Não consegui alocar porta (bind)'}
+            exit;
+        end;
+
+    {************ Descobre endereco IP do computador ***********}
+
+    strPCopy (hostName, nomeComput);
+    if (hostName[0] >= '0') and (hostName[0] <= '9')  then
+        enderHost := inet_addr (hostName)
+    else
+        begin
+            hip := gethostbyname (hostName);
+            if (hip = NIL)  then
+                begin
+                    while keypressed do readkey;
+                    mensagem ('CTSEMSRV', 1);  {'Não consegui achar um servidor com este nome'}
+                    exit;
+                end;
+            move (hip^.h_addr_list^^, enderHost, 4);
+        end;
+
+    {************ Conecta computador ***********}
+
+    fillchar (remoteAddr, sizeof (remoteAddr), 0);
+    with remoteAddr do
+        begin
+            sin_family := AF_INET;
+            move (enderHost, sin_addr, 4);
+            sin_port := htons (porta);
+        end;
+
+    with remoteAddr.sin_addr do
+        begin
+            s := 'Conectando com ';
+            write (s);
+            writeln (strPas (inet_ntoa (in_addr(enderHost))));
+        end;
+
+    if (connect (sock, remoteAddr, sizeof (remoteAddr)) = -1) then
+        begin
+            while keypressed do readkey;
+            msgBaixo ('CTNAOCON');  {'Não consegui realizar a conexao'}
+            exit;
+        end;
+
+    gethostname (localName, 80);
+    computLocal := strPas (localName);
+
+    if not mudo then
+        mensagem ('CTCONOK', 1);  {'Conexão realizada'}
+
+    abreConexao := sock;
+    sslAtivado := false;
+end;
+
+{-------------------------------------------------------------}
+{                  ativa camada SSL ou TLS
+{-------------------------------------------------------------}
+
+function ativaSSL (sock: integer): boolean;
+begin
+    sslAtivado := inicializa_ctx_SSL and conectaSSL (sock);
+    ativaSSL := sslAtivado;
+end;
+
+{-------------------------------------------------------------}
+{       fecha a conexão
+{-------------------------------------------------------------}
+
+procedure fechaConexao (sock: integer);
+begin
+    closeSocket (sock);
+    if sslAtivado then
+        begin
+            fechaSSL;
+            sslAtivado := false;
+        end;
+end;
+
+{-------------------------------------------------------------}
+{       ve se chegou dado na rede
+{-------------------------------------------------------------}
+
+function temDadoSock (sock: integer): boolean;
+var
+    entradas: TFDset;
+    tempoZero: timeVal;
+begin
+    with tempoZero do
+        begin
+            tv_sec := 0;
+            tv_usec := 0;
+        end;
+
+    keypressed;    { força execução do scheduler do Windows }
+
+    FD_ZERO (entradas);         { monitora soquete }
+    FD_SET (sock, entradas);
+    select (sock+1, @entradas, NIL, NIL, @tempoZero);
+
+    temDadoSock := FD_ISSET (sock, entradas);
+end;
+
+{-------------------------------------------------------------}
+{       recv nao bloqueante
+{-------------------------------------------------------------}
+
+function receive (sock: integer; buf: PChar; len: integer; flags: integer): integer;
+var
+    entradas: TFDset;
+    tempoMax: timeVal;
+    esperando: boolean;
+    lidos, l: integer;
+    c: char;
+begin
+    with tempoMax do
+        begin
+            tv_sec := 0;
+            tv_usec := 500;
+        end;
+
+    lidos := 0;
+    esperando := true;
+    while esperando do
+        begin
+            keypressed;    { força execução do scheduler do Windows }
+
+            FD_ZERO (entradas);         { monitora soquete }
+            FD_SET (sock, entradas);
+            select (sock+1, @entradas, NIL, NIL, @tempoMax);
+
+            if (sslAtivado and temDadoSsl) or FD_ISSET (sock, entradas)  then
+                begin
+                    if sslAtivado then
+                        l := RecebeSSL (buf, len)
+                    else
+                        l := winSock.recv (sock, buf^, len, flags);
+
+                    if l < 0 then break;
+
+                    lidos := lidos + l;
+                    if (l = 0) or (buf[l-1] = #$0a) then
+                        break;
+
+                    buf := buf + l;
+                    len := len - l;
+                end;
+
+            if keypressed and esperando then
+                begin
+                    c := readkey;
+                    insertKeyBuf (c);
+                    if c = ESC then
+                        begin
+                            lidos := 0;
+                            esperando := false;
+                        end;
+                end;
+        end;
+
+    result := lidos;
+end;
+
+
+{-------------------------------------------------------------}
+{       envia para TCP/IP
+{-------------------------------------------------------------}
+
+function sendBuf (sock: integer; buf: pchar; len: integer; flags: integer): integer;
+begin
+    if sslAtivado then
+        sendBuf := enviaSSL (buf, len)
+    else
+        sendBuf := winsock.send (sock, buf^, len, flags);
+end;
+
+{-------------------------------------------------------------}
+{       escreve texto de debug
+{-------------------------------------------------------------}
+
+procedure netDebug (s: pchar; tam: integer);
+begin
+    if not debug then exit;
+    textBackGround (BROWN);
+    write ('>>>');
+    if copy (s, 1, 5) = 'PASS ' then
+        writebuf ('PASS ...'+#$0d#$0a, 10)
+    else
+        writebuf (s, tam);
+    textBackGround (BLACK);
+end;
+
+{-------------------------------------------------------------}
+
+end.

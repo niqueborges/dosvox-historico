@@ -1,0 +1,226 @@
+!22050
+AT_ABRIR	Abrir
+AT_AJUDA	Ajuda
+AT_AUMVELOCIDADE	Aumentar velocidade
+AT_AUMVOLUME	Aumentar volume
+AT_AVANCAPAGINA	Avançar página
+AT_AVANCAR	Avançar
+AT_BIBLIOTECA	Biblioteca
+AT_BUSCAR	Buscar
+AT_CONFIGURACOES	Configurações
+AT_DIMVELOCIDADE	Diminuir velocidade
+AT_DIMVOLUME	Diminuir volume
+AT_INDICE	Índice do livro
+AT_INFO	Informações sobre o texto
+AT_LISTARMARCADORES	Listar marcadores
+AT_NIVELANT	Nível anterior
+AT_NOVOMARCADOR	Incluir marcador
+AT_PAGINA	Página
+AT_PLAYPAUSE	Ler livro / Pausar
+AT_PROXNIVEL	Próximo nível
+AT_RETROCEDER	Retroceder
+AT_SOLETRAR	Soletrar trecho
+AT_VOLTAPAGINA	Voltar página
+BT_ADD	Incluir
+BT_ADDCAT	Incluir Categoria
+BT_ADDMAR	Incluir Marcador
+BT_ADDTIT	Incluir Título
+BT_BIBLIO	Biblioteca
+BT_CANCEL	Cancelar
+BT_CLOSE	Fechar
+BT_COMENT	Comentário do Marcador
+BT_CONFIG	Configurações
+BT_DELCAT	Remover Categoria
+BT_DELMAR	Remover Marcador
+BT_DELTIT	Remover Título
+BT_EDCAT	Editar Categoria
+BT_EDTIT	Editar Título
+BT_HELP	Ajuda
+BT_INDEX	Índice do Livro
+BT_INFO	Informações sobre o texto
+BT_LIST	Listar
+BT_NEXT	Avançar
+BT_NEXTLEVEL	Próximo Nível
+BT_NO	Não
+BT_OK	Ok
+BT_OPEN	Abrir
+BT_PAGE	Página
+BT_PLAY	Tocar
+BT_REW	Retroceder
+BT_REWLEVEL	Nível Anterior
+BT_SAVE	Salvar
+BT_SEARCH	Buscar
+BT_STOP	Parar
+BT_WHITSOUND	Com som
+BT_WITHOUTSOUND	Tirar som
+BT_YES	Sim
+CB_BGCOLOR	Cor do fundo
+CB_DISTBGCOLOR	Cor do fundo de destacado
+CB_DISTFONTCOLOR	Cor da fonte de destacado
+CB_FONTCOLOR	Cor da fonte
+CB_FONTLEN	Tamanho da fonte
+CB_NAMEVOICE	Nome da Voz
+CB_PREFSOUND	Preferência de som
+CK_CASE	Diferenciar maiúsculas de minúsculas
+CK_ECO	Eco da Digitação
+CK_SHOWNOTES	Exibir notas de rodapé
+CK_SHOWPNUMBER	Exibir números de página
+DESC_ABREPARENTESE	Abre parêntese
+DESC_CEDILHA	Cedilha
+DESC_DOISPONTOS	Dois pontos
+DESC_FECHAPARENTESE	Fecha parêntese
+DESC_PTVIRG	Ponto e vírgula
+DESC_SUBLINHADO	Sublinhado
+DESC_TRACO	Traço
+DESC_VIRGULA	Virgula
+DESC_VK_DOWN	Seta para baixo
+DESC_VK_GREATER	Maior que
+DESC_VK_LEFT	Seta para a esquerda
+DESC_VK_LESS	Menor que
+DESC_VK_MINUS	Subtração
+DESC_VK_PAGE_DOWN	Peigi daun
+DESC_VK_PAGE_UP	Peigi âpy
+DESC_VK_PLUS	Soma
+DESC_VK_RIGHT	Seta para a direita
+DESC_VK_UP	Seta para cima
+DESC_TIL_A	Til A
+DESC_TIL_O	Til O
+DESC_CIRCUNFLEXO_A	Circunflexo A
+DESC_CIRCUNFLEXO_E	Circunflexo E
+DESC_CIRCUNFLEXO_O	Circunflexo O
+DESC_AGUDO_A	Agudo A
+DESC_AGUDO_E	Agudo E
+DESC_AGUDO_I	Agudo I
+DESC_AGUDO_O	Agudo O
+DESC_AGUDO_U	Agudo U
+DESC_CRASE_A	Crase A
+INF_AUTHR	Autor
+INF_DEPTH	Níveis
+INF_ENTRY	entradas
+INF_INDEX	Índice
+INF_PAGES	Páginas
+INF_PUBLS	Publicação
+INF_DATE	Data
+INF_CREAT	Criação
+INF_TEXT	Texto
+INF_TIME	Duração
+INF_TITLE	Título
+INF_TOPIC	tópicos
+LBL_CAT	Categorias
+LBL_COMENT	Comentário
+LBL_DIR	Diretórios
+LBL_DIRACIMA	Diretório acima
+LBL_DISTEXTEXAMPLE	Exemplo de texto destacado.
+LBL_EXAMPLE	Exemplo
+LBL_FILE	Arquivos
+LBL_NAME	Nome
+LBL_PATH	Caminho
+LBL_SENT	Sentido
+LBL_SPELLPAR	Parágrafo a ser soletrado quando o usuário teclar 'S'.
+LBL_SPELLTEXT	Texto a soletrar. Navegue utilizando setas.
+LBL_TEXTEXAMPLE	Exemplo de texto.
+LBL_TIT	Títulos
+LST_INF	Infantil
+LST_POL	Policial
+LST_ROM	Romance
+LST_SHORTCUTLST	Lista de Atalhos
+MARCLIST	Lista de Marcadores
+MSG_ATUALPATH	O caminho atual é
+MSG_AUDIOERROR	Erro Audio
+MSG_CANTBACKP	Não foi possível recuar um parágrafo.
+MSG_CANTCONNECT	Não foi possível se conectar.
+MSG_CANTOPENBOOK	Não foi possível abrir o livro!
+MSG_CANTPLAYPB	Não foi possível tocar este trecho do livro.
+MSG_CANTRUNSINT	Não foi possível executar o sintetizador de voz!
+MSG_CANTSTATECONT	Não foi possível reverter estado contínuo.
+MSG_ERRORGRAPH	Ocorreu um erro ao iniciar a interface gráfica.
+MSG_FILEBUTNOTFOUND	Arquivo do botão não encontrado.
+MSG_INVALIDFILE	Arquivo Inválido!
+MSG_INVALIDPAGE	Página inexistente ou inválida!
+MSG_NOBOOKLOADED	Nenhum livro carregado!
+MSG_NOBOOKPAGE	Livro sem numeração de página!
+MSG_NOFILESELECTED	Nenhum arquivo foi selecionado.
+MSG_NOHELP	Erro ao executar ajuda
+MSG_NOPAGE	Nenhum número de página digitado!
+MSG_NOTEXT	Nenhum texto digitado no diálogo de pesquisar!
+MSG_NULLPATH	O caminho atual está vazio. Você ainda não selecionou um diretório.
+MSG_TEXTNOTFOUND	Texto não encontrado no livro!
+MSG_UNKHOST	Host Desconhecido
+OPT_BACK	para trás
+OPT_FRONT	para frente
+OPT_RECAUDIO	(somente áudio gravado)
+OPT_RECSOUND	Preferencialmente som original (gravado)
+OPT_SINTSOUND	Preferencialmente som sintetizado
+OPT_WITHOUTSOUND	Sem som
+PROG_OPENBOOK	Abrindo livro. Aguarde!
+ROT_ABA	Aba
+ROT_ATALHOS	Lista de Atalhos
+ROT_BIBLIO	Biblioteca
+ROT_BOOKBEGIN	Início do livro
+ROT_BOOKEND	Fim do livro
+ROT_CHECKED	Marcado
+ROT_DAISY	Tocador Mec Daisy.
+ROT_DEIZI	Tocador Mec Dêizi.
+ROT_EDITBOX	Caixa de Edição
+ROT_ENTEREXIT	Tecle Enter para sair
+ROT_ESCHELP	ESC para fechar esta ajuda.
+ROT_ESCWINDOW	Tecle ESC para sair desta janela
+ROT_F1	F1 para ajuda.
+ROT_F9	F9 para a lista completa de atalhos.
+ROT_FILESELECTED	Arquivo Selecionado
+ROT_HELPMECDEIZI	Ajuda do Tocador Mec Dêizi.
+ROT_INFOUPDN	Utilize seta para cima ou para baixo para ouvir as informações.
+ROT_LEVEL	Nível
+ROT_MARC	Marcadores
+ROT_NOTCHECKED	Não marcado
+ROT_OPENFILE	Abrir arquivo. Utilize TAB e SHIFT + TAB para navegar ou F1 para ajuda.
+ROT_PAGE	Página
+ROT_SAVEFILE	Salvar arquivo. Utilize TAB e SHIFT + TAB para navegar ou F1 para ajuda.
+ROT_SEARCH	Digite um texto e tecle Enter para pesquisar no livro.
+ROT_SETA	Utilize as setas horizontais para caminhar entre as abas. F1 para ajuda.
+ROT_SETAESC	Utilize as setas para caminhar entre os atalhos. ESC para sair.
+ROT_SETAVERT	Utilize as setas verticais para navegar
+ROT_SETCOMENT	Utilize as setas horizontais para soletrar e controu F1 para ler comentario
+ROT_SETPAGE	Digite o número da página e tecle Enter.
+ROT_SIMNAOEXIT	Tecle Enter para sim e ESC para não.
+ROT_SLDCONTROL	Controle Deslizante
+ROT_TAB	Utilize Tab para navegar pelas opções
+ROT_TABBED	Lista de Abas
+ROT_TABESC	Utilize Tab para navegar pelas opções e Esc para sair.
+ROT_TABSHIFTTAB	Utilize TAB e SHIFT + TAB para navegar pelas opções.
+ROT_TITLE	Título
+ROT_UPDOWN	Utilize seta para cima ou para baixo para escolher uma parte do livro.
+ROT_VERIFYBOX	Caixa de Verificação
+ROT_VERSION	Tocador mec dêizy. Versão 1 ponto 0
+SL_SPEEDGRAV	Velocidade do áudio gravado
+SL_SPEEDSINT	Velocidade do sintetizador
+SL_VOL	Volume
+TIT_ADDMARC	Incluir Marcador
+TIT_BIBLIO	Biblioteca
+TIT_BOOKINDEX	Índice do Livro
+TIT_COMENTMARC	Comentário associado ao marcador
+TIT_CONFIG	Configurações
+TIT_HELP	Ajuda
+TIT_INFO	Informações sobre o Livro
+TIT_NAMEMARC	Nome associado ao marcador
+TIT_OPENFILE	Abrir arquivo
+TIT_SAVEFILE	Salvar aquivo
+TIT_SEARCH	Pesquisar
+TIT_SETPAGE	Página
+TIT_SHOWCOMENT	Exibição de Comentário
+TIT_SPELL	Soletração
+TP_SINT	Sintetizador
+TP_SOUND	Som
+TP_TEXT	Elementos do Texto
+TP_VIEW	Visualização
+VK_DOWN	Seta para baixo
+VK_PAGE_DOWN	Pg Dn
+VK_PAGE_UP	Pg Up
+VK_SPACE	Espaço
+VK_UP	Seta para cima
+VOXTXT_COLUMN	Coluna
+VOXTXT_DEL	Del
+VOXTXT_EMPTYLINE	Linha em branco
+VOXTXT_LINE	Linha
+VOXTXT_NEWLINE	Nova linha
+

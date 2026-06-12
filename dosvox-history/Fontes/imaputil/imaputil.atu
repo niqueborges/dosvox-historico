@@ -1,0 +1,9 @@
+[PROGREDE]
+Rede6=I,@\IMAPUTIL.EXE,-RDIMAP,Acesso IMAP ao correio eletrônico
+Rede16=G,@\INTERVOX.EXE,-RDINTER,Gerador de homepages Intervox
+
+[IMAPUTIL]
+DIRIMAPUTIL=@\som\imaputil
+EDITOR=@\edivox.exe
+NAVEGADOR=@\edivox.exe
+

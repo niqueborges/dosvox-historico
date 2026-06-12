@@ -1,0 +1,17 @@
+1. Usar Python3
+
+2. O sintetizador LianeTTS deve estar no diretório
+
+		"C:\winvox\Lianetts\"
+
+3. Em uma janela de comandos, digitar
+
+		pip install comtypes
+
+   para que o programa tenha acesso às vozes do Windows.
+
+4. Executar MathReader.py, com duplo clique ou digitando
+
+		python MathReader.py
+
+   em uma janela de comandos.

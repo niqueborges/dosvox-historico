@@ -1,0 +1,90 @@
+!22050
+IUINIC    Imaputil - versão
+IUOPCAO   As opções são:
+IUOP_ESC  ESC - Cancelar
+IUSELSET  Selecione com as setas a opção desejada:
+IUCRIA    C - criar pasta
+IUSELPAS  P - escolher pasta
+IUFOLPAS  F - folhear pasta
+IUAPAGP   A - apagar pasta
+IURENPAS  N - renomear pasta
+IUINFOP   I - informa pasta atual
+IUNOVLOG  L - novo login
+IUOPZERA  Z - Zerar uma pasta
+IUINFO    I - informações sobre a carta
+IUOPAPAG  A - apagar carta
+IUOPMOVE  M - mover carta para outra pasta
+IUOPCOPI  C - copiar carta para outra pasta
+IUOPGUAR  G - guardar na pasta de recebidas do cartavox
+IUABRCAR  ENTER - abrir a carta
+IUNAOSEI  Não sei fazer isso não
+IUFIM     Fim do processamento
+IUPVAZIA  A pasta está vazia
+IUMOMENT  Um momento...
+IUERRENV  Erro ao trazer os envelopes
+IUABRIND  Abrindo
+IUDATA    Data:
+IUENVPOR  Enviado por:
+IUASSUNT  Assunto:
+IUAPTENT  Aperte Enter para continuar...
+IULOGIOK  Login bem sucedido.
+IUERLOGI  Erro no processamento da conta ou senha.
+IUINFNOM  Informe o nome do servidor imap de correio:
+IUUSASEG  Servidor usa segurança?
+IUCONTA   Qual a conta?
+IUSENHA   Qual a senha?
+IUNUMCAR  Número de cartas:
+IUESCOLP  ImapUtil - escolhendo pastas
+IUESETAP  Escolha com as setas a pasta desejada
+IUDESIST  Desistiu
+IUNSEL    Não foi possível selecionar, voltando a INBOX
+IUPASCRI  Qual o nome da pasta a criar?
+IUQERSEL  Quer selecioná-la após a criação?
+IUNAOCRI  Não consegui criar.
+IUOK      OK!
+IUAPAGP   ImapUtil - apagando pasta
+IUESCPAP  Escolha com as setas a pasta a apagar
+IUPASNAP  Pasta não foi apagada.
+IUPASAP   OK, pasta apagada.
+IURENOP   ImapUtil - renomeando pasta
+IUESCRNO  Escolha com as setas a pasta a renomear
+IUNOVNOM  Editore o novo nome:
+IUNAORNO  Não consegui renomear a pasta.
+IUOKRNO   OK, pasta renomeada.
+IUOPPAST  Qual a opção de pasta:
+IUFOLHEN  ImapUtil - Folheando cartas de
+IUNAOAPA  Carta não foi apagada
+IUPROBLE  Operação concluída com problemas
+IUTENCON  Tentando estabelecer conexão
+IUCONECTE Por favor, conecte seu computador à Internet.
+IUNAOCON  Não consegui conectar com o servidor.
+IUPROBLM  Problemas na comunicação com o servidor.
+IUCONCAI  Conexão caiu!
+IUCARAMB  Caramba, quantas cartas!
+IUCOPSEL  Opção: S - copia as selecionadas, Enter - copia esta
+IUCPPARA  Copiando para
+IUERRCOP  Erro durante a cópia.
+IUSEMVLT  Tem certeza? Isso não tem volta!
+IUNAOZER  Pasta não pode ser zerada
+IUREMSEL  Opção: S - remove as selecionadas, Enter - Remove esta
+IUSEMVLT  Atenção, esta função destrói sem volta.  Tem certeza?
+IUNRECUP  Problemas ao recuperar a carta.
+IUGUASEL  Opção: S - guarda as selecionadas, Enter - Guarda esta
+IUERREST  Erro ao buscar a estrutura da carta
+IMARQGRV  Editore o nome do arquivo a gravar:
+IMPARSET  Escolha a parte com as setas:
+IUNUMPAR  Número de partes desta carta:
+IUQUEFAZ  Que fazer com esta parte?
+IUCNTFOL  Continue folheando...
+IUINFPAR  I - informações sobre a parte
+IULEIRAP  L - leitura rápida
+IUEDIVOX  E - leitura com edivox
+IUGRAVAR  G - gravar
+IUERRTRZ  Erro ao trazer a carta
+IULEINAO  Não ser fazer uma leitura rápida disso
+IUERRGRV  Erro de gravação
+IUSOTEXT  Não posso: só envio textos planos ou html
+IUERRDEC  Erro na decodificação - não posso ler
+IUERRCHM  Erro ao chamar o leitor
+IUCOMPUL  O servidor moveu compulsoriamente!
+IUPASIGU  As pastas de origem e destino tem que ser diferentes!

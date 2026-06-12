@@ -1,0 +1,134 @@
+***********************************************************
+Sistema de síntese de fala para português
+Copyleft (c) Serpro - 2007
+*********************************************************** 
+Detentor da licença:
+SERPRO - SERVIÇO FEDERAL DE PROCESSAMENTO DE DADOS
+BRASIL
+Autor: José Antonio Borges
+Versão 1.0 gerada em junho/2007
+***********************************************************
+A redistribuição desta peça de programação de computadores é regida pela
+LICENÇA SERPRO LPGL - 2007
+É permitido copiar e distribuir copias fiéis deste software
+e de sua documentação, mas não são permitidas quaisquer
+alterações aos mesmos, sem autorização expressa do Serpro.
+Esta documentação deve ser incluída intacta em qualquer redistribuição
+deste produto.
+***********************************************************
+Créditos:
+Este sintetizador usa partes do sintetizador DOSVOX do
+      NCE/UFRJ, criado por J. A. Borges em 1994
+Tradutor de Português originalmente criado em 1987 por
+      Alexandre Plastino de Carvalho
+      Sylvia de Oliveira e Cruz
+      Veronica Lourenco de Herval Costa
+A concatenação dos difones utiliza o sistema MBROLA,
+      CopyRight (C) 1996-2007 - Faculté Politechnique de Mons - Bélgica
+***********************************************************
+ 
+A documentação abaixo está descrita em Delphi, mas pode ser
+facilmente convertida para outras linguagens de 32 bits, sendo
+trivial sua conversão para C,  C++, python e muitas outras.
+ 
+***********************************************************
+ 
+1. Inicialização do sistema de fala
+A rotina lianeTTS_open inicializa a base de dados necessária para
+a conversão de textos para fala.
+Declaração:
+function lianeTTS_open (mbrola_db,
+                        arq_regras, arq_excessoes, arq_abrev,
+                        arq_prosodia, arq_listadif: pchar): boolean; 
+                stdcall;
+
+Valores default dos parâmetros:
+    São assumidos os seguintes valores para os parâmetros, caso sejam
+enviadas "strings" vazias (mas não nulas).
+    mbrola_db        =  br4
+    arq_regras       =  portug.nrl
+    arq_excessoes    =  portug.exc
+    arq_abrev        =  portug.abr
+    arq_prosodia     =  portug.pro
+    arq_listadif     =  portug.dfn
+    A base de dados bar4 deve estar registrada no painel de controle 
+do sistema MBrola (localizado no painel de controle do Windows).
+Caso ela não esteja registrada, é buscada em c:\winvox\lianetts\br4
+    São assumidos a velocidade 60 e o pitch rate de 50.
+ 
+***********************************************************
+ 
+2. Escolha do arquivo de saída da síntese de voz
+Declaração:
+procedure lianeTTS_setOutputFile (filename: pchar); stdcall;
+Valores default dos parâmetros:
+Se filename for fornecido como uma cadeia vazia (''), não nula,
+será assumida a placa de som principal do computador como saída.
+ 
+***********************************************************
+ 
+3. Configuração da velocidade e tonalidade
+Declaração:
+procedure lianeTTS_config (speed, pitch: integer); stdcall;
+Os valores fornecidos devem estar entre 0 e 100.
+ 
+***********************************************************
+ 
+4. Fechamento do sistema de síntese e desalocação da biblioteca
+contida na memória.
+Declaração:
+procedure lianeTTS_close; stdcall;
+ 
+***********************************************************
+5. Cancelamento da fala em execução
+Declaração:
+procedure lianeTTS_stop; stdcall;
+ 
+***********************************************************
+6. Pedido de fala
+Declaração:
+function lianeTTS_speak (toSpeak: pchar): boolean; stdcall;
+A fala é realizada assincronamente.
+Um novo pedido de fala cancela automaticamente um pedido anteriormente
+não concluído.
+ 
+***********************************************************
+7. Pedido de fala para texto em UTF-8
+Declaração:
+function lianeTTS_utfSpeak (toSpeak: pchar): boolean; stdcall;
+Idêntico à função lianeTTS_speak, sendo o texto representado na
+codificação UTF-8
+ 
+***********************************************************
+ 
+8. Verificação se o sintetizador está falando
+Declaração:
+function lianeTTS_isSpeaking: boolean; stdcall;
+A rotina retorna o valor TRUE caso alguma síntese esteja sendo executada.
+ 
+***********************************************************
+ 
+9. Espera a síntese atual terminar
+Declaração:
+procedure lianeTTS_wait; stdcall;
+Se não houver síntese em andamento, a rotina retorna imediatamente.
+ 
+***********************************************************
+
+10. Uso de callback
+É possível chamar uma rotina para indicar o momento em que
+uma fala terminou.
+Declaração:
+procedure lianeTTS_prepareCallback (rotCallback);  stdcall;
+onde rotCallback é uma procedure comum, sem parâmetros.
+
+Caso necessário é possível interromper este processo de callback.
+Declaração:
+procedure lianeTTS_killCallback;  stdcall;
+
+
+Importante:
+A biblioteca mbrola.dll deve ser colocada no mesmo diretório de execução
+do programa que fizer uso desta biblioteca.  É possível também usar uma
+versão oriunda do projeto Mbrola, instalado no computador antes de que este
+software possa ser utilizado.

@@ -1,0 +1,8 @@
+ERASE %1\*.exe
+ERASE %1\*.cfg
+ERASE %1\*.DCU
+ERASE %1\*.dof
+ERASE %1\*.DSK
+ERASE %1\*.~*
+ERASE %1\*.DSM
+ERASE %1\*.LST

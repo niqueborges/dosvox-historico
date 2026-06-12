@@ -1,0 +1,39 @@
+EF_IUINIC    Imaputil - versão
+EF_IUOPCAO   As opções são:
+EF_IUNAOSEI  Não sei fazer isso não
+EF_IUFIM     Fim do processamento
+
+EF_IUPVAZIA  A pasta está vazia
+EF_IUMOMENT  Um momento...
+EF_IUERRENV  Erro ao trazer os envelopes
+EF_IUABRIND  Abrindo
+EF_IULOGIOK  Login bem sucedido.
+EF_IUERLOGI  Erro no processamento da conta ou senha.
+
+EF_IUPASNAP  Pasta não foi apagada.
+EF_IUPASAP   OK, pasta apagada.
+EF_IUOKRNO   OK, pasta renomeada.
+
+EF_IUNAORNO  Não consegui renomear a pasta.
+EF_IUNAOCRI  Não consegui criar.
+
+EF_IUNSEL    Não foi possível selecionar, voltando a INBOX
+EF_IUSOTEXT  Não posso: só envio textos planos ou html
+EF_IUCONECTE Por favor, conecte seu computador à Internet.
+
+EF_IUERRGRV  Erro de gravação
+EF_IUERREST  Erro ao buscar a estrutura da carta
+EF_IUERRTRZ  Erro ao trazer a carta
+EF_IUERRCHM  Erro ao chamar o leitor
+EF_IUERRCOP  Erro durante a cópia.
+
+EF_IUNAOCON  Não consegui conectar com o servidor.
+EF_IUPROBLM  Problemas na comunicação com o servidor.
+EF_IUCONCAI  Conexão caiu!
+EF_IUNRECUP  Problemas ao recuperar a carta.
+
+EF_IUSEMVLT  Tem certeza? Isso não tem volta!
+EF_IUPASIGU  As pastas de origem e destino tem que ser diferentes!
+EF_IULEINAO  Não ser fazer uma leitura rápida disso
+
+EF_IUCNTFOL  Continue folheando...

@@ -1,0 +1,56 @@
+!11025
+CTAPAAPE  Deseja apagar o apelido 
+CTOKAPAP  Ok, apelido apagado
+CTOKAPES  Ok, apelidos apagados
+CT_APREG  Aplicar regras
+CTAJEN10  R - Inserir ou remover confirmação de recebimento
+CTAJEN01  A - Anexar arquivos
+CTAJEN02  C - Inserir cópias carbono
+CTAJEN03   S - Editar o assunto
+CTAJEN04   D - Editar o destinatário
+CTAJEN05   E - Reeditar o arquivo da carta
+CTAJEN06   L - Limpar lista de cópias carbono
+CTAJEN07  ESC - Cancelar
+CTAJEN08  O - Inserir cópias carbono ocultas
+CTAPAAPE  Deseja apagar o apelido 
+CTOKAPAP  Ok, apelido apagado
+CTOKAPES  Ok, apelidos apagados
+CTCANREC  Deseja cancelar o recebimento das cartas?:
+CTCANTRA  Deseja cancelar a transmissão das cartas?:
+CTREGINI  Regras
+CTREGO00  I - Incluir regra
+CTREGO01  A - Aplicar regras nas cartas recebidas
+CTREG002  P - Pastas de Regras
+CTREG003  R - Folhear regras
+CTREGESC  Digite A para aplicar regra sobre o assunto e R para remetente
+CTREGAAS  Digite o assunto sobre o qual deseja aplicar a regra
+CTREGEXA  Já existe regra para esse assunto
+CTREGEXR  Já existe regra para esse remetente
+CTREGFAZ  O que você deseja fazer com essas cartas? Digite P para mover para uma pasta ou E para excluir
+CTREGPAS  Para qual pasta você deseja mover essa carta?
+CTREGAPE  Deseja aplicar a regra sobre as cartas existentes?
+CTREGARE  Digite o email do remetente sobre o qual deseja aplicar a regra
+CTREGAPL  Regras aplicadas
+CTPASNEN  Pasta não encontrada
+CTARQREG  Arquivo com as regras não existe
+CTFOLREG  Folheamento das regras
+CTFOLPAS  Folheamento das pastas de regras
+CTPASTAS   Pastas
+CTAPAREG  Deseja apagar a regra 
+CTREGAPR  Deseja aplicar as regras sobre as cartas recebidas?
+CTREGVAZ  O arquivo de regras está vazio
+CTREGCAR  Não existem cartas para aplicar as regras
+CTCARLIX   Cartas movidas para a lixeira
+CTCARPAS   Cartas movidas para a pasta 
+CT_APREG  Aplicar regras
+CTOKRGAP  Ok, regra apagada
+CTAJFR01  Folheie as regras com as setas, depois tecle:
+CTAJFR02  A - Apagar regra
+CTAJPA01  Folheie as pastas com as setas, depois tecle:
+CTAJPA02  F - Folhear todas as cartas desta pasta
+CTCARCNP  Caracteres / \ < > " ? : * | não são permitidos
+CTMOVCAR  Deseja mover as cartas desta pasta para o diretório principal? Se não mover as cartas serão perdidas
+CTCARMOV  Ok, cartas movidas
+CTRESCON  O remetente desta carta requisitou uma confirmação para indicar que você leu esta carta. Você gostaria de enviar a confirmação?
+CTRECINC  Confirmação de recebimento incluído
+CTRECREM  Confirmação de recebimento removido 

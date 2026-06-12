@@ -1,0 +1,292 @@
+!22050
+DVSISTOP.WAV Sistema SINAL
+DVVERSAO.WAV - Versão
+DVNCE.WAV    SERPRO - Serviço Federal de Processamento de Dados
+DVBOMDIA.WAV Bom dia !
+DVBOATAR.WAV Boa tarde !
+DVBOANOI.WAV Boa noite !
+DVSEF1.WAV   Aperte F1 para ajuda.
+DVDOSVOX.WAV SINAL -
+DVOQUE.WAV   Comande:
+DVOPINV.WAV  Opção inválida.
+DVTRAB.WAV   Trabalhar com você é sempre bom !
+DVTCHAU.WAV  Tchau !
+DVINIED.WAV  Chamando editor.
+DVVOLTA.WAV  Voltando ao SINAL.
+DVCNFFIM.WAV Confirma o fim do SINAL (S/N) ?
+DVESCDIR.WAV Subdiretórios -
+DVDIRATU.WAV O diretório atual é
+DVOK.WAV     Ok !
+DVUNIATU.WAV A unidade de trabalho é
+DVINFDIS.WAV Informe novo disco de trabalho:
+DVERRUND.WAV Não consegui mudar de disco. Sinto muito.
+DVUNDMUD.WAV Disco de trabalho mudado para
+DVINFDIR.WAV Informe o novo diretório de trabalho:
+DVERRMUD.WAV Desculpe mas não consegui trocar para o diretório pedido.
+DVOKMUD.WAV  Ok, troquei diretório de trabalho
+DVCANC.WAV   <Entrada cancelada>
+DVTENTER.WAV    {tecle normalmente e depois ENTER}
+DVDEL.WAV       {DEL}
+DVDIRCRI.WAV Nome do diretório a criar:
+DVERRCRI.WAV Desculpe mas não consegui criar o diretório pedido.
+DVOKCRI.WAV  Ok, criei o diretório !
+DVDIRAPA.WAV Nome do diretório a remover:
+DVERRAPA.WAV Desculpe: não consegui remover o diretório pedido.
+DVOKAPA.WAV  Ok, apaguei o diretório !
+DVDISCOS.WAV Discos -
+DVCTLDSK.WAV Controle de disco -
+DVTAM.WAV    Tamanho:
+DVTAMDSK.WAV Tamanho do disco em K:
+DVLIVDSK.WAV Espaço livre em K:
+DVINFUNI.WAV Qual a unidade de disquete a formatar, A ou B ?
+DVDRVINV.WAV Unidade inválida
+DVDENSAL.WAV Posso usar densidade alta ?
+DVFORRAP.WAV Posso usar formatação rápida ?
+DVLEREL.WAV  Quer ler o relatório de formatação ?
+DVINSDSK.WAV Insira o disquete e tecle Enter...
+DVPROFOR.WAV Problemas na formatação.  Vou ler a tela.
+DVPROFRM.WAV Problemas na formatação, verifique protetor de escrita.
+DVNOMDSK.WAV Informe o nome do disquete (até 10 letras):
+DVFORCAN.WAV Formatação cancelada.
+DVFORFIM.WAV Disquete bem formatado.
+DVSEMSUB.WAV Nao existem subdiretórios aqui
+DVSUBDI1.WAV Subdiretórios: Use as setas para selecionar
+DVSUBDI2.WAV Depois tecle sua opção
+DVTECLE.WAV  Aperte as teclas e eu falarei.
+DVFIMTEC.WAV O teste será terminado quando você apertar ESCAPE
+DVTECBS.WAV  <backspace>
+DVTECTAB.WAV <tab>
+DVTECENT.WAV <enter>
+DVTECESC.WAV <escape>
+DVTECBCO.WAV <barra de espaços>
+DVTECF10.WAV f10
+DVTECINS.WAV <ins>
+DVTECDEL.WAV <del>
+DVTECHOM.WAV <home>
+DVTECEND.WAV <end>
+DVTECPGU.WAV <page up>
+DVTECPGD.WAV <page down>
+DVTECCIM.WAV <cima>
+DVTECBAI.WAV <baixo>
+DVTECESQ.WAV <esquerda>
+DVTECDIR.WAV <direita>
+DVFIMTST.WAV O teste está encerrado.
+DVVAZIO.WAV  Não existe nenhum arquivo neste diretório.
+DVARQ1.WAV   Arquivos: use as setas para selecionar.
+DVARQ2.WAV   Depois tecle sua opção.
+DVOPCAO.WAV                 opção
+DVPROBLE.WAV Cuidado, houve problemas no disco !
+DVNAOSEL.WAV Não posso fazer: não existe nenhum arquivo selecionado
+DVTAMBYT.WAV Tamanho em bytes:
+DVDATCRI.WAV Data de criação:
+DVHORCRI.WAV Hora de criação:
+DVCNFAPA.WAV Confirma remoção de
+DVSIMNAO.WAV                (s/n) ?
+DVFOIAPA.WAV Apaguei o arquivo
+DVPRO.WAV    Arquivo está protegido para regravação
+DVDESPRO.WAV Arquivo está desprotegido
+DVEDITRO.WAV Edite o novo nome
+DVTROCAD.WAV Troquei o nome do arquivo para
+DVMASC.WAV   Informe a máscara de seleção, p. ex., *.TXT
+DVNMASC.WAV  Troquei a máscara de seleção de arquivos para
+DVTIPCOP.WAV Qual o tipo de cópia ?
+DVINFDST.WAV Informe o diretório destino:
+DVCANCG.WAV  Certo, operação foi cancelada
+DVNAOPOD.WAV O arquivo não pode ser copiado sobre si mesmo !
+DVERRCOP.WAV Sinto muito, deu erro no disco, portanto não copiei.
+DVFOIMOV.WAV                movido.
+DVFOICOP.WAV                copiado.
+DVCOMPLE.WAV Perfeito, acabei.
+DVERRLEI.WAV Houve um erro de leitura no arquivo original.
+DVERRESC.WAV Não consegui escrever este arquivo.
+DVFALESP.WAV Não existia espaço suficiente para escrever.
+DVNOMCOP.WAV Informe nome do arquivo replica:
+DVCNTSEL.WAV Continue selecionando ou tecle ESC.
+DVNOMERR.WAV Esse nome que você escolheu não é valido.
+DVFOIREP.WAV                foi replicado.
+DVNAODIR.WAV Não existem subdiretórios aqui.
+DVTECCMD.WAV Tecle o comando.
+DVCOMFBR.WAV Impressão comum, formatada ou braille ?
+DVCOMBRA.WAV Deseja impressão comum ou braille ?
+DVIMPCAN.WAV A impressão foi cancelada.
+DVIMPFIM.WAV Impressão finalizada.
+DVNAODSP.WAV A impressora não está disponivel.
+DVIMPCOM.WAV Iniciando impressão comum.
+DVLEITEL.WAV Tecle ESC para voltar ao SINAL.
+DVSHIFT.WAV  <Shift>
+DVCONTRL.WAV <Control>
+DVNUM.WAV    <Num.Lock>
+DVNONUM.WAV  <Sem Num.Lock>
+DVCAPS.WAV   <Caps Lock>
+DVNOCAPS.WAV <Sem Caps Lock>
+DVALT.WAV    <Alt>
+DVSEMTRD.WAV Erro no diretório do tradutor.
+DVNOMIMP.WAV Digite o nome do arquivo a imprimir:
+DVESPIMP.WAV Qual o espacejamento (1, 2 ou 3) ?
+DVARQIMP.WAV Informe o nome do arquivo de impressora:
+DVARQNEX.WAV Arquivo não existe, sinto muito.
+DVQUERD.WAV  Ele vai ser o novo diretório de trabalho
+DVDIRNSL.WAV Não posso fazer: não existe subdiretório selecionado
+DVQSOLET.WAV Quer que soletre
+DVNUMARQ.WAV Número de arquivos neste diretório:
+DVERRDIR.WAV Erro: este diretório não está acessível
+DVTECUTL.WAV Qual a letra do utilitário ?
+DVTECPGM.WAV Qual a letra do programa ?
+DVTECJOG.WAV Qual a letra do jogo ?
+DVTECRED.WAV Qual a letra do programa de rede ?
+DVTECMUL.WAV Qual a letra do programa de multimídia ?
+DVUTLNAO.WAV Não existe programa registrado com esta letra.
+DVESCF1.WAV  Tecle F1 para ajuda ou ESC para cancelar.
+DVERRPRG.WAV Erro na execução do programa: código
+DVPRGNAO.WAV Programa não encontrado.
+DVNAOCAB.WAV Programa não coube na memória.
+DVOPCSAO.WAV As opções são:
+DVERINTC.WAV Erro na intercomunicação de processos
+DVAJU001.WAV As opções do SINAL são:
+DVAJU002.WAV t - testar o teclado
+DVAJU003.WAV e - editar texto
+DVAJU004.WAV l - ler texto
+DVAJU005.WAV i - imprimir
+DVAJU006.WAV a - arquivos
+DVAJ106A.WAV d - discos
+DVAJU007.WAV A tecla ESC é sempre usada para cancelar
+DVAJ007A.WAV Pode usar as setas para selecionar ou conhecer todas as opções
+DVAJ008A.WAV Aperte Enter para outras opções
+DVAJU101.WAV Outras opções:
+DVAJU102.WAV j - jogos
+DVAJU103.WAV u - utilitários falados
+DVAJU104.WAV r - acesso à rede e internet
+DVAJU14A.WAV m - multimídia
+DVAJ105A.WAV p - executar um programa do Windows
+DVAJU107.WAV s - subdiretórios
+DVAJU108.WAV q - informa a quem pertence este SINAL
+DVAJU17A.WAV v - vai para outra janela
+DVAJU111.WAV c - configura o SINAL
+DVAJU112.WAV * - configuração avançada do SINAL
+DVAJD10A.WAV Use as setas, depois acione
+DVAJD12B.WAV ENTER - seleciona diretório e continua
+DVAJD13B.WAV t - seleciona e sai
+DVAJD14A.WAV s - sai indo para o diretório pai
+DVAJD15A.WAV c - cria novo subdiretório
+DVAJD16A.WAV r - remove
+DVAJD17A.WAV d - obtém dados
+DVAJD18A.WAV v - volta ao penúltimo diretório
+DVAJD18B.WAV i - informa diretório atual
+DVAJD19A.WAV p - diretórios preferidos
+DVAJUD20.WAV As opções de manuseio de disco são:
+DVAJUD21.WAV d - escolher disco para trabalho
+DVAJUD22.WAV e - verificar o espaço do disco de trabalho
+DVAJUD23.WAV f - formatar um disquete
+DVAJUD24.WAV i - informar diretório de trabalho
+DVAJUD25.WAV t - selecionar diretório de trabalho
+DVAJUD12.WAV c - criar novo subdiretório
+DVAJU24D.WAV v - voltar ao último diretório
+DVAJU25D.WAV p - diretórios preferidos
+DVAJUSET.WAV Use as setas para escolher e tecle
+DVAJA01.WAV  e    - editar o arquivo
+DVAJA02.WAV  i    - imprimir
+DVAJA03.WAV  l    - ler
+DVAJA04.WAV  r    - remover
+DVAJA05.WAV  x    - executar o arquivo
+DVAJA06.WAV  n    - trocar o nome
+DVAJA07.WAV  c    - tirar uma cópia
+DVAJA08.WAV  d    - obter dados sobre o arquivo
+DVAJA09.WAV  q    - informar quantidade de arquivos
+DVAJA10.WAV  g    - exibir um grupo de arquivos
+DVAJA11.WAV  t    - falar o tamanho total dos arquivos
+DVAJA12.WAV  ctrl+t - falar o tamanho dos selecionados
+DVAJA13.WAV  p    - desproteger o arquivo
+DVAJA14.WAV  ctrl+p - proteger o arquivo
+DVAJA15.WAV  b    - buscar um arquivo que contenha um texto
+DVAJA16.WAV  ctrl+b - buscar novamente
+DVAJA17.WAV  ctrl+c - jogar nomes completos na área de transferência
+DVAJA18.WAV  ctrl+n - jogar os nomes sem incluir diretório
+DVAJA19.WAV  ctrl+q - informa a posição e quantos arquivos
+DVAJA20.WAV  ctrl+d - informa o nome do diretório atual
+DVAJAF9.WAV  Aperte F9 para conhecer outras opções
+DVAJUD51.WAV As opções de cópia de arquivos são:
+DVAJU52A.WAV r - criar réplica de um arquivo
+DVAJU53A.WAV d - copiar arquivos para outro diretório
+DVAJD54A.WAV m - mover arquivos para outro diretório
+DVAJU55A.WAV t - copiar todos
+DVSELJAN.WAV Selecione a nova janela com as setas depois ENTER
+DVTAMMEG.WAV Tamanho do disco em Mb:
+DVLIVMEG.WAV Espaço livre em Mb:
+DVVELOC.WAV  Qual a velocidade de 1 a 4 ?
+DVDTPAD.WAV  Informe o diretório de trabalho padrão do sistema
+DVSELESP.WAV Selecione o diretório com as setas
+DVSNTOD.WAV  Sim, não ou todos (SNT)
+DVTODSEL.WAV Copia todos os selecionados?
+DVAPASEL.WAV Apaga todos os selecionados?
+DVJAEXI1.WAV Arquivo destino
+DVJAEXI2.WAV                já existe.  Sobrescreve (S/N/T/ESC)?
+DVNAOAPO.WAV Não pude apagar o arquivo original
+DVCNF.WAV    SINAL - Configuração
+DVEDICNF.WAV Editore as configurações, ao final tecle ESC
+DVVELSIN.WAV Velocidade de 1 a 5
+DVCNDIR.WAV  Diretório de trabalho
+DVUSASAP.WAV Usa fala Sapi
+DVVOZSAP.WAV Número da voz Sapi
+DVVELSAP.WAV Velocidade Sapi
+DVTOMSAP.WAV Tonalidade Sapi
+DVCUIDAD.WAV A configuração avançada só deve ser feita por usuários experientes
+DVAPTS.WAV   Aperte a tecla C para continuar
+DVSELSEC.WAV Selecione com as setas a seção a configurar
+DVCONFIG.WAV Configurações -
+DVAJCN00.WAV As opções de configuração avançada são:
+DVAJCN01.WAV a - atualizar SINAL.INI via arquivo
+DVAJCN02.WAV m - editar os macrocomandos de f2 a f7
+DVAJCN03.WAV p - editar os diretórios preferidos
+DVAJCN04.WAV e - editar uma seção
+DVAJCN05.WAV i - incluir item em uma seção
+DVAJCN06.WAV r - remover item de uma seção
+DVAJCN07.WAV c - criar nova seção
+DVITEMRM.WAV Escolha com as setas o item a remover
+DVCNFRMI.WAV Confirma remoção do item
+DVOKRM.WAV   Ok, removido
+DVNOVSEC.WAV Informe o nome da nova seção do SINAL.INI
+DVREALTE.WAV Deseja realterar itens anteriormente criados?
+DVARQMUD.WAV Informe o nome do arquivo que contém as mudanças
+DVCHINVA.WAV Chave inválida
+DVOPPREF.WAV Folhear, incluir este ou editar?
+DVINFCMT.WAV Que nome este diretório terá na lista de preferidos?
+DVMCNDEF.WAV Este macrocomando não foi definido
+DVDESIST.WAV Desistiu...
+DVITEMIN.WAV Nome do item a incluir
+DVITEMCT.WAV Informe o conteúdo deste item
+DVNUMSUB.WAV Número de subdiretórios aqui:
+DVDIGPAL.WAV Digite a palavra ou frase a buscar
+DVACHEI.WAV  Achei
+DVNACHEI.WAV Não achei
+DVDARQEX.WAV Dados do arquivo existente
+DVDARQNV.WAV Dados do novo arquivo
+DVINDISP.WAV Dado não disponível
+DVTIPORD.WAV Ordena por Nome, Tipo ou Data?                 {obsoleto}
+DVTIPOR2.WAV Ordena por Nome, Extensao, Tamanho ou Data?
+DVCNFSAP.WAV Configurando fala SAPI
+DVSAPNAO.WAV Nenhuma fala SAPI está instalada
+DVAJA11A.WAV o    - ordenar os arquivos
+DVAJA11B.WAV m    - enviar arquivo como email
+DVAJA11C.WAV z    - compactar o arquivo
+DVEMDEST.WAV Email do destinatário
+DVASCART.WAV Assunto da carta
+DVVOUENV.WAV Vou enviar
+DVCNFIRM.WAV Confirma?
+DVPRCVOX.WAV Carta preparada para transmissão pelo Cartavox
+DVERCRAE.WAV Erro ao criar arquivo para envio
+DVCORREI.WAV Quer chamar o cartavox para enviar
+DVCTODSL.WAV Tecle T para todo diretório ou S para selecionados:
+DVNOCOMP.WAV Não consegui acionar o compactador
+DVNMCOMP.WAV Qual o nome do arquivo compacto?
+DVCOMPCT.WAV Um momento, compactando
+DVOKCMPC.WAV Ok, compactado
+DVAJD16B.WAV n - troca o nome
+DVINFNMD.WAV Editore o novo nome
+DVOKDNMD.WAV OK, nome mudado
+DVERRNMD.WAV Não pude mudar o nome
+DVSELECI.WAV selecionado
+DVSELECS.WAV selecionados
+DVDE.WAV     de
+DVTIPSAP.WAV Sapi 4 ou 5
+DVEDITRZ.WAV Reedite este comando ou tecle enter
+

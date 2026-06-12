@@ -1,0 +1,13 @@
+!22050
+AT_ABRIR	Abrir
+ROT_SETAESCAJUDA	Utilize as setas verticais para caminhar entre os itens da ajuda. Tab para ler o conteúdo do item. ESC para sair.
+MSG_EXIT	Tem certeza de que deseja fechar o tocador?
+TIT_COMENTMARC	Comentário associado ao marcador. Caixa de Edição
+ROT_NUMPAGINA	Número
+TIT_NAMEMARC	Nome associado ao marcador. Caixa de edição.
+ROT_PAGE	Página
+MSG_AUDIOERROR	Erro no áudio! Assumindo modo de som sintetizado. Descrição do erro:
+ROT_ESCHELP	Tecla ESC para fechar esta ajuda.
+VK_ESC	Escape
+DESC_ESC	Escape
+AT_FECHAR	Fechar o tocador

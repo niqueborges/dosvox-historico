@@ -1,0 +1,37 @@
+Sugestões para o rádio 50
+
+Permitir gravar as listas (playlists)  no computador 
+Permitir a criação de nossas próprias rádios
+
+Permitir criar uma lista de rádios favoritas  a partir dos últimos endereços http inseridos de rádios
+
+
+Não - seria assaz útil que o programa pudesse, por si mesmo, baixar o
+último arquivo ini da conta do Muniz. Assim, atualizar-se-ia sem
+grandes problemas, e sem que o usuário precisasse preocupar-se com isso.
+
+
+
+
+
+OK Primeira sugestão: Quando abrir uma categoria, pressionar por exemplo: A letra a para facilitar para encontrar as rádios que começa com a letra a, etc.
+Fazendo dessa forma, fica do mesmo jeito que está quando folheamos e pressionamos por exemplo: A letra b de Bahia para encontrar a categoria que queremos.
+  Segunda sugestão: Colocar uma opção para pesquisar rádios quando a gente abrir uma categoria que tiver muitas rádios nela.
+
+
+
+Passando agora para informar que estou achando o rádio 50 bem mais
+rápido. Mas, continua travando em algumas emissoras e aí aborta e volta
+para o prompt do programa.
+
+
+
+
+
+Estou neste momento folheando as rádios do Ceará e, naturalmente deletando aquelas que não tocam. Já folheei umas 20 e em todas, ouço a mensagem: programa 1.
+Ante o exposto, indago: será que não dá para retirar esta informação e ficar como era antes, ou seja, sem mensagem alguma, deixando para informar quando fosse o caso de uma rádio que funcionasse como a rádio dosvox?
+
+
+quando uma determinada rádio não pega, ouvimos a mensagem: "erro:  streaming não foi encontrado". Na versão anterior, era apenas isto e pronto. Na versão atualizada, segue-se mais uma informação: "aperte enter.". Penso que esta última informação é totalmente dispensável, já que se o operador teclar escape, sai naturalmente daquela posição.
+
+Quando se está no modo remover rádios, estando com o cursor numa delas, teclando seta direita, a máquina soletra o nome da rádio. teclando seta esquerda, o programa fala o nome da emissora. Diante disto, sugiro adotar as mesmas providências no modo folhear as rádios.

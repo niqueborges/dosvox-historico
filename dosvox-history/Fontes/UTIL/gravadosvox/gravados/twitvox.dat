@@ -1,0 +1,158 @@
+EDORIUTF    Original contém texto em UTF-8 na linha
+EDRECUST   Edições recentes, use as setas.
+EDRETOMA  Retomando na linha 
+FWUSEST         Use as setas
+TWABRNAV          Vou abrir um navegador para completar sua autorização.
+TWAPEBUS         Informe o apelido buscado: 
+TWAPEDST         Informe o apelido da pessoa destino: 
+TWAPEDST         Informe o apelido do destinatário: 
+TWAPEORI         Informe o apelido da pessoa origem:  
+TWAPEUSU         Informe o apelido do usuário no Twitter
+TWAPF1         Use as setas ou aperte F1 para ajuda
+TWAPOUID        Opção?  A-apelido  I-identificação: 
+TWAPTENT         Aperte enter para continuar
+TWAPTENT         Aperte enter...
+TWAUTO         Posso realizar sua autorização automaticamente? 
+TWAUTOK         Autorização concedida!
+TWCF_R         R - recuperar autorização do usuário
+TWCF_S         S - salvar autorização do usuário
+TWCF_T         T - verificar totais
+TWCF_U        U - trocar usuário
+TWCHVARM         Novas chaves armazenadas.
+TWCMD         Comando: 
+TWCNFCOD         Configurando os códigos de acesso
+TWCNFCON         Confirma usuário e senha atuais? 
+TWCNFFIM         Confirma fim? 
+TWCONFIR         Confirmando a identidade:
+TWCONFSN         Está certo? 
+TWCPFORM         Digite sua conta, aperte TAB, digite sua senha e ao final tecle Enter.
+TWCRIAMI         Criando amizade...
+TWDEIXEB         Se for você mesmo, apenas aperte enter
+TWDESIST         Desistiu...
+TWDESSEG         Deseja segui-lo também (S/N): 
+TWDIGPSW          Informe sua senha previamente criada no Twitter: 
+TWDIGTXT         Digite o texto a enviar
+TWDIGUSR          Informe sua conta previamente criada no Twitter: 
+TWEDESCT         Confira com as setas, ESC termina
+TWEDITOR         Soletre ou editore
+TWENTRET        Aperte enter depois que retornar
+TWENVMSG         Enviando mensagem...
+TWENVPED         Enviando pedido...
+TWERHTTP         Erro no protocolo HTTP
+TWERRCHV         As chaves de acesso não conferem.
+TWERRGRV         Erro ao gravar arquivo
+TWERRLEI         Erro ao ler arquivo
+TWERRO         Erro no processamento.
+TWERRPED         Pedido não foi aceito.
+TWESCPIN         Finalmente, copie e transcreva no Twitvox o número que aparecer na tela.
+TWEUDIG          Vou digitar os dados para você.
+TWEX_D         Detalhes do destinatário
+TWEX_L         Ler editorando a mensagem
+TWEX_M         Detalhes da mensagem
+TWEX_R         Remover a mensagem
+TWEX_S         Salvar mensagens em arquivo
+TWEX_T         Retuitar
+TWEX_U        Detalhes do usuário
+TWEX_X         Executar a referência http
+TWF12        Aperte F11 para executar pelo Windows, F12 para executar pelo DOSVOX
+TWFA_A        A - folhear minhas amizades
+TWFA_C        C - criar amizade
+TWFA_D        D - destruir amizade
+TWFA_O         O - folhear amizades de outros
+TWFA_S        S - folhear seguidores de usuários
+TWFA_V        V - verifica a relação existente entre usuários
+TWFIM         Fim do Twitter Vox
+TWFL_A         A - folhear enviadas por Alguém
+TWFL_D         D - folhear Diretas
+TWFL_E         E - folhear Enviadas por mim
+TWFL_G         G - folhear twits Globais
+TWFL_M         M - folhear Menções
+TWFL_T         T - folhear Twits
+TWFL_V         V - folhear diretas enViadas por mim
+TWFSETAS         Folheie com as setas, F9 dá opções, ESC termina
+TWIDBUS         Informe o número de identificação buscado: 
+TWINFARU         Informe o arquivo para salvar os dados do usuário
+TWINIC         Twitter Vox - versão 
+TWINRELU         Informe o arquivo para recuperar os dados do usuário
+TWINVTOK         Autorização de acesso inválido ou expirado.
+TWMESMA         Posso usar a última conta acessada? 
+TWMSGENV         Mensagem enviada.
+TWMSNENV         Mensagem não foi enviada.
+TWMUIMIL         mais de 5000
+TWNAODIG          Por favor não toque no teclado nem mova o mouse até que eu avise.
+TWNAOENC        Não encontrado.
+TWNAOESG         Você não pode enviar mensagens para quem não está seguindo você.
+TWNAOIMP         Não foi implementado ainda
+TWNAOMSD         Esta aplicação não está autorizada a acessar nem remover mensagens diretas
+TWNAOPOD         Este usuário não tem privilégios de mudar amigos
+TWNAOSEG         Não permitido: você não pode seguir-se a si próprio.
+TWNENCON         Não encontrado
+TWNOAUTH         Falta de permissão na autenticação com OAuth
+TWNOMSLV         Editore o nome do arquivo a salvar: 
+TWNUMAMI         Número de amigos: 
+TWNUMCOP         Número copiado: 
+TWNUMSEG         Número de seguidores: 
+TWOK         OK
+TWOK         Ok
+TWOPCAMI        Qual a opção de amizade? 
+TWOPCAO         Twit: 
+TWOPCCNF         Qual a opção de configurações? 
+TWOPINV         Opção inválida, F1 ajuda.
+TWOPSAO         As opções são:
+TWOP_A         A - amigos
+TWOP_C         C - configurações
+TWOP_D         D - mensagens diretas para mim
+TWOP_ESC         ESC - terminar
+TWOP_F         F - folhear mensagens
+TWOP_I         I - obter informações sobre alguém
+TWOP_L         L - linha do tempo
+TWOP_M         M - enviar mensagem direta
+TWOP_S         S - seguidores
+TWOP_T         T - tuitar uma mensagem
+TWOQFAZ         O que fazer com ele? 
+TWPEDENV         Pedido enviado.
+TWQUERDS         Quer mesmo destruir esta mensagem? 
+TWRELACI         Relacionamento:
+TWRETWIT         Retuitando...
+TWSEGUIDO          está sendo seguido por 
+TWSEGUIND          está seguindo 
+TWSEMREG         Não há usuários registrados.
+TWSEMSUG         Arquivo de sugestões não foi encontrado
+TWSENHA         Informe a senha: 
+TWSITNAO        Site não foi localizado na mensagem
+TWSOLIC         Solicitando... 
+TWSUGSET         (para sugestões use as setas)
+TWSUSPEN         Usuário suspenso.
+TWTIPFOL         Qual o tipo de folheamento? 
+TWTSTOD         Aperte T para todos, outra tecla só para esse: 
+TWUSUARI         Informe o usuário: 
+TWUSUATU         Usuário atual: 
+TWUSUSET         Informe o usuário ou use as setas: 
+TW_AMIGS         Amigos: 
+TW_APELI         Apelido: 
+TW_AUTOR         Autor: 
+TW_CREAT         Criado em: 
+TW_CRIAD         Criado em 
+TW_DESCR         Descrição: 
+TW_ENVIA         Enviado por: 
+TW_FAVOR         Favorito: 
+TW_FAVOR         Favoritos: 
+TW_HPAGE     Homepage: 
+TW_ID         Identificação: 
+TW_IDENT         Identificação: 
+TW_INRES         Resposta ao status: 
+TW_INREU         Resposta ao usuário: 
+TW_LINGU         Linguagem: 
+TW_LOCAL         Localização: 
+TW_LOCIM         Local da imagem: 
+TW_NOME          Nome: 
+TW_NTWEE         Quantos tweets: 
+TW_RECEB         Recebido por: 
+TW_REPSN         Resposta ao apelido: 
+TW_RETWI         Retuitado: 
+TW_RTCNT         Contador de retwits: 
+TW_SEGND         Seguindo: 
+TW_SEGUI         Seguidores:
+TW_SRC         Origem: 
+TW_TEXT         Texto: 
+TW_TRUNC         Truncado: 

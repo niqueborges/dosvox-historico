@@ -1,0 +1,96 @@
+{
+    VoxTube - utilitário de acessibilização do YouTube  ;
+
+Módulo de ajuda
+
+    Autores:
+        Antonio Borges,
+        Fabiano Ferreira,
+        Glauco Constantino,
+        Neno Albernaz,
+        Patrick Barbosa;
+
+    Versão 1.0 em Fevereiro de 2013;
+
+    Versão 6.0 em Março de 2024;
+}
+
+unit vt_aju;
+
+interface
+procedure ajuda;
+function selSetasOpcao: char;
+procedure menuAdiciona (cod: string);
+implementation
+uses
+dvcrt,
+dvwin,
+vt_msg,
+dvform;
+
+{Ajuda do programa}
+
+procedure ajuda;
+begin
+    writeln;
+    mensagem ('VTOPCAO', 1);   {'As opções são:'}
+    mensagem ('VTOP_ENT', 1);  {'ENTER - inicia a execução do vídeo'}
+    mensagem ('VTOP_I', 1);    {'I - informações sobre o vídeo'}
+    mensagem ('VTOP_P', 1);    {'P - próximos vídeos'}
+    mensagem ('VTOP_A', 1); {'A - fala o nome do autor do vídeo'}
+    mensagem ('VTOP_T',1); {'T - Fala o tempo de duração do vídeo'}
+    mensagem ('VTOP_D',1); {'D - mostra a descrição do vídeo'}
+    mensagem ('VTOP_CTRLD',1); {'CTRL+d - copia todas as informações para a área de transferência'}
+    mensagem ('VTOP_V',1); {'V - fala o número de visualizações'}
+    mensagem('VTOP_TAB',1); {'TAB - avança uma página'}
+    mensagem ('VTOP_BS',1); {'BACKSPACE - volta uma página'}
+    mensagem ('VTOP_Q', 1);    {'Q - informa a posição na lista de vídeos'}
+    mensagem ('VTOP_S', 1);    {'S - salvar vídeo'}
+    mensagem ('VTOP_M', 1);    {'M - gravar o audio do vídeo selecionado em mp3'}
+    mensagem ('VTOP_CTC', 1);  {'ctrl+c - copia o título e o link dos vídeos'}
+    mensagem ('VTOP_CTL', 1);  {'ctrl+l - copia o link do vídeo atual'}
+    mensagem ('VTOP_CTEN', 1); {'ctrl+enter - exibe o vídeo com o navegador padrão'}
+    mensagem ('VTOP_ESC', 2);  {'ESC - Cancelar'}
+    readkey;
+    limpaBufTec;
+end;
+
+procedure menuAdiciona (cod: string);
+begin
+    popupMenuAdiciona (cod, pegaTextoMensagem(cod));
+end;
+
+function selSetasOpcao: char;
+var n: integer;
+const
+    opmenu: string = ^m+'IPATD'+^D+'V'+^i+^h+'QSM'+^c+^l+^j+#27;
+begin
+    mensagem ('VTSELSET', 2); {'Selecione com as setas a opção desejada:'}
+
+    popupMenuCria(wherex, wherey, 50, 11, RED);
+    MenuAdiciona ('VTOP_ENT');  {'ENTER - inicia a execução do vídeo'}
+    MenuAdiciona ('VTOP_I');    {'I - informações sobre o vídeo'}
+    MenuAdiciona ('VTOP_P');    {'P - fala quando foi publicado o vídeo'}
+    MenuAdiciona ('VTOP_A');    {'A - fala o nome do autor do vídeo'}
+    MenuAdiciona ('VTOP_T');
+    menuadiciona ('VTOP_D');
+    menuadiciona ('VTOP_CTRLD');
+    MenuAdiciona ('VTOP_V');
+    MenuAdiciona ('VTOP_TAB');
+    MenuAdiciona ('VTOP_BS');
+    MenuAdiciona ('VTOP_Q');    {'Q - informa a posição na lista de vídeos'}
+    MenuAdiciona ('VTOP_S');    {'S - salvar vídeo'}
+    MenuAdiciona ('VTOP_M');    {'M - gravar o audio do vídeo selecionado em mp3'}
+    MenuAdiciona ('VTOP_CTC');  {'ctrl+c - copia o título e o link dos vídeos'}
+    MenuAdiciona ('VTOP_CTL');  {'ctrl+l - copia o link do vídeo atual'}
+    menuAdiciona ('VTOP_CTEN'); {'ctrl+enter - exibe o vídeo com o navegador padrão'}
+    MenuAdiciona ('VTOP_ESC');  {'ESC - Cancelar'}
+
+    n := popupMenuSeleciona;
+    if (n < 1) then
+        result := ' '
+    else
+        result := opmenu[n];
+end;
+
+end.

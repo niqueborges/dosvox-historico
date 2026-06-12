@@ -1,0 +1,99 @@
+!22050
+CA_CANC         Conta cancelada
+CA_CNFSAI        Confirma saída (s/n)?
+CA_DIVID        Dividido por...
+CA_ERRARQ       Erro no arquivo de memória
+CA_FIM          Calculadora desligada
+CA_FIMREV       Revisão terminada
+CA_IGUAL        Igual
+CA_INIC         Calculadora Vocal
+CA_MAIS         Mais
+CA_MEMCRG       Memórias carregadas
+CA_MEMGRV       Memórias gravadas
+CA_MEMO         Memória...
+CA_MEMZER       Memórias zeradas
+CA_MENOS        Menos
+CA_NUMDEC       Número de decimais?
+CA_OPINV        Operação inválida
+CA_PERCEN       Porcento
+CA_QUALME       Qual memória, de 0 a 9?
+CA_QUALMG       Em qual memória guardo, de 0 a 9?
+CA_RAIZ         Raiz quadrada
+CA_RESULT       Resultado
+CA_REVE         Use as setas ou o numero da memória a rever, ESC termina
+CA_TECINV       Tecla inválida
+CA_VEZES        Vezes
+CA_ERRO         Erro
+CA_TECF9        Tecle F9 para lista de funções
+CA_FUNC_M       Funções matemáticas
+CA_FUNC_T       Funções trigonométricas
+CA_GRAU         Ângulos em graus
+CA_RAD          Ângulos em radianos
+CA_RESTO        Resto
+CA_INVERSA      Inverso
+CA_OPOSTO       Oposto
+CA_TRUNCAR      Truncar
+CA_ARRED        Arredondar
+CA_FRACION      Fracionária
+CA_NUM_PI       Número Pi
+CA_NUM_E        Número de Neper
+CA_LOG          Logaritmo decimal
+CA_LOG_E        Logaritmo neperiano
+CA_FATORIAL     Fatorial
+CA_ELEV_A       Elevado a
+CA_RAIZ_N       Raiz enésima
+CA_SEN          Seno
+CA_COS          Cosseno
+CA_TAN          Tangente
+CA_ASEN         Arco seno
+CA_ACOS         Arco cosseno
+CA_ATAN         Arco tangente
+CA_SINH         Seno hiperbólico
+CA_COSH         Cosseno hiperbólico
+CA_TANH         Tangente hiperbólica
+CA_ASENH        Arco seno hiperbólico
+CA_ACOSH        Arco cosseno hiperbólico
+CA_ATANH        Arco tangente hiperbólico
+CA_OP_SOMAR     + somar
+CA_OP_SUBTR     - subtrair
+CA_OP_MULTIP    * multiplicar
+CA_OP_DIVIDIR   / dividir
+CA_OP_PERCENT   % porcentagem
+CA_OP_RAIZ_2    \ raiz quadrada
+CA_OP_IGUAL     = igual
+CA_OP_LIMPDIG   backspace limpa dígito
+CA_OP_LIMPCONT  C limpa conta
+CA_OP_NUM_CDEC  D número de casas decimais
+CA_OP_FUNC_M    F Funções matemáticas
+CA_OP_FUNC_T    T Funções trigonométricas
+CA_OP_ABRESUB   ( abre sub-expressão
+CA_OP_FECHASUB  ) fecha sub-expressão
+CA_OP_POEMEMO   P põe na memória
+CA_OP_RECMEMO   M recupera da memória
+CA_OP_RESTO     R resto
+CA_OP_INVERSO   I inverso
+CA_OP_OPOSTO    O oposto
+CA_OP_TRUNCAR   T truncar
+CA_OP_ARREND    A arredondar
+CA_OP_P_FRAC    F parte fracionária
+CA_OP_NUM_PI    P número pi
+CA_OP_NUM_E     E número de Neper
+CA_OP_LOG       L logaritmo decimal
+CA_OP_LOG_E     N logaritmo neperiano
+CA_OP_FATORIAL  ! fatorial
+CA_OP_ELEV_A    ^ elevado a
+CA_OP_RAIZ_N    \ raiz enésima
+CA_OP_GRAU      G ângulos em graus
+CA_OP_RAD       R ângulos em radianos
+CA_OP_SEN       S seno
+CA_OP_COS       C cossseno
+CA_OP_TAN       T tangente
+CA_OP_ASEN      AS arco seno
+CA_OP_ACOS      AC arco cosseno
+CA_OP_ATAN      AT arco tangente
+CA_OP_SENH      HS seno hiperbólico
+CA_OP_COSH      HC cosseno hiperbólico
+CA_OP_TANH      HT tangente hiperbólico
+CA_OP_ASINH     IS arco seno hiperbólico
+CA_OP_ACOSH     IC arco cossseno hiperbólico
+CA_OP_ATANH     IT arco tangente hiperbólico

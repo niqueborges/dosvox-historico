@@ -1,0 +1,384 @@
+!22050
+EDAJIN1  Sao os seguintes:
+EDAJIN2    C - comandos de cursor
+EDAJIN3    L - linha
+EDAJIN4    P - procura de textos
+EDAJIN5    M - margem
+EDAJIN6    A - arquivos
+EDAJIN7    B - blocos de linhas
+EDAJIN8    F - acionamento da fala
+EDAJIN9    I - instalacao
+EDAJIN10    E - letras especiais
+EDAJIN11    W - tratamento Word
+EDAJFW1  Os comandos de tratamento Word são
+EDAJFW2    F - insere marcas de formatação
+EDAJFW3    I - informa formatação no cursor
+EDAJFW4    G - gera arquivo DOC
+EDAJFW5    O - Ocultar formatação na tela
+EDAJFW6    M - modos de falar formatação
+EDAJLI1  Os comandos de linha sao:
+EDAJLI2    I - insere uma linha acima
+EDAJLI3    A - insere uma linha abaixo
+EDAJLI4    R - remove linha
+EDAJLI5    V - volta linha removida
+EDAJLI6    Q - quebra linha em duas
+EDAJLI7    J - junta duas linhas
+EDAJLI8    E - exclui linhas com o texto
+EDAJLI9    S - insere no início da linha
+EDAJLI10    D - insere no fim da linha
+EDAJCU1  Os comandos de cursor sao:
+EDAJCU2    - - inicio do texto
+EDAJCU3    + - fim do texto
+EDAJCU4    A - avança paragrafo
+EDAJCU5    R - recua paragrafo
+EDAJCU6    P - posiciona em certa linha
+EDAJCU7    I - apaga inicio da linha
+EDAJCU8    F - apaga fim da linha
+EDAJCU9    L - informa linha
+EDAJCU10    C - informa coluna
+EDAJCU11    M - memoriza posicao do cursor
+EDAJCU12    V - volta cursor `a posicao memorizada
+EDAJCU13    N - avança para linha em branco
+EDAJCU14    E - recua para linha em branco
+EDAJBL1  Os comandos de bloco sao:
+EDAJBL2    I - inicio do bloco
+EDAJBL3    F - fim do bloco
+EDAJBL4    M - move o bloco
+EDAJBL5    C - copia o bloco
+EDAJBL6    A - adiciona bloco a um arquivo
+EDAJBL7    O - ordena o bloco
+EDAJBL8    R - remove o bloco
+EDAJBL9    D - desmarca o bloco
+EDAJBL10    L - le arquivo gerando bloco
+EDAJBL11    G - grava o bloco em arquivo
+EDAJBL12    E - embeleza o bloco
+EDAJBL13    P - paragrafo vira bloco
+EDAJBL14    J - justifica paragrafo do cursor
+EDAJBL15    S - envia para servidor de fala
+EDAJBL16    V - verificação ortográfica
+EDAJBL17    X - decodificação
+EDAJBL18    U - converter bloco
+EDAJBL19    B - remover linhas em branco
+EDAJBL20    W - transferência no formato do Word
+EDAJBL21    T - seleciona Todo o texto
+EDAJMA1  Os comandos de margem sao:
+EDAJMA2    M - informa margens
+EDAJMA3    T - nova coluna de tabulacao
+EDAJMA4    R - remove todas tabulacoes
+EDAJAR1  Os comandos de arquivos sao:
+EDAJAR2    I - informa nome do arquivo
+EDAJAR3    S - salva arquivo e continua
+EDAJAR4    N - edita um novo arquivo
+EDAJAR5    C - salva como outro arquivo
+EDAJAR6    F - salva e fim
+EDAJAR7    A - abandona sem gravar
+EDAJAR8    X - exporta formato IBM
+EDAJBU1  Os comandos de busca sao:
+EDAJBU2    P - procura texto
+EDAJBU3    N - busca de novo
+EDAJBU4    T - troca palavras por outras
+EDAJFA1  Os comandos de fala sao:
+EDAJFA2    I - fala inicio da linha
+EDAJFA3    L - fala resto da linha
+EDAJFA4    T - fala resto do texto
+EDAJCF1  Os comandos de configuracao sao:
+EDAJCF2    F - fala
+EDAJCF3    I - insercao com Enter
+EDAJCF4    A - acentuacao
+EDAJCF5    S - soletragem
+EDAJCF6    Q - quebra de linha automatica
+EDAJCF7    V - velocidade
+EDAJEM1  Os comandos de embelezamento sao:
+EDAJEM2    C - centra bloco
+EDAJEM3    M - acerta margens
+EDAJEM4    A - alinha com as margens
+EDAJEM5    T - tabula pela esquerda o bloco
+EDAJEM6    I - indenta o bloco
+EDAJCV1  As 50 conversões são:
+EDAJCV2    a minúsculo - alqueire do norte para metros quadrados
+EDAJCV3    A maiúsculo - alqueire mineiro para metros quadrados
+EDAJCV4    b minúsculo - alqueire paulista para metros quadrados
+EDAJCV5    B maiúsculo - centímetros para pés
+EDAJCV6    c minúsculo - centímetros para  polegadas
+EDAJCV7    C maiúsculo - centímetros quadrados para pés quadrados
+EDAJCV8    d minúsculo - galões para centímetros cúbicos
+EDAJCV9    D maiúsculo - galões para litros
+EDAJCV10    e minúsculo - gramas para libras
+EDAJCV11    E maiúsculo - gramas para onças
+EDAJCV12    f minúsculo - hectare para metros quadrados
+EDAJCV13    F maiúsculo - jardas para centímetros
+EDAJCV14    g minúsculo - jardas para metros
+EDAJCV15    G maiúsculo - jardas quadradas para metros quadrados
+EDAJCV16    h minúsculo - libras para gramas
+EDAJCV17    H maiúsculo - libras para quilogramas
+EDAJCV18    i minúsculo - litros para quartos
+EDAJCV19    I maiúsculo - metros para jardas
+EDAJCV20    j minúsculo - metros para pés
+EDAJCV21    J maiúsculo - metros para polegadas
+EDAJCV22    k minúsculo - metros quadrados para jardas quadradas
+EDAJCV23    K maiúsculo - metros quadrados para pés quadrados
+EDAJCV24    l minúsculo - metros por minuto para centímetros por segundo
+EDAJCV25    L maiúsculo - metros por minuto para pés por segundo
+EDAJCV26    m minúsculo - milhas para quilômetros
+EDAJCV27    M maiúsculo - milhas para nós
+EDAJCV28    n minúsculo - milhas quadradas para quilômetros quadrados
+EDAJCV29    N maiúsculo - milhas por hora para metros por segundo
+EDAJCV30    o minúsculo - milhas por hora para quilômetros por hora
+EDAJCV31    O maiúsculo - nós para quilômetros por hora
+EDAJCV32    p minúsculo - onças para gramas
+EDAJCV33    P maiúsculo - onças para quilogramas
+EDAJCV34    q minúsculo - pés para centímetros
+EDAJCV35    Q maiúsculo - pés por minuto para centímetros por segundo
+EDAJCV36    r minúsculo - polegadas para centímetros
+EDAJCV37    R maiúsculo - polegadas para pés
+EDAJCV38    s minúsculo - quartos para litros
+EDAJCV39    S maiúsculo - quilogramas para libras
+EDAJCV40    t minúsculo - quilômetros para milhas
+EDAJCV41    T maiúsculo - quilômetros para pés
+EDAJCV42    u minúsculo - quilômetros quadrados para jardas quadradas
+EDAJCV43    U maiúsculo - quilômetros quadrados para milhas quadradas
+EDAJCV44    v minúsculo - quilômetros por hora para milhas por hora
+EDAJCV45    V maiúsculo - quilômetros por hora para pés por minuto
+EDAJCV46    w minúsculo - Fahrenheit para Celsius
+EDAJCV47    W maiúsculo - Celsius para Fahrenheit
+EDAJCV48    x minúsculo - Potenciação
+EDAJCV49    X maiúsculo - Comprimento da circunferência
+EDAJCV50    y minúsculo - Área do círculo
+EDAJCV51    Y maiúsculo - Volume da esfera
+EDAJCV52    z minúsculo - Logarítmo em qualquer base
+EDAJCV53    á minúsculo agudo - Seno
+EDAJCV54    Á maiúsculo agudo - Cosseno
+EDAJCV55    é minúsculo agudo - Tangente
+EDAJCV56    É maiúsculo agudo - Cotangente    
+EDAJCV57    í minúsculo agudo - Secante
+EDAJCV58    Í maiúsculo agudo - Cossecante
+EDAJCV59    ó minúsculo agudo - Logarítmo Neperiano
+EDAJCV60    Ó maiúsculo agudo - Logarítmo na base 10
+EDAJCV61    ú minúsculo agudo - Logarítmo na base 2
+EDAJCV62    Use as setas para selecionar.
+EDAJDA1    J - justificar
+EDAJDA2    C - centralizar
+EDAJDA3    D - alinhar a direita
+EDAJDA4    E - alinhar a esquerda
+EDAJF01    F - nome da fonte
+EDAJF02    T - tamanho da fonte
+EDAJF03    C - cor da fonte
+EDAJF04    N - início de negrito
+EDAJF05    CONTROL + N - fim de negrito
+EDAJF06    I - início de itálico
+EDAJF07    CONTROL + I - fim de itálico
+EDAJF08    S - início de sublinhado
+EDAJF09    CONTROL + S - fim de sublinhado
+EDAJMF1    F - fonte
+EDAJMF2    A - alinhamento
+EDAJMM1  Os comandos de maiúsculas e minusculas são:
+EDAJMM2    A - maiúscula
+EDAJMM3    I - minúscula
+EDAJMM4    P - Primeira letra maiúscula
+EDAJMM5    U - converter para UTF-8
+EDAJMM6    C - contar palavras
+EDAUTOMA  Automática
+EDPRETO  Preto
+EDAZUL  Azul
+EDTURQUE  Turquesa
+EDVERCLA  Verde claro
+EDROSA  Rosa
+EDVERMEL  Vermelho
+EDAMAREL  Amarelo
+EDBRANCO  Branco
+EDAZUESC  Azul escuro
+EDCERCET  Cerceta
+EDVERDE  Verde
+EDVIOLET  Violeta
+EDVERESC  Vermelho escuro
+EDAMAESC  Amarelo escuro
+EDCINZ50  Cinza 50
+EDCINZ25  Cinza 25
+EDAJFF1  Os modos de falar a formatação são:
+EDAJFF2    N - natural
+EDAJFF3    F - formatação
+EDAJFF4    B - bips
+EDAJFF5    M - mudo
+EDCFVEL  Use as setas para selecionar.
+EDVELC   Velocidade: 
+EDINSLIN ENTER insere linha: 
+EDQUEAUT Quebrar linhas: 
+EDFALPON Falar pontuação: 
+EDFALAUT Fala automática: 
+EDCOMDIC Com dicionário: 
+EDMODFOR Modo formatação (N, F, B ou M): 
+EDCOMSAP Com SAPI: 
+EDNUMSAP Número SAPI: 
+EDVEL    Velocidade SAPI: 
+EDTOM    Tonalidade SAPI: 
+EDTIPSAP Tipo SAPI (3, 4 ou 5): 
+EDMSGINI  EDIVOX
+EDSEMTRD  Erro no diretorio do tradutor
+EDQUERSV  Quer salvar o arquivo (s/n) ? 
+EDFIMPRC  Fim do EDIVOX - Autor: Marcelo Pimentel
+EDDIGNOM  Qual o nome do Arquivo? 
+EDREESCR  Arquivo já existe, reescreve (s/n) ?
+EDARQGRV  Arquivo gravado
+EDARTRUN  Arquivo enorme foi truncado
+EDARQNOV  Arquivo novo
+EDARQCRG  Arquivo carregado
+EDQUERSN  Quer salvar este texto (s/n)
+EDERRESC  Erro de escrita no arquivo
+EDERRLEI  Erro de leitura no arquivo
+EDOPRINV  Operação inválida
+EDLINHA   Linha: 
+EDCOLUNA  Coluna: 
+EDDEL     DEL
+EDFALDLG  Fala desligada
+EDFALACI  Fala acionada
+EDLINREM  Linha removida
+EDCNFSAI  Confirma saida (s/n) ? 
+EDDIGMD   Informe a margem direita: 
+EDDIGME   Informe a margem esquerda: 
+EDMARINV  Margem invalida
+EDMARACI  Margem acionada
+EDACENT   Acentuacao acionada
+EDNACENT  Acentuacao desligada
+EDINITEX  Inicio do texto
+EDFIMTEX  Fim do texto
+EDBLKMOV  Bloco movido
+EDBLKCPY  Bloco copiado
+EDBLKCRG  Bloco carregado
+EDBLKADC  Bloco adicionado
+EDBLKORD  Bloco ordenado
+EDBLKCNT  Bloco centrado
+EDBLKTAB  Bloco tabulado
+EDBLKMRG  Bloco margeado
+EDBLKALI  Bloco alinhado
+EDBLKPAR  Bloco parágrafo
+EDBLKINV  Bloco invalido
+EDBLKREM  Bloco removido
+EDCMDBLK  Comando de bloco: 
+EDBLKMAR  Bloco marcado
+EDINCOMP  Bloco incompleto
+EDINIBLK  Inicio do bloco
+EDFIMBLK  Fim do bloco
+EDJUSTIF  Trecho justificado
+EDPOSINV  Posicao de bloco invalida
+EDBLKDSM  Bloco desmarcado
+EDLINQUE  Linha quebrada
+EDAPAINI  Apagado a esquerda
+EDAPAFIM  Apagado a direita
+EDLINSER  Linha nova
+EDLGRAND  Linha excederia 150 letras, nao juntei
+EDLINJUN  Linhas juntadas
+EDTXTPRC  Qual o texto ? 
+EDTXTENC  Texto encontrado
+EDTXNENC  Texto nao encontrado
+EDTXTTRC  Texto trocado
+EDQUATRE  Qual o texto nas linhas a excluir?
+EDARQNAO  Arquivo nao existe
+EDNOME    Nome deste arquivo: 
+EDFORTXT  Usa acentuacao internacional (s/n) 
+EDLINGRA  Linhas grandes foram divididas
+EDNOMGRV  Nome do arquivo a gravar: 
+EDESCCAN  Gravacao de arquivo cancelada
+EDDGNLIN  Digite o numero da linha: 
+EDLINAO   Linha nao existe
+EDVELOC   Qual a velocidade, de 1 a 4 ? 
+EDCOLMAR  Informe a coluna da esquerda: 
+EDNCLIND  Numero de colunas a indentar: 
+EDDESIST  Desistiu... 
+EDTABINS  Tabulacao inserida
+EDTABCAN  Tabulacoes canceladas
+EDENTINS  Enter vai inserir linha
+EDENTNIN  Enter nao vai inserir linha
+EDSOLETR  Soletragem acionada
+EDNSOLET  Soletragem desligada
+EDMEMPEQ  Memoria muito reduzida.  Tecle ENTER.
+EDINFTXT  Informe o novo texto: 
+EDTODBLK  Todo texto (T) ou bloco (B): 
+EDCOMAND  Qual comando? 
+EDOPCAO   Qual opcao? 
+EDQAUTO   Quebra automatica ligada
+EDNQAUTO  Quebra automatica desligada
+EDNUM     Num Lock ligado
+EDNONUM   Num Lock desligado
+EDCAPS    Caps Lock ligado
+EDNOCAPS  Caps Lock desligado
+EDERRSRV  Erro no servidor
+EDGRANDE  Bloco muito grande
+EDCOPTRU  Bloco não pode ser transcrito por tem mais de 65000 letras
+EDBLKTRN  Bloco trazido foi truncado por ser muito grande
+EDDICNAO  Dicionário não foi achado
+EDUTF8    Escolha q para quoted-printable, u para utf-8 ou g para yahoogroups
+EDAGUARD  Aguarde ...
+EDDESCON  Deseja tentar converter o arquivo para TXT? 
+EDMAIUSC  Deseja converter o bloco para maiúscula? 
+EDPUTF8  Deseja codificar o bloco para UTF-8
+EDDICIOA  Dicionário ativado
+EDDICIOD  Dicionário desativado
+EDCONVER  Conversões. Tecle F1 para ajuda.
+EDINFPOT  Qual a potência?
+EDSEMSUG  Sem sugestões
+EDALTERN  Use as setas para alternativas
+EDOK      OK
+EDPAICON  Painel de configuração
+EDVELC    Velocidade : 
+EDINSLIN  ENTER insere linha: 
+EDQUEAUT  Quebra automática: 
+EDFALPON  Fala pontuação: 
+EDFALAUT  Fala automática: 
+EDCOMDIC  Com dicionário: 
+EDCOMSAP  Com Sapi: 
+EDNUMSAP  Número SAPI: 
+EDVEL     Velocidade SAPI: 
+EDTOM     Tonalidade SAPI: 
+EDDICATI  O dicionário será ativado
+EDAGUARC  Aguarde, configurando
+EDCARDIC  Carregando dicionário
+EDREFORM  Junta linhas para exportar? 
+EDNEXEC  Não pude executar
+EDCFVEL   Use as setas para selecionar.
+EDINFVAL  Informe o valor 
+EDFONTES  Fontes
+EDDE  de 
+EDLIDO  lido 
+EDTXTNEX  Falta o arquivo txtword.exe
+EDDIGTAM  Digite o tamanho da fonte
+EDOPCINV  Opção inválida
+EDINSFOR  Inserir marcas de formatação
+EDAUTOMA  Automática
+EDPRETO  Preto
+EDAZUL  Azul
+EDTURQUE  Turquesa
+EDVERCLA  Verde claro
+EDROSA  Rosa
+EDVERMEL  Vermelho
+EDAMAREL  Amarelo
+EDBRANCO  Branco
+EDAZUESC  Azul escuro
+EDCERCET  Cerceta
+EDVERDE  Verde
+EDVIOLET  Violeta
+EDVERESC  Vermelho escuro
+EDAMAESC  Amarelo escuro
+EDCINZ50  Cinza 50
+EDCINZ25  Cinza 25
+EDFONTE  Fonte
+EDTAMANH  Tamanho
+EDALIJUS  Alinhamento justificado
+EDALICEN  Alinhamento centralizado
+EDALIESQ  Alinhamento à esquerda
+EDALIDIR  Alinhamento à direita
+EDININEG  Início de negrito
+EDFIMNEG  Fim de negrito
+EDINIITA  Início de itálico
+EDFIMITA  Fim de itálico
+EDINISUB   Início de sublinhado
+EDFIMSUB   Fim de sublinhado
+EDNEGRIT  Negrito
+EDITALIC  Itálico
+EDSUBLIN  Sublinhado
+EDMINUSC  Deseja converter o bloco para minúscula?
+EDPRIMAI  Deseja converter primeira letra de todo bloco para maiúscula?
+EDPALAVR  palavras
+EDSOMLEI  Este arquivo é somente leitura, provavelmente não será gravado
+EDFOROCU  Formatação oculta na tela
+EDFORAPA  Formatação aparente na tela
+EDMOFAFO  Modos de falar formatação
