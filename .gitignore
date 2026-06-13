@@ -21,3 +21,4 @@ tools/
 !sources/orphan-binaries/*.dll
 !sources/audio-historical/*.wav
 !sources/audio-historical/*.mp3
+dosvox-archeology/scratch/
