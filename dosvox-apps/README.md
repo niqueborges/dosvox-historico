@@ -1,14 +1,3 @@
-# DOSVOX Apps
+﻿# Sandbox de Curadoria
 
-**Propósito:**
-Aplicações independentes construídas sobre o framework base (o "Core" do DOSVOX) destinadas ao uso diário do usuário final. Nenhum código foi extraído fisicamente para este diretório ainda.
-
-**Critério de Inclusão:**
-São programas que consomem a API de acessibilidade (`dvwin`, `dvcrt`, `dvform`) mas operam isoladamente como utilitários, ferramentas de produtividade, comunicação, educação e jogos.
-
-**Exemplos mapeados na taxonomia:**
-- `Webvox` (Navegador)
-- `Cartavox` (E-mail)
-- `Edivox` / `MINIED` (Editores)
-- `Jogavox` / `MISTUVOX` (Jogos)
-- `Braivox`
+Este diretório é um ambiente experimental. Os projetos aqui contidos foram extraídos para análise de taxonomia e compilação isolada. A presença neste diretório não implica canonização na arquitetura final.
