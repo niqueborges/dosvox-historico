@@ -1,7 +1,23 @@
-﻿sources/releases/
-*.wav
+sources/releases/
+tools/
+
+# Produtos de compilação
 *.exe
 *.dll
 *.dcu
 *.obj
-*.dpr
+*.map
+*.ppu
+*.o
+
+# Conteúdo multimídia massivo
+*.wav
+*.mp3
+*.avi
+*.mid
+
+# Exceções Especiais de Preservação Arqueológica
+!sources/orphan-binaries/*.exe
+!sources/orphan-binaries/*.dll
+!sources/audio-historical/*.wav
+!sources/audio-historical/*.mp3
