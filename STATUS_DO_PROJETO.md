@@ -179,11 +179,63 @@ A existência de módulos independentes, instalações parciais e atualizações
 - Forma exata de comunicação em tempo real entre módulos (sockets, pipes ou memória compartilhada).
 - Processo de build e empacotamento.
 - Organização interna das atualizações (`atuvox`).
-- Existência de repositório público ou histórico de controle de versão.
+- Existência de repositório público ou histórico de controle de versão (embora a distribuição tradicional via `.zip` tenha sido confirmada).
+- **Compilação Isolada:** Resolvido. O "Kernel 77" (na verdade um Framework/Runtime na pasta `tradutor`) não gera um `.exe` único, mas suas units compilam de forma autônoma, provando forte modularidade. A pasta "tradutor" é um fóssil de nomenclatura.
+- **Orquestração:** Resolvido. A unit `dvwin` atua de fato como o orquestrador principal do sistema, implementando Inversão de Dependência (as aplicações não sabem qual TTS está falando, apenas pedem à `dvwin`).
+- **Dependências de Rede:** Resolvido. A biblioteca `lianetts` NÃO é obrigatória; é apenas um dos motores de síntese possíveis (baixo acoplamento).
+- **Código Legado:** Resolvido. Existem fósseis inativos (ex: `DOSDOS.PAS`, `DOSED.PAS`). Estes serão preservados em `legacy/unused/` e documentados, mantendo a postura conservadora da arqueologia.
+
+---
+
+## Camadas Arquiteturais e Repositórios Planejados
+
+A estruturação para preservação e estudo segue esta divisão:
+- `dosvox-history/` (Espelho bruto e inalterado)
+- `dosvox-core/` (Infraestrutura principal, o framework)
+- `dosvox-shell/` (Orquestração e menu do sistema)
+- `dosvox-apps/` (Aplicações independentes como jogos, webvox, etc.)
+- `dosvox-thirdparty/` (Ferramentas externas encapsuladas, ex: ffmpeg, Synapse, SQLite, OCR)
+- `dosvox-archeology/` (A camada documental que explica o "porquê")
+
+### Documentos da Camada de Arqueologia já inicializados:
+
+Documentos já inicializados:
+- `architecture.md`
+- `kernel77.md`
+- `dead-code.md`
+- `programming_model.md`
+- `design-philosophy.md`
+- `dependency-graph.md`
+- `generations.md`
+
+---
+
+## Metodologia de Arqueologia de Software
+
+Com base no desenvolvimento da pesquisa, o projeto adota agora uma postura clara de **Arqueologia e Preservação de Software**, seguindo as seguintes diretrizes antes de qualquer tentativa de modernização:
+
+1. **Congelar o estado atual:** Manter uma cópia inalterada (fotografia) da instalação original e do pacote de fontes.
+2. **Criar um workspace de pesquisa:** Realizar toda exploração, compilação e teste em uma área isolada, sem alterar os originais.
+3. **Registrar as descobertas:** Documentar meticulosamente o raciocínio arquitetural, dependências, gerações tecnológicas e o porquê de cada arquivo existir.
+4. **Confirmar hipóteses experimentais:** Testar o código para validar o que é infraestrutura real (core) e o que é aplicação isolada, antes de dividir os repositórios definitivamente.
+5. **Modernização postergada:** A refatoração só deve acontecer após o completo entendimento e documentação do ecossistema atual.
+
+---
+
+## As 7 Principais Descobertas Técnicas
+
+Até o momento, a análise do código fonte nos forneceu as seguintes evidências sustentadas:
+1. `dvtradut.pas` (1987) antecede o próprio DOSVOX.
+2. O núcleo principal apresenta dependências puramente verticais, sem ciclos aparentes.
+3. A pasta `tradutor` é um fóssil de nomenclatura que hoje guarda o runtime inteiro do sistema.
+4. A API pública é estritamente procedural e de alto nível (ex: `sintetiza`, `readkey`).
+5. Os aplicativos dependem pesadamente do framework, mas o framework não depende de nenhum deles (baixo acoplamento/Inversão de Dependência).
+6. Há código morto inativo perfeitamente preservado no repositório.
+7. A evolução do DOSVOX ocorreu por sedimentação (adição de camadas superiores) e não por reescrita de módulos base.
 
 ---
 
 ## Hipótese principal da pesquisa
 
-O DOSVOX deve ser entendido menos como um software único e mais como uma plataforma de acessibilidade construída incrementalmente ao longo de três décadas, composta por dezenas de módulos especializados integrados por uma camada comum de interação baseada em voz e teclado.
+O DOSVOX deve ser entendido menos como um software único e mais como uma plataforma de acessibilidade construída incrementalmente ao longo de três décadas, composta por dezenas de módulos especializados integrados por uma camada comum de interação baseada em voz e teclado. O patrimônio mais valioso não é o código em si, mas as soluções de engenharia e UX criadas para permitir autonomia a pessoas cegas décadas antes das diretrizes modernas de acessibilidade.
 
