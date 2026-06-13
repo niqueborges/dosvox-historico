@@ -1,0 +1,1345 @@
+MANUAL DO SISTEMA OPERACIONAL DOSVOX
+
+
+SUMÁRIO
+
+0) CRÉDITOS E NOTAS SOBRE O MANUAL
+1) INTRODUÇÃO
+1.1) HISTÓRICO
+2) INICIANDO E FECHANDO O SISTEMA OPERACIONAL DOSVOX
+2.1) INICIANDO
+2.2) ALTERANDO O VOLUME DO SOM
+2.3) RELENDO MENSAGENS JÁ DITAS
+2.4) FECHANDO
+3) TESTE DE TECLADO
+4) EDITOR DE TEXTOS
+5) ARQUIVOS
+5.1) EDITAR ARQUIVO
+5.2) IMPRIMIR ARQUIVO
+5.3) LEITURA DE ARQUIVO
+5.4) REMOVER ARQUIVO
+5.5) EXECUTAR UM ARQUIVO
+5.6) TROCAR NOME DO ARQUIVO
+5.7) ALTERNAR PARA SUBDIRETÓRIOS
+5.8) CÓPIA DO ARQUIVO
+5.9) DADOS SOBRE O ARQUIVO
+5.10) ESPECIFICAÇÃO DE GRUPOS DE ARQUIVOS
+5.11) ORDENAR OS ARQUIVOS
+5.12) ENVIAR ARQUIVO COMO E-MAIL
+5.13) ZIPAR O ARQUIVO
+5.14) PROTEGER OU DESPROTEGER ARQUIVO
+5.15) BUSCAR ARQUIVO QUE CONTENHA UM TEXTO
+5.16) SOLICITAR NOME DA PASTA ATUAL
+5.17) SELECIONAR E TIRAR A SELEÇÃO DE VÁRIOS ARQUIVOS AO MESMO TEMPO
+5.18) BUSCA RÁPIDA PELA LETRA INICIAL
+5.19) FILTRO DE ARQUIVOS
+6) DISCOS / DISQUETES
+6.1) INSERINDO E REMOVENDO DISQUETES
+6.2) MANIPULANDO DISCOS E DISQUETES
+6.2.1) ESCOLHER DISCO PARA TRABALHO
+6.2.2) VERIFICAR O ESPAÇO DO DISCO DE TRABALHO
+6.2.3) FORMATAR UM DISQUETE
+7) SUBDIRETÓRIOS
+7.1) CRIAR
+7.2) DIRETÓRIOS PREFERIDOS
+7.3) ALTERNAR PARA ARQUIVOS
+8) EXECUTAR UM PROGRAMA OU COMANDO QUALQUER
+9) IR PARA OUTRA JANELA DO WINDOWS
+10) CONFIGURAR O DOSVOX
+11) CONFIGURAÇÃO AVANÇADA DO DOSVOX
+11.1) ATUALIZAR DOSVOX.INI A PARTIR DE ARQUIVO PREEXISTENTE
+11.2) AJUSTAR OS MACROCOMANDOS
+11.3) TRABALHAR COM AS SEÇÕES DO DOSVOX.INI
+12) OS APLICATIVOS DO DOSVOX E SEUS MANUAIS
+12.1) MENU PRINCIPAL
+12.2) JOGOS
+12.3) UTILITÁRIOS
+12.4) ACESSO A REDE E INTERNET
+12.5) MULTIMÍDIA
+13) CONTATANDO O PROJETO DOSVOX
+
+
+
+0) CRÉDITOS E NOTAS SOBRE O MANUAL
+
+Esta presente edição surgiu a partir de uma revisão completa feita por
+mim do manual escrito pelo prof. José Antonio Borges, cuja última edição
+houvera sido publicada em 1999. Apresento-lhes, pois, a nova edição
+continente de tudo quanto foi implementado no sistema Dosvox até a data
+atual - Junho de 2005 -, em sua versão 3.2.
+
+Caso não encontre neste o que busca, especialmente se se tratar de
+informações e/ou referências acerca dos aplicativos constantes do Dosvox
+que não ele mesmo, procure nos outros manuais, listados todos na seção
+12 do presente manual.
+
+Atenciosamente,
+Cleverson Casarin Uliana,
+em Primeiro de Junho de 2005.
+
+
+1) INTRODUÇÃO
+
+O DOSVOX é um sistema para microcomputadores da linha PC que se comunica
+com o usuário mediante síntese de voz, viabilizando, o uso de computadores
+por deficientes visuais.
+
+Este manual pretende ser um relato simples e direto sobre o uso do DOSVOX,
+visando sempre não apenas ensinar como realizam-se os procedimentos, mas também
+relatar a importância de seu uso no contexto computacional.
+
+O programa é composto de:
+
+.Sistema operacional que contém os elementos de interface com o usuário;
+.Sistema de síntese de fala para língua portuguesa;
+.Editor, leitor e impressor/formatador de textos;
+.Impressor/formatador para braille;
+.Programas de uso geral adaptados a cegos: caderno de telefones, agenda,
+ calculadora, preenchedor de cheques, etc;
+.Jogos diversos;
+.Ampliador de telas para pessoas com visão reduzida;
+.Programas para ajuda à educação de crianças com deficiência visual;
+.Clientes para acesso à Internet, como Correio Eletrônico, Telnet, FTP e
+acesso a WWW;
+.Aplicativos multimídia, como tocador de CDs e arquivos de som, gravador
+de áudio, conversores de formatos e interfaces com programas populares
+para Windows;
+.Leitor de telas para Windows.
+
+
+1.1) HISTÓRICO
+
+O sistema foi desenvolvido no Núcleo de Computação Eletrônica da Universidade
+Federal do Rio de Janeiro, sob a supervisão do prof. Antonio Borges, da
+Divisão de Assistência ao Usuário.  Da equipe de desenvolvimento participam
+também programadores deficientes visuais, que fazem uso do sistema, sem
+necessitar da ajuda de pessoas que enxergam.
+
+O sistema DOSVOX tem um grande impacto social pelo benefício  que ele traz
+aos deficientes visuais, abrindo novas perspectivas de trabalho e de
+comunicação; ele hoje conta com mais de 10000 usuários em todo o Brasil.
+
+
+2) INICIANDO E FECHANDO O SISTEMA OPERACIONAL DOSVOX
+2.1) INICIANDO
+
+O DOSVOX pode ser chamado por meio do seguinte procedimento: Pressione
+as teclas CONTROL ALT D simultaneamente e você escutará a seguinte
+mensagem:
+"sISTEMA DOSVOX - VERSÃO 3.2 - NÚCLEO DE COMPUTAÇÃO ELETRÔNICA
+DA UFRJ. DOSVOX - O que você deseja ?"
+
+A pergunta "DOSVOX - O que você deseja ?" será ouvida sempre quando ele
+necessite que você entre com alguma informação.
+
+A partir deste momento você pode comandar de forma interativa o
+computador.
+
+Na tela do computador aparecem informações acerca de como adquirir ou
+obter ajuda sobre o DOSVOX. Essas informações estão na seção 13 deste
+documento.
+
+Para saber as opções do DOSVOX, tecle F1 ou caminhe com as
+setas verticais.  Será mostrado o seguinte:
+
+As opções do DOSVOX são:
+
+T - testar o teclado
+E - editar texto
+L - ler texto
+I - imprimir
+A - arquivos
+D - verificar discos
+J - jogos
+U - utilitários falados
+R - acesso a rede e internet
+M - multimídia
+P - executar um programa qualquer
+S - subdiretórios
+V - vai para outra janela do Windows
+C - configura o Dosvox
+* - configuração avançada do dosvox
+Q - informa a quem pertence este DOSVOX
+
+Existem ainda outras opções, como o atalho CONTROL F6 que ativa os
+macrocomandos, detalhados no item 12.2 deste manual.
+
+Observação: No DOSVOX, o que é mostrado na tela também é falado.  Em alguns
+casos a fala é um pouco diferente, mais reduzida.
+
+Se, neste momento ou quando estiver em qualquer programa do Dosvox
+detalhado mais a diante ou em outros manuais, você quiser saber que horas são segundo o
+relógio do computador, pressione F8; caso queira saber a data, pressione
+CONTROL e sem soltar pressione F8.
+
+
+2.2) ALTERANDO O VOLUME DO SOM
+
+Por padrão, o sistema operacional (no caso o Windows) configura as
+placas de som dos computadores, de modo que qualquer som produzido e
+jogado ali saia plenamente audível pelos auto-falantes e/ou fones de
+ouvido cujo volume esteja regulado para uma posição média. Se, todavia,
+por qualquer causa você estiver escutando um som demasiadamente baixo ou
+alto para seus ouvidos, proceda assim:
+
+Após ouvir a pergunta "Dosvox, o que você deseja ?", tecle a letra M, e,
+quando da pergunta "Qual a letra do Programa de Multimídia ?", responda
+com a letra V.
+
+Neste momento, a máquina pedir-lhe-á para digitar um
+número entre 1 e 5, o qual será, a partir de então, o novo volume de
+tudo o que se ouve pela placa de som. Recomendamos que, no caso que o
+som esteja baixo, ponha-se o valor 5, posto que é esse o valor que
+coloca o volume em 100 porcento. Após digitar o valor, você retorna
+automaticamente à janela inicial e principal do Dosvox.
+
+Nota técnica: O programa ativado pela opção M V do Dosvox é o TMix.exe.
+
+
+2.3) RELENDO MENSAGENS JÁ DITAS
+
+Caso aconteça em algum momento que alguma mensagem dita pelo sistema lhe
+escape ao ouvido ou simplesmente você não compreenda bem o significado
+da mesma, pressione CONTROL F9 e será ativado o modo de leitura da
+tela; nesse modo é possível rever com as setas as últimas informações
+escritas na tela do computador, que, como já supracitado, correspondem
+quase identicamente ao que é falado. Assim pois, que sempre quando você
+quiser ter certeza de algo que foi falado recentemente pelo sistema,
+pressione CONTROL F9, releia com as setas e depois tecle Esc para
+retornar àonde ativara o modo de leitura da tela.
+
+
+2.4) FECHANDO
+
+Quando quiser fechar o Dosvox, pressione F ou ESC; uma mensagem de
+despedida soa, e após lhe é perguntado se deseja desligar o computador,
+se fazer logoff, se permanecer no Windows normalmente ou reiniciar o computador.
+Teclando a letra correspondente, será executada a ação; no caso que a
+escolha seja permanecer no Windows, é perguntado se deseja manter o
+leitor de telas ativo para continuar com suporte falado em ambiente
+Windows, ao que deve responder sim S ou não N.
+
+Nota técnica: o programa ativado quando da saída do sistema Dosvox, é o
+fechawin.exe.
+
+
+3) TESTE DE TECLADO
+
+O teste de teclado é de suma importância, principalmente para o usuário
+iniciante em microcomputadores.  Se você já possui conhecimentos de
+datilografia será fácil adaptar-se ao teclado do micro.  O objetivo
+principal do teste de teclado, é que o usuário possa fazer um
+reconhecimento da posição das teclas alfanuméricas e teclas com funções
+especiais, tornando a aprendizagem dos demais aplicativos do sistema
+facilitada.
+
+Você pode testar o teclado pressionando a tecla T, em resposta à mensagem
+principal "DOSVOX - o que você deseja ?".
+
+Quando cada tecla for pressionada, o sistema emitirá o som do nome dessa tecla.
+Assegure-se de ter localizado as seguintes teclas:
+
+ENTER, BACK SPACE, INS ou INSERT, DEL ou DELETE, PAGE UP, PAGE DOWN,
+HOME, END, F1, F2, F3, F4, F5, ... até F10,
+NUM LOCK, CAPS LOCK, DIREITA, ESQUERDA, CIMA, BAIXO, ESC ou ESCAPE
+
+Algumas teclas, nomeadamente as situadas entre CONTROL e ALT que ficam
+na primeira carreira de baixo do teclado junto à barra de espaço, não
+emitem som algum. Esse é um comportamento normal, mas tente num primeiro
+momento não pressionar tais teclas, pois uma delas - a tecla
+Windows, caracterizada por uma janela desenhada - ativa o botão Iniciar
+do Windows e o foco sairá da janela do Dosvox de teste do teclado.
+
+Pressionando a tecla ESC o teste termina e soa novamente a pergunta
+"DOSVOX - O que você deseja ?".
+
+
+4) EDITOR DE TEXTOS
+
+Como regra geral, a primeira tarefa realizada por pessoas
+que adquirem um microcomputador para uso doméstico, é escrever, imprimir
+e ler textos; estes podem ser cartas pessoais, trabalhos escolares ou
+acadêmicos, documentos de trabalho profissional redigidos para posterior
+impressão, e tantos outros... Por esta razão, as primeiras opções do
+menu principal do Dosvox referem-se a trabalhos com texto.
+
+
+
+
+Para a versão completa do DOSVOX o editor chama-se EDIVOX;
+O nome do arquivo do manual detalhado para esclarecimentos quanto ao
+uso do editor é EDIVOX.TXT.
+
+Para a versão Mini do DOSVOX feita para iniciantes chamada MINIVOX o editor
+chama-se MINIED; o Minied também integra o pacote completo do
+Dosvox, não sendo todavia o editor padrão.
+
+O nome do arquivo do manual detalhado sobre o uso desse minieditor
+chama-se MINIED.TXT e encontra-se na pasta \winvox\manual, que é a
+pasta padrão dos manuais do Dosvox (para informações sobre pastas, ver
+seção 7 deste manual).
+
+
+5) ARQUIVOS
+
+Todas as informações armazenadas em um computador são guardadas em
+arquivos, que podem, "a grosso modo", ser imaginados como cadernos com
+informações, guardados em discos flexíveis (disquetes), CDs ou discos rígidos.
+
+Para trabalhar com arquivos basta digitar a opção A após a pergunta
+"DOSVOX - o que você deseja ?".
+
+A máquina informa:
+"Número de arquivos neste diretório: xx
+Arquivos: use as setas para selecionar.
+Depois tecle sua opção.", onde xx é o número de arquivos existentes
+naquele diretório.
+
+Além das setas, pode usar as teclas PAGE UP e PAGE DOWN, que retrocedem
+e avançam 10 arquivos de uma vez, respectivamente; a tecla Home vai para
+o primeiro arquivo da lista e a tecla End vai para o último.
+
+Para saber as opções de arquivos tecle F1, ou, tecle F9 e ande com as
+setas verticais.. São elas:
+
+E - editar o arquivo
+I - imprimir
+L - ler
+R, a ou F7 - remover
+X ou Enter - executar o arquivo
+N - trocar o nome
+C - tirar uma cópia
+D - obter dados sobre o arquivo
+Q - informar quantidade de arquivos na pasta atual
+G - exibir um grupo de arquivos
+T - falar o tamanho total dos arquivos da pasta atual
+O - ordenar os arquivos
+M - enviar arquivo como e-mail
+Z - zipar o arquivo
+CONTROL T - falar o tamanho dos selecionados
+P - desproteger o arquivo
+CONTROL P - proteger o arquivo
+B - buscar um arquivo que contenha um texto
+CONTROL B - buscar novamente
+CONTROL C - jogar nome completo (com o caminho) na área de transferência
+CONTROL N - jogar o nome na área de transferência sem incluir o diretório
+CONTROL Q - informa a posição do arquivo com relação a todos da lista
+CONTROL D - informa o nome do diretório atual
+
+Para sair do menu de arquivos ou qualquer uma de suas sub-opções, tecle
+Esc.
+
+
+5.1) EDITAR ARQUIVO
+
+Nesta opção você pode editar diretamente um arquivo selecionado através
+das setas, sem precisar sair do menu de arquivos e entrar no Edivox. Uma
+vez terminada a edição, o usuário ainda encontrar-se-á dentro da opção
+de arquivos, viabilizando desta forma uma operação rápida de edição
+sobre vários deles.
+
+
+5.2) IMPRIMIR ARQUIVO
+
+Para imprimir o arquivo digite I logo após o sistema falar o nome
+dele. Soará a mensagem: "Deseja impressão Comum, Formatada ou em Braille?"
+Se optar pela Comum tecle C, F para formatada ou B para Braille.
+
+A impressão pode ser em Braille ou comum (em tinta), dependendo do tipo
+de impressora que esteja conectada ao seu computador. Tecle C ou B para
+informar se a impressora é Comum ou Braille. O programa pergunta:
+"Deseja configuração padrão (s/n)?"
+
+Caso a resposta seja "S" (sim), a impressão será iniciada.
+Caso seja "N" serão exibidas diversas opções num formulário onde pode
+caminhar com as setas e trabalhar tal qual num editor de textos.
+Para sair deste formulário e iniciar a impressão tecle ESC.
+
+Nota: Antes de iniciar a impressão, é necessário certificar-se que a
+impressora está conectada ao computador e ligada, e se a impressora está
+abastecida com papel.
+
+
+5.3) LEITURA DE ARQUIVO
+
+Um texto qualquer pode ser lido diretamente pelo levox.  O leitor é um
+programa automático, que sai lendo diretamente o texto.  Ele entende
+os códigos ANSI (padrão internacional) ou IBM (usado no MS-DOS,
+pelo editor EDIT).
+
+Para cessar a leitura tecle Enter ou espaço. Para reiniciar a leitura, de
+novo Enter ou espaço. Pode-se caminhar no texto com as setas.
+
+Caso deseje ir a um ponto específico do texto, pressione
+F5 e informe uma ou mais palavras a buscar; o leitor posicionar-se-á no
+primeiro ponto do arquivo onde o texto digitado for encontrado;
+pressionando CONTROL F5 ele busca o próximo ponto onde haja texto
+idêntico.
+
+A leitura é terminada teclando Esc ou ALT F4 simultaneamente.
+
+
+5.4) REMOVER ARQUIVO
+
+Se um arquivo não é mais necessário, pode-se apagá-lo através desta
+opção. Apagar (também chamado de deletar) um arquivo pode parecer uma
+atitude drástica, especialmente quando leva-se em conta o tempo
+investido para criá-lo. Existem, entretanto, boas razões para fazê-lo: a
+primeira delas, muitas vezes imperiosa, é a necessidade de obter
+mais espaço em disco. Outra é que, com o tempo, muitos arquivos passam a
+conter informações defasadas, e outros contém apenas versões antigas de
+programas ou cópias de segurança de outros arquivos.
+
+Eliminando essas relíquias, você terá mais espaço para trabalhar com novos
+arquivos e programas e manterá seu computador sempre organizado, realizando
+assim uma importante rotina de manutenção dos dados nele contidos.
+
+Quando você remove um arquivo teclando R, A ou F7, o mesmo não é
+efetivamente apagado mas sim enviado para a lixeira do Dosvox. Isso
+significa simplesmente que a opção copia o arquivo para uma pasta
+específica que por padrão é \lixeira, para o caso de o usuário um dia
+necessitar do arquivo novamente em razão de algum imprevisto ou
+simplesmente arrepender-se de havê-lo apagado. Se, contudo, o usuário
+pretender de fato excluir permanentemente o arquivo, pode teclar CONTROL
+A ou CONTROL R ao invés de R ou F7; mas atenção porém que neste caso seu
+arquivo não terá mais volta !
+
+
+5.5) EXECUTAR UM ARQUIVO
+
+Essa opção executa, ou seja, "abre" o arquivo selecionado usando o programa
+com o qual aquele tipo de arquivo é associado. No ambiente Windows, os
+tipos de arquivos distinguem-se por suas extensões, que são os três
+últimos caracteres do nome, os quais vêm após o ponto (.). Assim, existem
+os arquivos .txt que são arquivos de texto puro, arquivos .doc
+(documentos formatados), arquivos .ini (parâmetros de configuração para
+programas), arquivos .wav, .mp3, .rm, etc. (arquivos de áudio), e assim
+por diante.
+
+O Windows mantém cada uma dessas espécies de arquivos associada a um
+programa específico, para que toda vez quando mandamos abrir /
+executá-lo ele já saiba que programa acionar.
+
+No ambiente Dosvox, existem algumas associações diversas do Windows; por
+exemplo, quando mandamos executar um arquivo de texto (*.txt) este é aberto no
+editor de textos do Dosvox - o
+Edivox - e não no Bloco de Notas ou notepad como acontece quando
+abrimos o mesmo arquivo .txt pelo Windows. Da mesma forma, os arquivos
+de áudio são abertos e tocados no Midiavox e não no Windows Media Player,
+bem entendido, quando se executa pela opção x ou Enter no menu de
+arquivos do Dosvox.
+
+A lista completa de tipos de arquivos para os quais o Dosvox suporta
+associações, bem assim os programas a serem ativados, encontra-se na
+seção [dosvox] constante do arquivo dosvox.ini situado na pasta
+\windows, que é o arquivo principal de configuração do dosvox. Pode-se
+incluir novas associações aí, mas recomenda-se isso seja feito com
+atenção e cautela especialmente para os ainda sem prática e apenas
+quando realmente necessário, vez que os tipos de arquivos não
+constantes do dosvox.ini podem ser executados normalmente pela opção de
+arquivos do Dosvox, apenas que no caso sê-lo-ão usando
+os próprios programas associados pelo Windows.
+
+
+5.6) TROCAR NOME DO ARQUIVO
+
+Esta opção pede que você edite o novo nome de um arquivo. Depois de
+teclar, pressione Enter.
+
+
+5.7) ALTERNAR PARA SUBDIRETÓRIOS
+
+Essa opção leva ao menu de subdiretórios do Dosvox sem que você precise
+teclar Esc para voltar à janela principal do programa e depois teclar S
+(para aprender mais sobre diretórios, ver seção 7 deste documento). Isso
+torna mais práticas muitas das operações com arquivos descritas
+asseguir, vez que para copiar arquivos, buscar texto, remover, etc., é
+preciso, na maioria dos casos, saber em quais pastas esses arquivos se
+encontram. E de fato com o tempo você perceberá que é mesmo muito comum
+e necessário, para fins de comodidade e agilização de tarefas, ter uma
+noção conjunta de arquivos, pastas, subpastas, etc.
+
+
+5.8) CÓPIA DO ARQUIVO
+
+Esta é uma das operações mais usadas e consiste em criar um arquivo novo,
+duplicata de um outro já existente, apagando ou não o original.
+
+Os tipos de cópia que o DOSVOX realiza são quatro, a saber:
+
+A) Criar réplica deste arquivo:
+
+A opção R cria uma cópia de segurança do arquivo selecionado. O nome do
+arquivo réplica é perguntado; tecle até 256 letras seguidos do ponto . e
+mais as três letras correspondentes à extensão do arquivo (recomendamos
+manter a mesma extensão do arquivo original para não haver confusão de
+tipos de arquivo, o que pode danificá-lo caso este seja aberto pelo
+programa errado). Pode
+também teclar o caminho completo (incluindo a pasta de destino), como
+por exemplo: c:\winvox\treino\cópia.txt
+
+B) Copiar o arquivo para outro disco ou subdiretório:
+
+Na opção D você copia o último arquivo selecionado para um outro disco
+ou diretório.
+Para copiá-lo a outro disco, informe a letra da unidade, seguido
+pelo caracter dois pontos. Por exemplo:
+   A:
+   B:
+
+C) Mover arquivos para outro diretório
+
+Essa opção move, ou seja, cria o mesmo arquivo em outra pasta e durante
+o mesmo processo apaga o arquivo original. Essa operação é muito útil
+quando, por exemplo, organizamos nossas pastas, queremos que um dado
+arquivo esteja noutra pasta que não a onde atualmente está e não
+precisamos de cópia do mesmo.
+
+D) Copiar todos os arquivos deste diretório para outro:
+
+Na opção T, todos os arquivos do diretório de trabalho corrente (o
+espaço do disco em que você está trabalhando), serão copiados para outro
+disco ou diretório.
+Esta opção, portanto, fornece uma alternativa mais fácil e rápida de
+copiar diversos arquivos de uma só vez.
+
+
+5.9) DADOS SOBRE O ARQUIVO
+
+Nesta opção é possível saber o tamanho em bytes (ou seja o número de
+letras) do arquivo, sua data e hora de criação. Se o arquivo tiver mais
+de 50 KB de tamanho, este será dito em KB e não em Bytes (um KB é igual
+a 1024 bytes). Caso o arquivo seja maior que 100 MB, o tamanho será dito
+em MB (1 MB é igual a 1024 KB).
+
+A importância desta função está no fato de sabermos mais detalhes de nossos
+arquivos tais como:
+
+.saber se determinado arquivo pode ou não ser copiado para outro disco
+dependendo do tamanho dele e do espaço disponível no disco para onde se
+quer copiar arquivos;
+.distinguir cópias antigas de determinados arquivos que já estão obsoletas.
+
+
+5.10) ESPECIFICAÇÃO DE GRUPOS DE ARQUIVOS
+
+Normalmente o menu de arquivos mostra todos os que existem num diretório.
+Podemos ver apenas alguns arquivos, selecionando uma máscara de
+visualização. Nesta máscara podemos usar os seguintes caracteres: letras, o
+ponto de interrogação e o asterisco.
+
+O ponto de interrogação substitui uma só letra qualquer em sua posição.
+O asterisco substitui quantas letras houver após sua posição.
+
+Suponhamos que existam os seguintes arquivos no diretório atual:
+
+arq1.txt
+arq2.dat
+teste.doc
+texto.tmp
+taxas.txt
+
+A opção "arq*.*" selecionaria os arquivos "arq1.txt" e "arq2.dat".
+A opção "t?x*.t*"   selecionaria "texto.tmp" e "taxas.txt".
+A opção "*.*"    selecionaria todos os arquivos.
+
+
+5.11) ORDENAR OS ARQUIVOS
+
+São possíveis três ordens: por nome (que é o padrão), por
+tipo e por data. À pergunta deve-se responder com n, t ou d,
+respectivamente.
+
+
+5.12) ENVIAR ARQUIVO COMO E-MAIL
+
+Essa opção cria um e-mail e anexa os arquivos por você selecionado,
+deixando-o preparado para posterior envio pelo Cartavox. Você deve
+informar primeiramente o destinatário para o qual enviará o e-mail,
+depois o assunto da carta e finalmente confirmar o envio. Esse recurso
+evita situações quando, por exemplo, você teria de decorar os nomes de
+vários arquivos, sair do menu arquivos, entrar no Cartavox ou em outro
+cliente de e-mail e digitar lá os arquivos para enviar anexos.
+
+Obs.: para aprender mais sobre como selecionar vários arquivos ao mesmo
+tempo, ver item 5.17 deste documento.
+
+
+5.13) ZIPAR O ARQUIVO
+
+Zipar, compactar ou comprimir um ou mais arquivos ou pastas, significa
+transformá-los mediante um processo de codificação, em arquivos com
+tamanho menor que os originais, os quais podem ser abertos e alterados
+apenas por programas que lidam com formatos de arquivos compactos. O
+termo "zipar" deriva da extensão que têm os arquivos no formato de
+compactação atualmente mais comum no meio informático como um todo, o
+Zip.
+
+Ao teclar Z no menu de arquivos do Dosvox, é pedido que tecle T para
+compactar todo o diretório ou apenas os selecionados (ver itens 5.17 e 7
+deste manual). Após fazer sua opção, informe o nome do arquivo compacto
+que conterá os arquivos e/ou pastas originais e tecle Enter; se o
+caminho do arquivo for omitido, este é posto no diretório onde
+encontramo-nos no momento.
+
+Sempre quando precisar descomprimir um arquivo, simplesmente o execute
+teclando x ou Enter sobre ele e o utilitário descompressor faz o resto.
+
+Compactar arquivos pode trazer vantagens em muitas situações; imagine,
+por exemplo, que você precise transmitir por e-mail uma dezena ou mais
+de arquivos, os quais juntos somam um tamanho demasiado grande podendo
+lotar a caixa de e-mails do seu destinatário ou mesmo sobrecarregar os
+servidores de envio e recebimento de e-mails. Tal circunstância é
+especialmente grave, quando um dos correspondentes ou ambos conectam-se à
+Internet via acesso discado, por cujo a transmissão de dados é sobremodo
+vagarosa. Ademais, não é difícil deduzir ser mais fácil ocorrer o
+extravio de um arquivo que esteja entre dez ou sem outros anexados a uma
+carta, do que um único arquivo anexo. Por tudo isso é que convém
+comprimir os arquivos que você pretende enviar, e tão logo cheguem eles à
+pessoa destinada esta procede então à descompressão.
+
+Você pode também compactar arquivos e pastas que usa com muito pouca
+freqüência a fim de facilitar a manutenção e o gerenciamento do conteúdo
+em sua máquina, visto como a compressão aumenta o espaço em disco e
+desobstrui pastas muito cheias.
+
+É importante observar que o Dosvox não trabalha com arquivos compactos
+por si mesmo, ele faz uso de algum compressor instalado na máquina. Por
+padrão é instalado com o Dosvox o RAR32, que é capaz de descompactar e
+compactar arquivos .ZIP e .RAR. Contudo nada impede que você mesmo
+escolha seu próprio compactador, bastando para tanto que trate-se de um
+possível de se trabalhar via linha de comandos ao estilo MS DOS. Para
+alterar o utilitário de compressão e descompressão, edite o arquivo
+\windows\dosvox.ini e altere a linha "compactador=", indicando o caminho
+para o executável do programa (recomenda-se deixá-lo na pasta padrão do
+Windows, a \windows e indicar apenas o nome dele no dosvox.ini).
+
+Obs.: O formato de arquivo compacto .rar usa algoritmos de codificação
+mais confiáveis que os usados pelo .zip, deixando os arquivos
+substancialmente menores; todavia, trata-se de um formato bem menos
+popular e, portanto, se você enviar um arquivo em formato .rar por
+e-mail a alguém, por exemplo, corre o risco que aquela pessoa não tenha
+um descompactador para esse formato.
+
+
+
+5.14) PROTEGER OU DESPROTEGER ARQUIVO
+
+Para proteger seus arquivos contra gravação, ou evitar que sejam
+apagados por acidente, basta teclar CONTROL P; Para desproteger
+digite P. A proteção evita, por exemplo, que o arquivo seja editado e
+alterado no Edivox, mas é possível lê-lo normalmente no Levox, caso
+naturalmente trate-se de arquivo texto compatível.
+
+O Dosvox traz de fábrica uma proteção natural contra a edição de
+arquivos que, se editados, certamente danificariam algum programa do
+sistema, daí que é dispensada a necessidade de preocupação em proteger
+tais arquivos; são os com extensão .exe (programas executáveis), .dll
+(arquivos de auxílio aos executáveis) e .bin (arquivos de código
+binário, que só são entendidos pela máquina em si).
+
+Observação muito importante: nas versões NT, 2000 e XP do Windows, a
+opção P não consegue desproteger um arquivo protegido pelo Windows,
+quando o usuário atualmente logado for diferente do usuário que criou o
+arquivo, a menos que o primeiro encontre-se com privilégios de administrador.
+
+
+5.15) BUSCAR ARQUIVO QUE CONTENHA UM TEXTO
+
+Na opção B, é perguntada a palavra ou frase a buscar. Caso seja
+encontrada, o arquivo que a contém é focado. Caso a cadeia de caracteres
+não seja encontrada em qualquer arquivo no diretório atual, isso
+ser-lhe-á dito. Teclando CONTROL B, é buscado novamente o último texto
+digitado na opção B e focado o próximo arquivo que o contenha.
+
+
+5.16) SOLICITAR NOME DA PASTA ATUAL
+
+Às vezes, durante operações com arquivos, pode haver necessidade de
+lembrar em qual diretório estamos. Para isso, em princípio,
+precisaríamos teclar S a fim de alternar para a opção de subdiretórios
+abandonando assim o menu de arquivos, o que ocasionaria perda de
+tempo, desfocalização e conseqüentemente desconcentração do ponto onde
+encontrávamo-nos em nosso trabalho. Todavia mediante o atalho CONTROL D
+tal informação nos é fornecida dentro da opção de arquivos.
+
+
+5.17) SELECIONAR E TIRAR A SELEÇÃO DE VÁRIOS ARQUIVOS AO MESMO TEMPO
+
+Suponha que haja uma pasta com centenas de arquivos e você deseje
+remover, copiar, zipar ou mover a maioria deles para outro local, mas não
+absolutamente todos. Uma opção seria executar a operação arquivo por
+arquivo, o que geraria um desgaste e perda de tempo incomensuráveis.
+
+Visando a agilidade para esses casos, existe, na opção arquivos do
+Dosvox, um recurso que permite selecionar vários arquivos ao mesmo
+tempo, estejam eles na posição onde estiverem ao longo da lista, e em
+seguida realizar as diversas operações possíveis e já explanadas, como
+apagar, copiar, enviar por e-mail, zipar, saber o tamanho total, etc.
+
+Para selecionar um arquivo, posicione-se nele com as setas e pressione
+barra de espaço. A partir desse momento, sempre quando você passar com
+as setas sobre este arquivo, ouvirá um bipe antes do nome dele; esse
+bipe indica que há uma marca especial no arquivo. Para tirar a seleção,
+pressione novamente barra de espaço e notará que o bipe não soa mais.
+
+Quando vários arquivos estão selecionados, ao escolher a opção de
+remover, é perguntado se deseja apagar todos os selecionados; o mesmo
+acontece com as opções de cópia e de compressão. Desse modo, torna-se
+bem mais prático realizar tais operações com muitos arquivos dispersos
+por uma lista e que, uma vez selecionados, são processados ao mesmo
+tempo.
+
+Existem também os atalhos asterisco (que seleciona de uma só vez todos os
+arquivos da lista) e barra (que tira a seleção de todos os
+selecionados). Assim, se quiser, por exemplo, apagar todos os arquivos
+da lista menos um, pressione asterisco, localize o arquivo que quer
+preservar, pressione espaço (note que neste momento o bipe não soa mais
+antes do nome do arquivo recém-desselecionado), e então pode mandar apagar
+todos os selecionados.
+
+
+5.18) BUSCA RÁPIDA PELA LETRA INICIAL
+
+Numa lista muito grande de arquivos, pode-se demorar muito até chegar ao
+arquivo desejado usando apenas as setas e as teclas PAGE UP e PAGE Down.
+Pressionando a tecla F5 uma vez, e em seguida o primeiro caracter do nome
+do arquivo, o cursor é posicionado no primeiro arquivo da lista
+iniciado por
+aquele caracter. Uma vez que os arquivos estão sempre em ordem
+alfabética - a menos que você haja alterado a ordem com a opção O -, basta
+então caminhar com a seta abaixo até o arquivo desejado caso não
+seja o próprio onde o cursor ficou.
+
+
+5.19) FILTRO DE ARQUIVOS
+
+Imagine uma pasta com dezenas ou centenas de arquivos iniciados pela
+mesma letra ou caracter, e que você precise localizar um desses arquivos para
+ler, editar, imprimir ou executá-lo com outro utilitário qualquer. Uma opção é teclar F5
+e o primeiro caracter do nome; todavia, tendo em vista serem muitos os
+iniciados pelo mesmo a operação tomar-lhe-ia um tempo precioso.
+
+Há, pois, uma forma de filtrar os arquivos toda vez quando você
+encontra-se em um campo onde tem de digitar o nome de um, por exemplo,
+quando chama o Edivox, o Levox ou o Imprivox a partir do menu principal
+do Dosvox; nestes e em outros casos, a primeira pergunta é o nome do
+arquivo. Caso não o lembre ou tenha dúvidas quanto à grafia do nome,
+pressione seta abaixo e será dito o nome do primeiro da pasta. Aí pode
+andar com as setas, com PAGE UP, PAGE DOWN, Home e End e usar a função
+de busca com F5, tal como se estivesse na opção de arquivos. Se, porém,
+quiser que apareçam apenas arquivos iniciados por uma certa cadeia de
+caracteres, tecle essa cadeia quando for perguntado o nome do arquivo e
+depois pressione seta abaixo. É exibida então uma lista composta apenas
+pelos arquivos iniciados por aquele conjunto de caracteres. Digitando a
+letra b, por exemplo, serão exibidos apenas os arquivos iniciados por b;
+se digitar ass, serão exibidos apenas arquivos iniciados por ass, caso
+haja arquivos com nomes tais como assinatura, assuntos, etc.
+
+Esse é um truque muito útil para economizar tempo procurando arquivos
+que deseja editar, ler, imprimir ou abrir em qualquer utilitário outro
+que seja. Tão logo encontre o arquivo desejado, pressione Enter e este
+abrir-se-á no mesmo programa que outrora você abrira e que perguntara-lhe o
+nome do arquivo.
+
+
+6) DISCOS / DISQUETES
+
+Os disquetes são dispositivos onde as informações são gravadas por
+processos eletromagnéticos. Eles podem variar de tamanho assumindo a
+forma 3 1/2 polegadas, com capacidade para 1400000 letras - equivalente
+a 1.38 MB - ou 5 1/4 com
+capacidade de 1200000 letras. As unidades físicas onde são inseridos os disquetes são chamadas de A: ou B:
+
+Existe uma unidade de armazenamento permanente de dados dentro do
+computador, geralmente denominada C: Este disco recebe o nome de disco
+rígido ou HD (hard disk). O disco rígido é um dispositivo magnético
+usado para o armazenamento de grandes volumes de informações. Tanto a
+capacidade de armazenamento quanto a velocidade de acesso são
+incomensuravelmente maiores no disco rígido que nos discos flexíveis
+(disquetes).
+
+Os discos rígidos são fixos no computador, portanto mais seguros, enquanto
+os disquetes são dispositivos de menor capacidade, mas são práticos para
+guardar um pequeno volume de informações. É importante ressaltar alguns cuidados especiais para o manuseio dos discos:
+
+.Mantenha os discos longe do calor excessivo, que pode empená-los ou
+danificar sua superfície magnética;
+.Os campos magnéticos podem apagar informações e inutilizar os seus
+discos;
+Tome cuidado especial com telefones, alto-falantes, televisores, som
+etc;
+.Preencha as etiquetas a tinta ou em braille antes de colocá-las nos discos.
+
+Os disquetes de 3 1/2 possuem um entalhe que pode ser coberto empurrando
+um pequeno pino localizado na parte inferior direita, protegendo-o desta
+forma contra gravação posterior.
+
+
+6.1) INSERINDO E REMOVENDO DISQUETES
+
+A etiqueta deve estar para cima e para fora. Empurre-o o disco
+suavemente até escutar um clique. Para remover o disco, acione o botão
+da unidade de leitura e o disquete será automaticamente ejetado. Não
+remova o disquete quando a máquina estiver fazendo alguma cópia ou
+salvando um arquivo nele: você pode danificar os dados gravados no
+disquete.
+
+
+6.2) MANIPULANDO DISCOS E DISQUETES
+
+Ao teclar D após a mensagem principal, você usa um aplicativo
+do DOSVOX que trata da seleção e manipulação das unidades de discos.
+Para saber as opções da unidade de discos e diretórios basta teclar [F1],
+ou andar com as setas verticais após a mensagem:
+"Discos - O que você deseja ?"
+As opções de manuseio de disco são:
+
+D - escolher disco para trabalho
+V - voltar ao último diretório
+E - verificar espaço do disco de trabalho
+F - formatar um disquete
+P - diretórios preferidos
+
+Apesar de haver no Dosvox um menu específico para operar com
+subdiretórios, foram colocadas as operações mais corriqueiras também na
+opção de discos, para fins de praticidade; para mais detalhes ver seção
+7 deste manual.
+
+
+6.2.1) ESCOLHER DISCO PARA TRABALHO
+
+As unidades de discos, são os dispositivos no qual os mesmos são colocados
+para a leitura e gravação de informações. Em geral a unidade A é a unidade
+de disquete principal, B a unidade opcional secundária e C o disco rígido
+interno do computador ou uma de suas partições. Algumas pessoas gostam
+de particionar seus HDs quando estes são grandes, deixando em regra a
+unidade C para todos os programas instalados e a unidade D para os
+dados que se crie. Desse modo, quando um programa causa danos ao sistema
+Windows como um todo e há necessidade de formatar o disco, a urgência de
+fazer e manter cópias de segurança de todos os dados é dispensada, vez
+que ficam preservados na unidade D e formata-se apenas a C.
+
+O sistema perguntar-lhe-á qual o novo disco de trabalho. Basta informar
+a letra e o sistema trocará para a unidade desejada.
+
+
+6.2.2) VERIFICAR O ESPAÇO DO DISCO DE TRABALHO
+
+O sistema informar-lhe-á o tamanho total do disco e o espaço livre para
+novos usos. Esse espaço é medido em KB, que vale aproximadamente 1000
+bytes (na verdade, 1024), ou, quando o disco tem mais que 100 MB de
+tamanho, é medido em MB (um MB é igual a 1024 KB)..
+
+
+6.2.3) FORMATAR UM DISQUETE
+
+Hoje em dia, praticamente todos os disquetes vêm preparados para uso
+imediato (o que se conhece como disco pré-formatado). Entretanto se você
+comprar disquetes muito baratos eles necessitarão ser pré-gravados com
+marcas especiais para operação no PC; essa operação é conhecida como
+"formatar o disquete".
+
+O sistema pergunta a unidade e se você deseja usar formatação
+rápida (em
+discos normais, comprados em boas lojas, responda que sim). É perguntado
+então o nome do disquete, que é opcional. Depois, insira o
+disquete novo na unidade a formatar, e pressione Enter.
+
+Obs.: Se a qualquer momento de todo esse processo você desejar desistir,
+basta pressionar Esc.
+
+Aguarde o tempo necessário que pode variar, mas gira em torno de um a
+dois minutos, durante os quais você ouve ruídos na unidade de disquete
+de sua máquina. Caso haja problemas com a formatação, será exibida e
+falada uma mensagem de erro que deve conter a causa do problema
+encontrado.
+
+Nota: a formatação pode ser usada também para apagar completamente um
+disquete que contenha dados confidenciais, ou algum que tenha sido
+inadvertidamente desgravado por um campo magnético forte. Entretanto
+evite formatar desnecessariamente um disquete, pois a formatação
+original de fábrica é em geral mais confiável. Se, no entanto, for
+necessário desfazer-se de dados confidenciais, lembre de não usar
+formatação rápida, pois esta apenas apaga os dados lógicos do disco
+enquanto que aquela realiza a formatação física, impedindo que se
+recuperem os dados mediante programas especializados.
+
+
+7) SUBDIRETÓRIOS
+
+Um diretório - atualmente mais conhecido como pasta por usuários de
+Windows - é uma coletânea de arquivos, que ficam agrupados num "armário
+fictício" dentro do disco. Para que você possa trabalhar de forma
+organizada, deve criar seus próprios diretórios ou pastas, a fim de
+poder separar os tipos de informações, (por exemplo, pessoais, de
+trabalho, de piadas, etc).
+
+As pastas têm nomes com até 256 letras, precedidas pelo caracter
+"\".         Assim, alguns diretórios válidos seriam:
+\textos
+\contas 2005
+
+Um diretório pode conter "subdiretórios", possibilitando uma
+organização mais sofisticada das informações. Por exemplo:
+\textos\bons
+\textos\ruins
+\contas 2005\pagas
+\contas 2005\a pagar
+
+Existem dois diretórios importantes dentro do DOSVOX, do ponto de vista do
+usuário:
+\winvox\treino - que é o diretório padrão de trabalho
+\winvox\manual - o diretório que contém os manuais do sistema
+
+Selecionando a opção "S", o seletor de diretórios se inicia.
+Você usa as setas para verificar os subdiretórios do diretório atual,
+e depois pode teclar:
+
+T - para entrar no diretório atualmente selecionado e voltar ao menu
+principal do Dosvox;
+ENTER - entrar no diretório atual e continuar na opção subdiretórios;
+S - Sair para o diretório pai do atual;
+C - Criar novo subdiretório;
+R - remover a última pasta falada (só funciona se a mesma encontrar-se
+completamente vazia de subpastas e arquivos);
+N - trocar o nome da pasta selecionada. Você deve editar o novo nome e
+depois teclar Enter;
+D - obter dados sobre a pasta (normalmente fala a data de criação);
+V - voltar para a pasta anterior;
+I - saber qual a pasta atual;
+A - Alternar para o menu de arquivos.
+Teclando [Esc] você retorna ao DOSVOX;
+
+Você pode ter acesso a algumas dessas operações por meio do menu de discos do
+Dosvox de uma maneira mais prática. Para ativá-las, pressione D na
+janela principal do Dosvox e uma das seguintes opções:
+
+I - informar diretório de trabalho - diz o nome do diretório de trabalho atual
+e retorna ao menu principal do Dosvox;
+T - selecionar diretório de trabalho - pergunta o nome do diretório
+desejado e, caso ele exista, entra nele retornando ao menu principal do
+Dosvox. Selecionar um diretório de trabalho é importante pois assim
+pode-se organizar melhor o ambiente de trabalho. Por exemplo se estamos
+trabalhando com textos é importante estar localizado em um diretório que
+trate somente de textos;
+C - criar novo subdiretório - pede o nome do mesmo e se será o novo
+diretório de trabalho, retornando após as respostas ao menu principal do
+Dosvox;
+
+
+7.1) CRIAR
+
+Ao criar um diretório é fundamental escolher um nome significativo,
+facilitando a classificação dos arquivos dentro dele mesmo e dos
+subdiretórios correspondentes. Informa-se o nome do diretório de duas
+formas:
+a) Teclando um nome de até 256 letras. Neste caso o diretório será criado
+como um subdiretório do atual;
+b) informando o nome completo do diretório, com o caracter "\" (raiz)
+antes do nome, por exemplo:
+\cartas ou \winvox\cartas.
+
+
+7.2) DIRETÓRIOS PREFERIDOS
+
+Nota: Essa opção encontra-se disponível apenas no menu de Discos do
+Dosvox)
+
+Suponha que haja duas ou mais pastas entre as quais você alterne
+constantemente. Com certeza que o fato de tais pastas lhe serem
+importantes fá-lo-ia decorar logo seus respectivos nomes e você
+digitaria sem problemas na opção de escolher o diretório de trabalho.
+Todavia, convenhamos que o simples fato de digitar não lhe toma apenas
+segundos de tempo, os quais, somados representariam uma parcela
+substancial do seu dia; você também acumularia um desgaste físico
+considerável.
+
+Com vistas a tornar mais prática tal situação, encontramos no Dosvox um
+recurso chamado de "diretórios preferidos". Essa opção permite-lhe
+guardar uma lista das pastas que você mais usa e mudar para elas com
+mais rapidez. Você pode folhear os diretórios já previamente
+configurados, incluir o diretório atual ou editar diretamente - esta
+última opção recomendada para usuários avançados -. Se escolher incluir
+o diretório atual, ser-lhe-á solicitado que digite um nome, ou seja,
+qualquer palavra para identificar mais facilmente que pasta se trata
+quando do folheamento.
+
+Ao folhear podemos pressionar a primeira letra do nome-comentário do
+diretório e o cursor posicionar-se-á no primeiro nome da lista iniciado
+por aquela letra.
+
+Nota: pode-se também editar os diretórios preferidos recorrendo ao menu
+de configuração avançada do Dosvox (ver item 16 deste manual).
+
+
+7.3) ALTERNAR PARA ARQUIVOS
+
+Quando trocamos de um diretório para outro, a primeira coisa que
+fazemos, como regra geral, é verificar quais são os subdiretórios ou os
+arquivos dentro do que acabamos de entrar. No caso de saber quais os
+subdiretórios, não há problemas pois sempre ficamos posicionados
+justamente onde devemos estar para tal, qual seja, no próprio menu de
+subdiretórios. Mas para conhecer os arquivos precisaríamos teclar Esc
+voltando ao menu principal do Dosvox e em seguida A de arquivos.
+Pretendendo, pois, facilitar e tornar muito mais práticas as coisas em
+momentos como esses, existe no menu de subdiretórios a opção A que o
+leva diretamente ao menu de arquivos sem necessitar teclar Esc antes.
+
+
+8) EXECUTAR UM PROGRAMA OU COMANDO QUALQUER
+
+Teclando P na janela principal do Dosvox, você ouve a mensagem: "Tecle o
+comando:". A partir desta opção é possível entrar com qualquer nome de
+programa ou arquivo executável reconhecido pelo Windows ou
+qualquer comando do MS DOS que sua versão do Windows reconheça. Por
+exemplo, para executar o Edivox a partir da opção P do dosvox, digite
+x:\winvox\edivox.exe, em que x é a unidade de disco onde o Dosvox está
+instalado. Caso queira que o programa executado abra diretamente um arquivo
+específico, acrescente um espaço em branco após o nome do programa e em
+seguida o nome do arquivo a ser aberto incluindo o caminho de pastas
+caso você não esteja na mesma pasta do arquivo no momento. Ex.:
+c:\winvox\edivox.txt asteroid.txt
+c:\winvox\levox.exe c:\winvox\manual\dosvox.txt
+
+Obs.: Caso o nome do programa e/ou do arquivo contenha espaços em branco
+ou mais de oito caracteres, cerque-o com aspas. Ex.:
+
+\winvox\scripvox.exe "apaga e-mails com assunto indesejado.txt"
+
+Note que é possível abrir páginas de Internet por meio deste
+procedimento, como por exemplo para abrir a página do Dosvox no Internet
+Explorer, digite:
+iexplore http://intervox.nce.ufrj.br/dosvox
+
+Para executar um programa que já venha instalado no Windows, basta
+teclar o nome dele; neste caso não precisa informar o diretório porque o
+próprio Windows já o identifica como sendo o \windows onde estão
+instalados por padrão os principais ou mais usados aplicativos. Alguns
+nomes de programas mais comuns do Windows são:
+
+iexplore - Internet Explorer;
+msimn - Outlook Express;
+notepad - bloco de notas. Se for seguido de um espaço em branco e
+do nome de um arquivo, abre-o;
+sndvol32 - controle de volume. Se for seguido de um espaço em
+branco mais o parâmetro /r, abre nas propriedades de gravação;
+winword - Microsoft Word;
+explorer - Windows Explorer;
+control - painel de controle do Windows;
+wordpad - Word Pad;
+sndrec32 - gravador de som;
+
+Muitos comandos do MS DOS necessitam ser precedidos pela palavra "dos"
+para serem executados; esse procedimento tem também a vantagem de
+permitir a leitura dos resultados com o Dosvox. Como exemplo, se quiser
+acertar a hora do sistema, digite "dos time" sem as aspas, um espaço em
+branco e a hora atual no formato hh:mm:ss. A data ajusta-se com o
+comando "dos date" seguido de um espaço em branco e a data atual no
+formato dd/mm/aaaa. Após teclar um desses comandos ou outro qualquer e
+pressionar Enter, você ouve após alguns segundos "tecle ESCAPE para
+voltar ao Dosvox" e então pode ler a tela que contém o resultado gerado
+pelo comando usando as teclas padrão para leitura de textos, como setas,
+Alt F1, etc.
+
+A título de informação técnica, se sua versão de Windows for 9x, o
+programa usado para gerar comandos MS DOS é o command.com e se a versão
+do Windows for de plataforma NT, é o cmd.exe.
+
+
+9) IR PARA OUTRA JANELA DO WINDOWS
+
+Suponha que você esteja aguardando a chegada de um e-mail muito
+importante e para tanto deixe o seu cliente de e-mails monitorando o
+servidor à espera do e-mail, mas tenha outros trabalhos igualmente
+urgentes para realizar ao computador. Suponha agora que você esteja a ler
+um texto no Levox e lembre que precisa modificar uma certa informação em
+outro arquivo, mas não possa fechar o Levox para abrir o edivox, sob pena
+de não saber mais tarde onde interrompera a leitura pelo fato de o
+arquivo ser extenso.
+
+Para facilitar as coisas em situações como as hipotéticas supracitadas e
+tantas outras, existe um atalho de teclado muito conhecido por usuários
+de Windows o qual alterna o foco para outra janela, sem, contudo,
+fechá-la efetivamente, minimizando-a apenas: é o ALT Tab, que consiste em pressionar ALT e Tab
+simultaneamente, o que exibe uma lista de todas as janelas atualmente abertas
+no Windows. Tais janelas podem ser vários programas abertos um após o
+outro, o mesmo programa aberto inúmeras vezes, várias
+janelas pertencentes a um só programa, etc. Segurando pressionada a
+tecla Alt, pressiona-se várias vezes a tecla Tab, e a cada vez o cursor
+é posicionado numa janela da lista; quando chega à desejada soltamos o
+Alt e a janela é focada.
+
+O comando Alt Tab, todavia, pode deixar os usuários do Dosvox um tanto
+perdido porque, a menos que o Monitvox ou outro leitor de telas esteja
+ligado, não é possível saber quantas vezes tem de pressionar Tab até
+chegar à janela desejada pois o Dosvox nada anuncia. Para esse fim, foi
+criada a opção V do menu principal do Dosvox, que lista as janelas todas
+atualmente abertas, possibilitando-lhe aceder a qualquer uma dessas com
+as setas. Desse modo, toda vez quando você estiver em qualquer aplicação
+- seja do Dosvox ou não - e quiser ir a outra janela já aberta no
+Windows, pressione Control Alt D, o atalho de teclado que chama o Dosvox
+tendo o mesmo sido já iniciado ou não, e em seguida pode teclar V para
+listar as janelas abertas, selecionar a que quer e teclar Enter.
+
+
+10) CONFIGURAR O DOSVOX
+
+A opção C do Dosvox oferece-lhe a possibilidade de alterar de forma
+rápida e prática alguns dos parâmetros principais e mais usados do
+sistema. Pressione Enter após entrar com cada parâmetro ou caminhe pelo
+formulário com as setas verticais. Quando terminar, ou a qualquer
+momento da configuração, tecle Esc para sair e retornar ao Dosvox. Os
+parâmetros são:
+
+velocidade - de 1 a 5 (só funciona se a fala SAPI não estiver ativa);
+diretório de trabalho padrão do sistema (digite incluindo a unidade);
+usa fala SAPI? (S / N);
+número da voz SAPI (este e os próximos parâmetros só têm efeito se a
+resposta à pergunta acima houver sido S);
+Velocidade SAPI;
+Tonalidade SAPI.
+
+Nota: O sistema Dosvox pode fazer uso de qualquer sintetizador
+compatível com o padrão da Microsoft SAPI (speech application program
+interface) versão 4.0. Ao ser instalado, o Dosvox reconhece
+imediatamente os sintetizadores SAPI já instalados no computador.
+
+Durante a configuração pela opção C, se o número da voz SAPI for deixado
+em branco ou especificado como 0, o sistema procura e usa
+automaticamente a primeira fala em português que encontra instalada na
+máquina.
+
+
+11) CONFIGURAÇÃO AVANÇADA DO DOSVOX
+
+Desde o início do desenvolvimento do Dosvox há mais de dez anos, bem
+assim sua contínua expansão por todo o Brasil e hoje para suas
+além-fronteiras, os usuários mais familiarizados com o sistema como um
+todo aprenderam a configurar os seus parâmetros editando diretamente o
+arquivo principal de configuração - o \windows\dosvox.ini -, o que de
+certa forma permite um controle mais franco e completo sobre o modo e os
+detalhes de particularidade com que o sistema interage com a máquina e
+com o usuário. Tal procedimento (de editar o dosvox.ini diretamente),
+porém, exige plenos conhecimentos de sintaxe e lógica das configurações
+para ser realizado, pois a simples omissão ou adição de um só caracter
+em lugar inadequado - apenas para ficar num exemplo - pode tornar todo o
+Dosvox inoperante e, a depender se o caso for extremo, danificar o seu
+Windows.
+
+No sentido portanto de facilitar a vida de usuários mais avançados, foi
+introduzida no Dosvox a opção * para configuração avançada do sistema.
+Este item trabalha com os vários parâmetros ajustáveis no dosvox.ini, os
+quais não estejam presentes nas outras opções do programa. São, todavia,
+formas de configuração que continuam a exigir cautela por parte do
+usuário, o qual deve estar ciente do que faz e de como reverter uma
+eventual situação inesperada.
+
+Ao teclar asterisco o usuário ouve o aviso que a configuração avançada
+só deve ser realizada no caso que o usuário já seja familiar ao sistema.
+Se a resposta for C, continua nas configurações; qualquer outra tecla
+retorna ao Dosvox. As opções de configuração avançada são:
+
+A - atualizar dosvox.ini a partir de arquivo preexistente
+M - ajustar os macrocomandos de F2 a F7
+P - editar os diretórios preferidos
+E - editar uma seção
+I - incluir item em uma seção
+R - remover item de uma seção
+C - criar nova seção
+
+
+11.1) ATUALIZAR DOSVOX.INI A PARTIR DE ARQUIVO PREEXISTENTE
+
+Quando alguma mudança substancial (ou em alguns casos uma simples
+atualização) é realizada em algum programa do Dosvox - bem assim nele
+próprio -, faz-se necessário alterar várias linhas no arquivo dosvox.ini
+afim de o sistema comportar-se de maneira correta diante de tal
+transformação ocorrida. Como regra geral, o programador responsável
+pela(s) modificação(ões) disponibiliza ao público os novos itens para o
+arquivo, e/ou os itens com parâmetros modificados, em um arquivo com
+extensão .atu. Visando a que os usuários não necessitem copiar e colar
+diretamente as novas informações, existe a opção A na configuração
+avançada, mediante a qual informa-se o nome do arquivo que contém as
+mudanças e o sistema providencia sua auto-atualização.
+
+Após entrar com o nome do arquivo das mudanças, é perguntado se deseja
+realterar itens anteriormente criados; se responder N, o sistema apenas
+inclui os itens que não constem do dosvox.ini; caso responda S, serão
+atualizados para o dosvox.ini todos os itens cujos parâmetros difiram
+nos dois arquivos.
+
+
+11.2) AJUSTAR OS MACROCOMANDOS
+
+Nota: esta opção também pode ser chamada a partir da janela principal do
+Dosvox teclando CONTROL F6.
+
+Suponha que existam arquivos que você use com muita freqüência, sejam
+textos que precisa editar ou ler constantemente, músicas que goste de
+ouvir, scripts que executa diariamente, etc., ou ainda que haja comandos
+do DOS ou programas não referenciados nas opções do Dosvox e para os
+quais não seja possível ou fácil criar atalhos de teclado. A única
+alternativa, pois, seria executá-los sempre manualmente: abrir os
+arquivos pela opção correspondente do Dosvox, abrir o programa desejado
+e chamar o arquivo de dentro dele e assim por diante.
+
+Para resolver esse problema, o Dosvox oferece os assim chamados
+macrocomandos, os quais nada mais são que atalhos de teclado
+direcionáveis a qualquer coisa
+que possa ser executada pela opção P do Dosvox ou pela opção iniciar /
+executar do Windows. O número de atalhos que é possível criar é 31, a
+saber: as teclas F2, F3, F4, F5, F6 e F7; a tecla CONTROL pressionada
+com cada uma das 26 letras do alfabeto inglês, excetuando
+a letra M.
+
+Alguns macrocomandos vêm pré-configurados no Dosvox e apontam para
+programas e arquivos bastante usados ao longo do tempo pelos usuários do
+sistema, podendo todavia ser normalmente editados teclando CONTROL F6
+na janela principal do Dosvox ou na opção M da
+configuração avançada.
+
+
+11.3) TRABALHAR COM AS SEÇÕES DO DOSVOX.INI
+
+As últimas quatro opções da configuração avançada do Dosvox permitem-lhe
+incluir e remover itens das seções do dosvox.ini, bem como editar e
+criar novas seções, no caso que qualquer uma dessas operações seja
+necessária. Em regra a opção mais usada é a de editar os itens de uma
+seção, porém repetimos, são operações que devem ser realizadas com o
+máximo conhecimento possível do que se esteja fazendo a fim de evitar
+resultados imprevisíveis.
+
+Nas opções E, I e R, você primeiramente seleciona com as setas a seção a
+configurar e após teclar enter escolhe o item a editar ou remover; pode sempre pressionar a
+primeira letra do nome da seção ou item buscado para posicionar-se no
+primeiro item iniciado por aquela letra na lista.
+
+No caso da inclusão de novo item, é perguntado o nome do item, ou seja,
+o item propriamente dito, aquilo que no dosvox.ini aparece normalmente antes do sinal de igual; em
+seguida deve teclar o conteúdo do item, isto é, seu(s) parâmetro(s). Por
+exemplo, observe a seguinte linha:
+
+DIRDOSVOX=C:\WINVOX\SOM\DOSVOX
+
+Na linha acima, "DIRDOSVOX" é o nome e "C:\WINVOX\SOM\DOSVOX", o
+conteúdo do item.
+
+
+12) OS APLICATIVOS DO DOSVOX E SEUS MANUAIS
+
+Nota técnica: todos os executáveis correspondentes aos aplicativos aqui
+citados encontram-se na pasta \winvox.
+
+O sistema DOSVOX traz alguns jogos que visam a não só divertir como
+também Facilitar a aprendizagem. Eles têm como objetivos o
+entretenimento e o aperfeiçoamento do usuário com o teclado e do sistema
+de um modo geral. Tais jogos são acessados pela opção J do menu
+principal mais a letra do jogo correspondente.
+
+O DOSVOX traz ainda aplicativos para facilitar a organização
+pessoal do seu dia a dia; esses programas são acionados teclando a opção
+U seguido de uma letra que é o atalho do programa.
+
+Há também os clientes e outros utilitários para trabalho com redes, quer
+em âmbito internáltico ou de redes internas. São os programas da opção R
+do Dosvox.
+
+Finalmente, temos as aplicações multimídia (opção M) que nos oferecem
+toda uma gama de possibilidades para trabalho com áudio.
+
+Todos os aplicativos retrocitados estão listados abaixo, precedidos pela
+letra que os ativam dentro dos respectivos menus do Dosvox e seguidos
+pelos nomes dos arquivos de seus manuais, os quais encontram-se em
+\winvox\manual. Para fins de facilitar buscas, a lista obedece à ordem
+que os atalhos para os programas aparecem nos menus e à ordem que esses
+menus aparecem na janela principal do Dosvox. Caso não encontre aqui o
+manual que procura, busque referências ao programa neste próprio manual.
+
+12.1) MENU PRINCIPAL
+
+E - editar texto - Edivox.txt
+I - imprimir - Imprivox.txt, Listavox.txt, Braivox.txt
+
+12.2) JOGOS
+
+F - jogo da forca - Forcavox.txt
+M - jogo da memória - Memovox.txt
+I - jogo de mistura de sons - Mistuvox.txt
+N - nimvox o jogo dos palitinhos - nimvox.txt
+S - jogo da senha - Senhavox.txt
+Q - questionário automático - Questvox.txt
+3 - jogo 3 x 3 - X3vox.txt
+P - paciência - Pacienci.txt
+V - dados sobre sua vida - Vidavox.txt
+C - cata palavras - Catavox.txt
+O - oráculo chinês (I-Ching) - Ichinvox.txt
+L - letravox - Letravox.txt
+U - jogo de sueca - Suecavox.txt
+Y - fuga de San Quêntin - Squentin.txt
+E - explorador da caverna colossal - Colossal.txt
+T - jogo de taboada - Contavox.txt
+X - letrix o jogo das palavrinhas - Letrix.txt
+J - Julius - o pirata - Piratvox.txt
+G - govox - Govox.txt
+$ - cassino alto ou baixo - Casino.txt
+D - dominó - Domivox.txt
+R - jogo de adivinhar números - Sortevox.txt
+A - profeta - Profeta.txt
+
+12.3) UTILITÁRIOS
+
+C - calculadora vocal - Calcuvox.txt
+R - relógio despertador - Clockvox.txt
+T - caderno de telefones - Televox.txt
+A - agenda de compromissos - Agenvox.txt
+X - emissor de cheques - Cheqvox.txt
+D - gerador de documentos padronizados - Cartex.txt
+K - relógio cronômetro - Cronovox.txt
+E - editor simplificado - Minied.txt
+B - preprocessador de braille matemático - Transcod.txt, Matemat.txt
+W - utilitário de acesso a Word 7.0 - WordUtil.txt
+O - utilitário de acesso ao OCR - OCRVox2.txt
+Q - criador de ícones e teclas de atalho - Criaicon.txt
+S - executor de script de comandos - Scripvox.txt
+P - exibidor de apresentações interativas - PPTVox.txt
+U - fichário de arquivos - Fichavox.txt
+G - agenda multi-uso - Agenda.txt
+Z - leitor de telas - Monitvox.txt
+
+12.4) ACESSO A REDE E INTERNET
+
+C - correio eletrônico - Cartavox.txt
+P - bate-papo sonoro pela Internet - Papovox.txt
+H - acesso a home pages - Webvox.txt
+I - gerador de home pages Intervox - Intervox.txt
+T - telnet falado - TNetvox.txt, Lynx.txt
+F - transferência de arquivos via FTP - FTPVox.txt
+L - preparador de cartas para listas de pessoas - Prelista.txt
+S - servidor de bate-papo pela Internet - Sitiovox.txt
+D - discavox - Discavox.txt
+W - gerador de home pages - versão antiga - WWWVox.txt
+M - mini-servidor de home pages
+
+12.5) MULTIMÍDIA
+
+M - processador multimídia - Midiavox.txt
+G - gravador de som - Minigrav.txt
+X - mixer geral do Windows - Mixervox.txt
+C - transcritor de trilha de CD - CDWav.txt
+F - Conversor de formatos de sons - ConvSons.txt
+J - Juntador de arquivos WAV - Juntawav.txt
+S - configurador da fala SAPI - Sapiutil.txt
+
+
+13) CONTATANDO O PROJETO DOSVOX
+
+Direção técnica: (21) 2598-3339 - Prof. José Antonio Borges
+                    e-mail: antonio2@nce.ufrj.br
+Dúvidas técnicas: (21) 2598-3198 - CAEC - UFRJ
+                    Bernard Condorcet: bernard@acd.ufrj.br
+                    Cleverson Casarin Uliana: clever9@intervox.nce.ufrj.br
+                    Marcelo Pimentel: marcelo@intervox.nce.ufrj.br
+                    Neno Albernaz: neno@intervox.nce.ufrj.br
+Projeto Dosvox:     http://intervox.nce.ufrj.br/dosvox
+Dosvox Estudantil:  http://www.saci.org.br

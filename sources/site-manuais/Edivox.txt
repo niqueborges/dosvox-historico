@@ -1,0 +1,1247 @@
+EDITOR DE TEXTOS - EDIVOX
+
+
+SUMÁRIO
+
+0) CRÉDITOS
+1) INICIAR O PROGRAMA
+2) EDITAR
+2.1) TECLAGEM SIMPLES
+2.2) O CURSOR
+2.3) REMOVER CARACTERES INDESEJÁVEIS
+2.4) LER UMA LINHA
+2.5) ACENTUAÇÃO
+2.6) INSERIR NOVAS LINHAS
+2.7) PROCURAR E TROCAR PALAVRAS NO TEXTO
+2.8) MARGENS
+2.9) MARCAS DE TABULAÇÃO
+2.10) CONFIGURAÇÕES
+2.11) ARQUIVAMENTO E SAÍDA DO EDIVOX
+3) COMANDOS DE BLOCO
+3.1) MARCAR E DESMARCAR
+3.2) EMBELEZAR
+3.3) DECODIFICAR
+3.4) OPERAÇÕES DIVERSAS
+4) VERIFICADOR ORTOGRÁFICO
+5) FUNCIONAMENTO DA ESTRUTURA DO DICIONÁRIO DO EDIVOX
+5.1) INTRODUÇÃO
+5.2) IDÉIA GERAL DO MÉTODO
+5.3) EXCEÇÕES
+5.4) ARQUIVOS USADOS
+5.5) TÉCNICA DE BUSCA
+6) EXECUTAR PROGRAMAS A PARTIR DE COMANDOS EM UM TEXTO
+7) TELEFONAR
+8) OUTROS FORMATOS DE ARQUIVO SUPORTADOS
+9) MODO DE COMANDO
+10) OUTROS COMANDOS
+11) CALCULADORA ELETRÔNICA
+11.1) OPERAÇÕES VÁLIDAS E MODO DE ACIONAMENTO
+11.2) AS 11 OPERAÇÕES E AS 50 CONVERSÕES VÁLIDAS
+11.3) AS QUATRO OPERAÇÕES BÁSICAS
+11.4) PORCENTAGEM
+11.5) RADICIAÇÃO
+11.6) POTÊNCIAS
+11.7) COMPRIMENTO, ÁREA E VOLUME DA CIRCUNFERÊNCIA, CÍRCULO E ESFERA
+11.8) CONVERTENDO PESOS E MEDIDAS DE a A y E A A Y
+11.9) COMENTÁRIOS
+11.10) DUAS PARCELAS NUMA MESMA LINHA
+11.11) MODO DE CONVERSÃO INTERATIVA
+
+
+0) CRÉDITOS
+
+A maior parte do presente manual foi escrita pelo professor Antonio
+Borges, que o atualizara em 1999, excetuando a seção 6), a qual
+foi escrita em 2004. A seção "9) CALCULADORA ELETRÔNICA", incluindo
+todas as subseções, foi escrita por Glauco Férius Constantino de
+Oliveira em Março de 2004 como um manual único, anexado ora por mim -
+Cleverson Casarin Uliana - à presente edição deste manual, o qual também
+revisei e atualizei, concluído aos 16 de Fevereiro do ano de 2005.
+
+
+1) INICIAR O PROGRAMA
+
+Para iniciar o EDIVOX, estando na janela principal do Dosvox,
+basta pressionar a tecla E. Ele fala:
+"EDIVOX – Qual o nome do arquivo ?"
+Tecle até 256 letras para formar o nome do arquivo, seguido do caracter
+ponto e depois mais 3 letras; se estas últimas forem omitidas, o Edivox
+insere ".txt" - que é a extensão padrão dos arquivos de texto - quando
+salvarmos o arquivo. Para finalizar pressione a tecla ENTER.
+
+
+O programa dá a mensagem: "arquivo novo", caso o arquivo seja novo;
+"arquivo carregado", caso o arquivo esteja sendo reeditado. Pressione F9
+para ajuda. O editor agora está pronto para ser usado.
+
+
+2) EDITAR
+2.1) TECLAGEM SIMPLES
+
+A teclagem é idêntica a uma máquina de escrever convencional; Cada tecla é
+ecoada pela placa de som. Ao fim de cada linha, soa um bip para indicar o
+final da linha.  Pressione a tecla ENTER para continuar a teclar o texto.
+Ao mesmo tempo em que a teclagem é realizada, aparece também na tela do
+computador o texto, para que um eventual observador que não seja deficiente
+visual possa também acompanhar o trabalho.
+
+
+2.2) O CURSOR
+
+Um texto teclado é composto de uma série de letras, obviamente.  A grande
+vantagem de um editor de textos é podermos alterar livremente cada uma destas
+letras, inserir novas letras, criar linhas novas, apagar linhas, etc.
+
+A posição da letra no texto em que vamos fazer qualquer alteração é chamada
+de cursor.  O cursor, a medida que vamos teclando, vai andando para a 
+direita,
+junto com a datilografia.
+
+Diversas teclas movem o cursor:
+
+SETA PARA A ESQUERDA - move o cursor um caracter para a esquerda.
+Ao chegar no primeiro caracter da linha, dá um bip. O caracter sobre o 
+qual o cursor passou será falado.
+
+SETA PARA A DIREITA - move o cursor um caracter para a direita. Ao chegar
+no último caracter da linha, dá um bip. O caracter sobre o qual o cursor
+passou será falado.
+
+SETA PARA CIMA - move o cursor uma linha para cima. Ao chegar na primeira
+linha, avisa.  Deixa o cursor na coluna 1.
+
+SETA PARA BAIXO - move o cursor uma linha para baixo. Ao chegar na última
+linha do texto, avisa.  Deixa o cursor na coluna 1.
+
+HOME - posiciona na coluna 1 da linha.
+END - posiciona após a última coluna escrita da linha.
+ENTER - move o cursor uma linha para baixo. Se já estava na última linha
+insere uma nova linha após esta.  Deixa o cursor na coluna 1.
+PAGE UP - volta 15 linhas de texto. Deixa o cursor na coluna 1.
+PAGE DOWN - avança 15 linhas de texto. Deixa o cursor na coluna 1.
+
+
+2.3) REMOVER CARACTERES INDESEJÁVEIS
+
+Teclas Usadas:
+BACKSPACE – remove o caracter a esquerda do cursor;
+DEL  - remove o caracter na posição do cursor.
+
+A linha em que o cursor está pode ser completamente removida do texto com o
+seguinte procedimento:
+
+Pressione a tecla CONTROL (a mais esquerda e abaixo no teclado) e mantenha-a
+pressionada. Pressione a tecla Y. Solte a tecla CONTROL. soará a mensagem
+"linha removida"
+
+Obs.: este procedimento de pressionar CONTROL, depois uma tecla, depois soltar,
+será de agora em diante, neste texto referido como "CONTROL TECLA", por
+exemplo, CONTROL Y. Também para remover uma linha pode-se pressionar F7,
+sendo o resultado idêntico ao do comando CONTROL Y.
+
+Se quiser recuperar a linha que apagou por último, pressione CONTROL U
+que a linha aparecerá novamente onde está o cursor.
+
+Normalmente, quando teclamos algo no meio de uma linha já teclada, o EDIVOX
+insere os novos caracteres ali, empurrando para a direita os caracteres já
+existentes.
+
+para substituir alguns caracteres por outros, devemos pressionar a tecla
+F6.
+É perguntado:  "Qual o texto?"
+Digite o texto que vai ser alterado e tecle ENTER.
+É pedido: "Informe o novo texto:"
+Tecle agora o novo texto e tecle ENTER.
+É perguntado: Todo o Texto (T) ou Bloco (B)?
+Escolha a opção e tecle ENTER.
+É ouvido: "Texto trocado."
+
+Existem outros comandos interessantes para remover letras:
+CONTROL BACKSPACE ou CONTROL H - apaga toda uma palavra
+CONTROL D - apaga desde a posição do cursor até o fim da linha
+CONTROL S – apaga do início da linha até a posição do cursor.
+
+
+2.4) LER UMA LINHA
+
+Movendo o cursor para uma certa posição, e pressionando F1 várias vezes,
+cada palavra desta linha é falada. Após a última palavra da linha soa um
+bip. Outra opção é CONTROL F1. Neste caso, o editor fala a linha inteira
+do texto, a partir do ponto que o cursor está. Caso queira interromper a
+fala pressione qualquer tecla, exceto CONTROL, alt, windows ou aplicações.
+
+Se quiser ler o resto do texto, do ponto em que o cursor está até o fim,
+pressione ALT F1
+
+Teclando F4 você aciona ou desaciona a fala durante a digitação.
+Este comando pode agilizar muito a datilografia pois a fala consome muito
+tempo.  As falas dos comandos continuam ativas.
+
+CONTROL F4 - ativa o painel de configuração, onde podem ser alterados os
+parâmetros:
+velocidade - de 1 a 5;
+enter insere linha - para determinar se a tecla enter inserirá novas
+linhas sempre quando for pressionada ou se apenas pulará para o início
+da próxima linha já existente;
+quebrar linhas - determina se uma linha será automaticamente quebrada
+durante a digitação ou aumentará de tamanho até pressionarmos Enter;
+falar pontuação - ativa ou desativa a fala de pontuação durante a
+leitura do texto todo ou linha a linha;
+fala automática - ativa ou desativa a fala automática do texto
+ao caminhar com as setas linha a linha e com page up e page down;
+com dicionário - determina se haverá ou não correção ortográfica
+automática (ver seção 5);
+Com SAPI - indica se a leitura é feita com uma voz SAPI instalada. As
+opções logo abaixo configuram o número da voz a ser usada, a velocidade
+e a tonalidade, respectivamente.
+
+
+2.5) ACENTUAÇÃO
+
+Os acentos são colocados como numa máquina de escrever. Primeiro o acento,
+depois a letra.  O EDIVOX trabalha com acentuação internacional, conhecida
+como código ANSI.
+
+Obs.: Se o texto a editar foi criado em um outro editor, pode ser necessário
+submetê-lo ao DVTXT, que vem junto com o DOSVOX e que serve para converter
+do/para o formato internacional.
+
+
+2.6) INSERIR NOVAS LINHAS
+
+Ao pressionarmos ENTER o cursor passa para a próxima linha.  Se for a última
+linha, uma nova linha é automaticamente criada abaixo desta.  Isso atende a
+noventa por cento dos usos do editor.
+
+Para inserirmos novas linhas no meio do texto, entretanto, é necessário
+fazer uso de outros comandos.
+
+Ao pressionarmos CONTROL ENTER, CONTROL J ou CONTROL M, a linha atual será puxada para baixo abrindo
+espaço para uma nova linha. Desta forma, quando queremos inserir uma nova
+linha abaixo desta, basta teclarmos ENTER e depois CONTROL ENTER.
+
+Quando o número de linhas a inserir é muito grande, pode-se usar
+opcionalmente a tecla INSERT.  Ela aciona um modo de trabalho chamado "auto
+inserção de linhas com ENTER".  Neste modo de trabalho, quando se
+pressiona
+ENTER, uma nova linha é automaticamente criada abaixo desta. Este modo é
+especialmente útil para programadores, que criam textos de forma não
+consecutiva.
+
+É possível também quebrar uma linha em duas.  Para isso, mova o cursor
+para a posição desejada e pressione CONTROL Q.  O cursor vai para a coluna 1
+da linha seguinte. Caso esse comando seja pressionado com o cursor na última
+coluna,  a linha seguinte é juntada ao fim
+da atual e um espaço em branco é introduzido entre elas.
+
+
+2.7) PROCURAR E TROCAR PALAVRAS NO TEXTO
+
+F5 - procura uma palavra no texto; se encontrar posiciona o cursor antes
+da mesma.
+CONTROL F5 - procura mesma a palavra do último F5 novamente.
+
+
+2.8) MARGENS
+
+O EDIVOX mantém controle de duas margens.  Normalmente a esquerda é a
+coluna 1 e a direita a coluna 72.
+Quando pressionamos ENTER, o cursor se posiciona na margem esquerda da próxima
+linha.  Quando estamos datilografando e chegamos à margem direita, uma
+nova linha é inserida abaixo desta e aí continua a teclagem.
+
+A seleção de novas margens é feita teclando F10.  Neste caso
+soa a mensagem:
+
+"Digite coluna da margem esquerda:"
+ Você deve teclar a coluna e depois pressionar ENTER.
+"Digite coluna da margem direita:"
+Você deve teclar a coluna e depois pressionar ENTER.
+
+
+2.9) MARCAS DE TABULAÇÃO
+
+Como regra geral, a tela do computador onde escrevemos um texto é
+dividida horizontalmente em linhas; assim que, quando uma linha acaba o
+cursor vai para a próxima ou podemos mudar de linha quando desejamos
+pressionando Enter conforme já visto acima. O Edivox permite-lhe também
+dividir a tela verticalmente, ou seja, em colunas, o que é extremamente
+útil por exemplo para criar tabelas. A fim de entender melhor, faça o seguinte teste:
+
+Crie um arquivo novo; o cursor naturalmente encontrar-se-á na linha e
+na coluna 1;
+Digite "1 minuto";
+pressione a tecla tab ou barra de espaços várias vezes até chegar à coluna 37;
+pressione F9, m, t. você ouvirá
+"tabulação inserida";
+Digite agora "60 segundos";
+pressione Enter e verifique neste momento que você encontra-se na linha
+2, coluna 1;
+digite "2 minutos" e em seguida pressione CONTROL T;
+verifique neste momento com o comando CONTROL K que você foi para a
+coluna 37, a mesma onde há pouco acabara de inserir uma marca de
+tabulação;
+pode digitar então o equivalente a 2 minutos, "120 segundos".
+
+Como percebe pela simulação acima, pode-se criar tabelas perfeitamente
+alinhadas com o uso das marcas de tabulação, as quais podem ser quantas
+se queira e estar onde se deseje ao longo da linha. Para inserir cada
+uma pressione F9, M, T e para avançar à próxima marca, CONTROL T; E como
+visto acima na simulação, uma vez estabelecidas marcas em uma linha,
+estas valem para todas as seguintes.
+
+
+2.10) CONFIGURAÇÕES
+
+Pressionando as teclas CONTROL F4, você entra no painel de configuração
+do Edivox. Ali é possível alterar alguns detalhes do modo como o
+programa trabalha e deixá-lo mais a seu gosto. Ande com as setas
+verticais e preencha os campos como quiser; são os seguintes:
+
+Velocidade - (de 1 a 5) - quanto maior, mais rápida será a fala dentro
+do programa;
+Enter insere linha - se SIM, cada vez que pressionar ENTER será criada
+uma linha nova abaixo da atual. Se NÃO, o ENTER apenas posiciona na
+linha de baixo já existente, igual à seta abaixo;
+Quebrar linhas - se ativada, quando estiver digitando e chegar à coluna
+73, passa automaticamente para a próxima linha; se desativar, ao chegar
+nessa coluna começará a ouvir um bipe a cada letra digitada até que
+troque você mesmo de linha com ENTER;
+Falar pontuação - indica se os sinais de pontuação devem ou não ser
+falados por extenso durante a leitura de textos com o comando ALT F1;
+Fala automática - se desativado, o Edivox deixa de dizer automaticamente
+o conteúdo das linhas quando se posiciona nelas com as setas ou PAGE UP
+e PAGE DOWN;
+Com dicionário - indica se o corretor ortográfico deve carregar a cada
+vez quando o programa é iniciado. Note que isso pode tornar a carga do
+Edivox extremamente lenta em algumas máquinas;
+Com SAPI - se ativada o Edivox lê usando algum sintetizador SAPI que
+eventualmente esteja instalado na máquina. O número, a velocidade e a
+tonalidade da voz usada nesse caso são escolhidos nos campos logo abaixo
+deste. Se deixar desativado, a leitura será feita com a fala original do
+Dosvox.
+
+
+2.10) ARQUIVAMENTO E SAÍDA DO EDIVOX
+
+Para sair do EDIVOX deve-se pressionar ESC.
+Ele pede confirmação da saída. Tecle S.
+Ele pergunta se você deseja gravar o texto teclado. Tecle N
+caso não o queira salvar, ou novamente S.
+O texto teclado é copiado da memória RAM do computador para o disco rígido
+ou disquete (a depender de onde o arquivo aberto se encontra).
+Em caso de teclagens muito extensas, é prudente fazer gravações de tempos
+em tempos.  Para isso, teclando-se F2, o texto já digitado é copiado para o
+disco rígido e a edição prossegue normalmente.
+
+Caso deseje abandonar este texto, e começar um outro, pode-se pressionar F3.
+É pedida a confirmação do abandono; tecle S;
+é pedido o nome do novo arquivo; tecle este nome seguido por ENTER.
+
+Outra opção é CONTROL X, grava o arquivo e termina o EDIVOX sem perguntar.
+Há também o comando CONTROL F2 que permite-lhe salvar este arquivo com
+outro nome e eventualmente em outra pasta.
+
+
+3) COMANDOS DE BLOCO
+3.1) MARCAR E DESMARCAR
+
+Os comandos de bloco permitem mover ou copiar trechos de texto; devemos
+marcar o trecho a copiar ou mover, da seguinte forma:
+Mova o cursor até a primeira linha do trecho; tecle CONTROL B;
+Solte CONTROL e tecle I;
+Mova o cursor até a última linha do trecho; tecle CONTROL B;
+Solte CONTROL e tecle F
+
+Obs.: mnemônico: "CONTROL BLOCO INÍCIO" e "CONTROL BLOCO FIM". Note que
+um bloco sempre contém linhas completas. Assim, não adianta marcar um
+pedaço de uma linha. Uma vez que o bloco esteja marcado diversas
+operações podem ser realizadas; Para desmarcar o bloco tecle CONTROL B
+D.
+
+3.2) EMBELEZAR
+
+São previstas diversas opções de embelezamento. Note que tais operações
+preservam os parágrafos, caracterizados pela existência de uma ou mais
+linhas em branco:
+
+C - Centrar o bloco entre as margens (esta operação normalmente deixa
+espaços em branco ao início e ao fim das linhas do bloco);
+A - alinhar o bloco com as margens para que o texto fique
+completamente simétrico à esquerda e à direita;
+M - remargear o texto (sem alinhar perfeitamente);
+T - tabular o bloco pela esquerda (você deve informar a partir de qual
+coluna inicia-se o bloco);
+i - indentar o bloco, ou seja, recuá-lo com alguns espaços; será
+perguntado quantas colunas ficarão em branco ao início da linha. O
+número pode ser negativo (precedido por hífen); no caso, o número de
+colunas será subtraído do início da linha e não somada.
+
+3.3) DECODIFICAR
+
+Por vezes recebemos e-mails escritos em programas que suportam e
+trabalham com
+codificações diferentes daquela usada para textos no edivox. Com a opção
+CONTROL b x, podemos decodificar esses textos. nos é perguntado: "opção
+P para quoted printable, U UTF8, ou G, Yahoo Grupos ?"
+
+Caso não saiba a resposta, pode observar algumas características do
+texto que quer converter. Por exemplo, os textos quoted printable são
+impregnados de
+sinais de igual (=); os textos em UTF8 contêm grande quantidade de
+letras F; o formato Yahoo grupos é para textos em regra recebidos de
+grupos de discussão daquele servidor.
+
+3.4) OPERAÇÕES DIVERSAS
+
+Mover ou Copiar (ou seja replicar) o bloco para um outro lugar:
+  tecle CONTROL B C;
+Remover o bloco: CONTROL B.R;
+Ordenar o bloco: Troca a ordem das linhas para que elas fiquem em ordem alfabética.
+CONTROL B O;
+Remover linhas em branco: tira todas as linhas vazias existentes ao
+longo do bloco. CONTROL B B.
+
+Gravar aquele bloco num arquivo: CONTROL B G;
+informar o nome do arquivo que receberá o bloco.
+  Se este arquivo existir, o programa perguntará se você quer
+regravá-lo, ou então, adicionar o bloco no fim deste
+
+Ler um arquivo, inserindo-o no lugar do cursor: CONTROL B L;
+  Informar depois o nome do arquivo a ler.
+  O cursor será colocado na primeira linha do texto inserido.
+  Obs.: Esta operação desmarca automaticamente um bloco antes
+marcado. Um novo bloco ficará marcado nas linhas onde o texto
+for inserido.
+
+Marcação rápida de bloco:
+  Freqüentemente precisamos trabalhar com o parágrafo atual (que é o conjunto
+de linhas em que o cursor está precedido e sucedido por uma linha em
+branco, início ou fim do texto). Pode-se transformar o parágrafo atual em
+bloco teclando-se CONTROL B P. Existe também o comando CONTROL b j,
+que margeia apenas o parágrafo onde se está.
+enviar bloco para servidor de fala - CONTROL b s. Envia o bloco para o
+servidor de fala SAPI. Esta função encontra-se obsoleta na versão atual
+do edivox, bem como de todo o sistema Dosvox.
+Verificar ortografia - CONTROL b v. Detalhado na seção 5.
+
+
+4) VERIFICADOR ORTOGRÁFICO
+
+O Edivox incorpora um verificador ortográfico automatizado.
+Quando ele está ativado, a digitação de uma palavra errada
+faz com que a máquina exiba dois bipes.
+Para ativar ou desativar este processo, pode teclar F11.
+
+O acionamento de CONTROL seta a direita também pode indicar erro
+na palavra.  Para isso poder ser possível, o cursor deve sempre estar
+após a primeira letra da palavra.
+
+Quando uma palavra está errada, pode pressionar CONTROL W, e
+neste caso são sugeridas opções de grafia.  Use as
+setas para escolher uma opção (seta para direita soletra cada
+opção) e depois tecle enter para substituir.
+
+Além disso, é possível fazer uma verificação ortográfica de todo
+texto.  Neste caso:
+
+- Marque o início do bloco, CONTROL + B  I;
+- Marque o fim do bloco, CONTROL + B  F;
+- Passe o verificador ortográfico, CONTROL + B  V.
+
+As palavras que não estão no dicionário do DOSVOX são
+marcadas com o símbolo # no início.
+
+Para corrigir palavras encontradas com erro, digita-se normalmente
+ou usa-se com o CONTROL W, como mostrado anteriormente.  Outra
+opção, quando o número de erros é grande é a seguinte:
+
+1. Fazer uma busca (F5 e continuar a buscar CONTROL F5) procurando
+o caracter #.
+2. Quando ele for encontrado, usa-se o F1 para ler a palavra.
+3. Quando as sugestões são exibidas, ao teclar CONTROL W,
+o caracter # já é apagado automaticamente.
+
+Para corrigir uma palavra, tecle CONTROL W e aparecerá uma
+lista de sugestões, caso tenha, a qual poderá ser acessada com
+as setas para cima e para baixo e ao encontrar a palavra correta
+para a substituição é só teclar "Enter" que a troca será feita.
+
+
+5) FUNCIONAMENTO DA ESTRUTURA DO DICIONÁRIO DO EDIVOX
+5.1) Introdução
+
+Com o intuito de melhorar a qualidade da digitação de nossos usuários,
+diminuindo os erros de português, foi introduzida na versão 3.1 do
+DOSVOX um pequeno verificador ortográfico.
+
+Apesar de ser uma implementação relativamente simples, ela se baseia
+numa estrutura de informações muito extensa, que deveria conter
+todas as palavras da língua portuguesa, com suas inúmeras variantes.
+
+Manter essa estrutura é um trabalho sem fim pois a língua
+portuguesa continuamente vai sendo ampliada.  Entretanto, mesmo
+que este dicionário não seja absolutamente completo, se ele
+atender à maior parte das palavras usadas, sua utilidade será
+muito grande.
+
+Este texto visa explicar como esta estrutura funciona, como é
+possível introduzir nela novas palavras, ou corrigir palavras
+com detecção errônea.
+
+5.2) IDÉIA GERAL DO MÉTODO
+
+A idéia geral é a existência de um procedimento que dada uma
+palavra, busca numa lista se ela existe ou não.
+Não há, neste verificador, nenhuma checagem sintática nem semântica
+nem de contexto.  Apenas as palavras, isoladamente, são verificadas.
+
+O problema maior deste dicionário é que, em português, esta lista é
+absurdamente grande, pelo fato de que a língua portuguesa tem muitas
+variações.
+
+Por exemplo: uma palavra como "lindo" tem variantes tais como
+lindos, linda, lindas, lindamente, lindíssimo, etc.
+Verbos são outro bom exemplo, e a língua portuguesa faz forte uso
+de conjugações com muitas possibilidades.
+
+Para diminuir o tamanho do dicionário, e conseqüentemente o
+espaço usado para busca, o dicionário do Dosvox armazena
+duas informações para cada palavra: seu radical (pense nisso
+como sendo a parte inicial da palavra) e sua lista de sufixos
+válidos.  Para diminuir ainda mais, como a língua tem uma
+estrutura bastante homogênea para sufixos (mas não totalmente
+homogênea), os sufixos são agrupados em classes.
+
+Por exemplo, a mesma palavra "lindo".
+
+Ela poderia ser registrada com o radical "lind" e com as seguintes
+classes de sufixos.
+
+lind oaosas inhos amente
+
+Definição das classes
+[oaosas]
+o
+a
+os
+as
+
+[inhos]
+inho
+inha
+inhos
+inhas
+
+[amente]
+amente
+
+Então a palavra lindo tem as seguintes variantes:
+
+
+lindo
+linda
+lindos
+lindas
+lindinho
+lindinha
+lindinhos
+lindinhas
+lindamente
+
+Nota: usa-se a convenção de um sinal de igual (=) para
+indicar a possibilidade do uso do radical sem sufixo.
+
+5.3) Exceções:
+
+a) nomes próprios e abreviaturas
+
+Nomes próprios e abreviaturas devem ser escritos usando
+maiúsculas no seu início, ou em partes da palavra.  Então
+esses nomes devem ser registrados em separado, com sua
+grafia de maiúsculas correta.
+
+b) radicais defectivos
+
+Por razões de operacionalização, às vezes é conveniente
+registrar uma palavra com uma certa classe de variantes
+e depois dizer que uma variante específica não existe.
+Um exemplo é o verbo "colorir".  Pode-se dizer que
+
+color v3
+
+indicando que a palavra faz uso de radicais de verbo da terceira
+conjugação, que apenas não existe "coloro" (primeira pessoa
+do presente do indicativo).
+
+Então essa palavra "coloro" pode ser colocada como uma exceção.
+
+5.4) ARQUIVOS USADOS
+
+Essa estrutura de informações é armazenada em quatro arquivos,
+todos localizados no diretório \Winvox:
+
+diciona.dic - o dicionário de radicais com suas listas de sufixos
+diciona.suf - a definição de cada lista de sufixos
+diciona.nom - a lista de nomes próprios e abreviaturas
+diciona.exc - a lista de exceções
+
+O arquivo diciona.dic deve, necessariamente, ser mantido em
+ordem alfabética, para aumentar o desempenho do sistema.
+
+5.5) TÉCNICA DE BUSCA
+
+A técnica usada para a busca de uma palavra no dicionário consiste
+em tomá-la e buscar o maior radical possível para a palavra, e
+depois adicionar cada sufixo deste para tentar chegar à palavra.
+Caso não seja encontrada o radical ou caso os sufixos deste não
+sejam encontrados, tenta-se usar um radical com menos letras.
+
+
+6) EXECUTAR PROGRAMAS A PARTIR DE COMANDOS EM UM TEXTO
+
+O Edivox executa qualquer comando que possa ser executado pela opção P
+do Dosvox ou pelo item executar do menu iniciar do Windows. Para tanto é
+suficiente que o comando esteja escrito em qualquer local de um arquivo
+texto e seja pressionada a tecla F12 com o cursor em qualquer parte do
+comando.
+
+Suponha por exemplo que você receba um
+e-mail com um link iniciado por http ou por www. Se pressionar F12 nesse
+link, o Webvox é aberto e a página em questão, chamada. Da mesma forma,
+escrevendo "mailto:" sem as aspas e seguido sem espaço em branco por um
+endereço de e-mail qualquer, o seu cliente de e-mail é aberto para que
+você redija uma carta para enviar àquele endereço.
+
+Seguindo o mesmo caminho, se quiser executar a calculadora vocal de
+dentro do edivox, digite \winvox\calcuvox.exe, pressione F12 e a
+calculadora abre; e assim por diante.
+
+
+7) TELEFONAR
+
+Imagine você necessitando telefonar urgentemente para um número qualquer
+que esteja em sua agenda telefônica ou em qualquer arquivo editável pelo
+Edivox. Uma vez que você usaria uma das mãos pra digitar os algarismos
+no telefone, provavelmente teria de decorar o número inteiro a partir da
+sua agenda para depois digitar, ou então, usar uma mão para caminhar
+com as setas enquanto digitasse os algarismos no aparelho telefônico com a
+outra. Ambas essas alternativas não são muito práticas e tomam-lhe um
+precioso tempo que poderia ocupar com outros afazeres. Pensando nisso, o
+Edivox oferece-lhe o atalho CONTROL \ que, quando pressionado sobre um
+conjunto qualquer de algarismos - como um número de telefone -, gera os
+sons DTMF correspondentes e desse modo se seu telefone encontrar-se com
+linha o número será discado automaticamente. Os sons DTMF são aqueles
+sons que você ouve ao digitar cada tecla correspondente a um número no
+seu telefone; esses sons são enviados pelo bocal do aparelho para a central telefônica
+que os interpreta e gera a chamada. Levando isso em consideração, não
+é difícil deduzir que tais sons na realidade podem ser gerados por
+qualquer dispositivo que esteja próximo ao bocal do telefone. Se o
+aparelho fonador humano (leia-se a garganta e a boca de cada pessoa)
+fosse capaz de gerar os sons DTMF, os teclados dos aparelhos telefônicos
+seriam completamente dispensáveis. Caso possua um aparelho telefônico,
+proceda ao seguinte teste:
+
+Digite no Edivox um número de telefone, que caso necessário pode
+inclusive conter * e #, como geralmente contêm os números que chamam as centrais
+das operadoras de telefonia móvel;
+em seguida pegue seu aparelho telefônico e tire o telefone do gancho;
+quando der linha, aproxime bem o bocal de uma das caixas de som do computador
+e digite CONTROL \;
+você ouvirá imediatamente os sons DTMF discando o número que digitou no
+Edivox. Tão logo acabe de discar, ponha o telefone no ouvido e observe
+que efetivamente a chamada foi feita.
+
+Obs.: o número de telefone pode conter hifens ou parênteses em seu meio,
+sem prejuizo na discagem pelo comando CONTROL \ do Edivox.
+
+
+8) OUTROS FORMATOS DE ARQUIVO SUPORTADOS
+
+o Edivox é capaz de converter para o formato txt arquivos do Microsoft
+Word com extensão .DOC e .RTF. Quando se tenta abrir algum arquivo
+escrito em um daqueles formatos com o Edivox, ele pergunta se deseja
+convertê-lo para texto; Recomenda-se fortemente responder que sim, pois
+aí o Edivox salva uma réplica do arquivo em formato texto e abre-o
+imediatamente para edição. Você fica então com dois arquivos: um no
+formato original e outro em formato texto. Caso responda que não quer
+converter, então o Edivox abre o arquivo no formato original, o que pode
+resultar num amontoado de caracteres não compreensíveis.
+
+
+9) MODO DE COMANDO
+
+Como o EDIVOX possui dezenas de comandos, fica muitas vezes difícil
+lembrar deles.  Para isso, o EDIVOX possui um "modo de comando".
+Pressionando a tecla  F9 o computador pergunta:
+"Qual comando?" Para saber as opções pressione F1
+
+Os comandos nesta forma de operar são compostos por duas ou três letras.
+A primeira letra informa o objeto de operação, por exemplo:
+A - arquivos, B - blocos, C - cursor, L - linha.
+
+A segunda letra indica o que queremos fazer com este objeto. Por exemplo:
+A letra R significa Remover.  Assim, para remover uma linha poderíamos teclar
+F9 LR.
+
+Note que é muito mais prático teclar CONTROL Y para remover uma linha.
+Este modo é útil de duas formas:
+Primeiro - Existem comandos que não existem na forma de CONTROL;
+Segundo - É muito interessante explorar e conhecer todo potencial do EDIVOX
+desta forma, sem precisar ler o manual.
+
+Detalharemos a seguir o Modo de Comando:
+Teclando-se F9 o sistema pergunta:
+
+“Qual o comando?” Para saber as opções tecle F1 ou caminhe com as setas
+verticais.
+
+São os seguintes:
+
+C   comandos de cursor
+L   linha
+P   procura de textos
+M   margem
+A   arquivos
+B   blocos de linhas
+F   acionamento da fala
+I   instalação
+E   letras especiais
+
+Pressione a tecla  F1  para listar as opções ou caminhe com as setas.
+
+C   COMANDOS DE CURSOR: (F9 C)
+
+Os comandos de manipulação do cursor são:
+
+-   início do texto
++   fim do texto
+A   avança parágrafo
+R   recua parágrafo
+P   posiciona em certa linha
+I   apaga início da linha
+F   apaga fim da linha
+L   informa Linha
+C   informa Coluna
+M   memoriza posição do cursor
+V   volta cursor à posição memorizada
+
+L   COMANDOS DE LINHA: (F9 L)
+
+Os comandos de manipulação de linhas são:
+
+I   insere uma linha acima
+A   insere linha abaixo
+R   remove linha
+V   volta linha removida
+Q   quebra linha em duas
+J   Junta duas linhas
+
+P   COMANDOS DE PROCURA: (F9 P)
+
+P   procura texto
+N   busca de novo
+T   troca palavras por outras
+
+M   COMANDOS DE MARGEM (F9 M)
+
+M   informa margens
+T   nova coluna de tabulação
+R   remove todas tabulações
+
+A   COMANDOS DE ARQUIVO (F9 A)
+
+I   informa o nome do arquivo
+S   salva arquivo e continua
+N   edita um novo arquivo
+C   salva como outro arquivo
+F   salva e fim
+A   abandona sem gravar
+X   exporta formato IBM
+
+B   COMANDOS DE BLOCO  (F9 B)
+
+I   início do bloco
+F   fim do bloco
+M   Move o bloco
+C   Copia o bloco
+A   adiciona o bloco a um arquivo
+O   Ordena bloco
+R   Remove bloco
+D   desmarca bloco
+L   lê arquivo gerando bloco
+G   grava bloco em arquivo
+E   embeleza bloco:
+    C   centra bloco
+    M   acerta margens
+    A   alinha com margens
+    T   tabula pela esquerda do bloco
+    I   intenta o bloco
+P   parágrafo vira bloco
+J   justifica o parágrafo do cursor
+S   envia para servidor de fala
+V   realiza a verificação ortográfica do texto
+X   decodifica texto em outro formato
+U   converte todas as letras para maiúsculas
+
+F   COMANDOS DE ACIONAMENTO DA FALA (F9 F)
+
+L   fala resto da linha
+T   fala resto do texto
+I   fala início da linha
+
+I   COMANDOS DE CONFIGURAÇÃO/INSTALAÇÃO (F9 I)
+
+F   fala
+I   inserção com enter
+A   acentuação
+S   soletragem
+Q   quebra de linha automática
+V   velocidade
+
+
+10) OUTROS COMANDOS
+
+F8 - informa a hora atual;
+CONTROL F8 – informa o dia;
+TAB ou CONTROL i - equivalente a teclar 4 espaços;
+CONTROL PAGE UP - posiciona cursor na primeira linha do texto;
+CONTROL PAGE DOWN - posiciona cursor na última linha do texto;
+CONTROL ESQUERDA - retorna uma palavra na linha;
+CONTROL DIREITA - avança uma palavra na linha;
+CONTROL HOME ou CONTROL CIMA - coloca o cursor na posição imediatamente
+acima;
+CONTROL END ou CONTROL BAIXO - coloca o cursor na posição imediatamente
+abaixo;
+CONTROL G – posiciona em uma linha específica;
+CONTROL L - informa a linha atual do cursor;
+CONTROL K - informa a coluna atual do cursor;
+CONTROL E - entra uma letra especial. São as seguintes:  o: ozinho,
+(para números ordinais masculinos)  a:azinho (para números ordinais
+femininos), p: parágrafo (para textos legislativos / normativos);
+CONTROL C ou CONTROL INSERT - copia bloco para área de transferência;
+CONTROL V ou SHIFT INSERT - cola conteúdo da área de transferência na
+posição do cursor;
+CONTROL A - informa nome do arquivo atual;
+CONTROL F12 - - informa a versão do Edivox
+CONTROL ALT F11 e CONTROL ALT F12 - ativa e desativa, respectivamente, o
+modo de digitação Perkins, no qual digita-se as letras como numa máquina
+de escrita em braille, usando as teclas FDS na mão esquerda e JKL na mão
+direita, tecladas simultaneamente de modo a obter-se o caracter desejado
+segundo a tabela de caracteres braille.
+Obs.: Para escrever letras maiúsculas neste modo, pressione novamente
+CONTROL ALT F11;
+CONTROL F6 - aciona a calculadora (ver seção 9);
+CONTROL F7 - troca o tamanho da tela;
+CONTROL F - fala texto até encontrar um sinal de pontuação (à exceção de
+hifens, vírgulas, parênteses, aspas, etc.);
+CONTROL P - imprime arquivo (salva antes);
+
+
+11) CALCULADORA ELETRÔNICA
+11.1) OPERAÇÕES VÁLIDAS E MODO DE ACIONAMENTO
+
+O Edivox conta com uma calculadora que lê as parcelas do texto e as
+reconhecendo e interpretando, oferece a totalização escrita na linha
+imediatamente abaixo da última parcela para manuseio pelo operador. O
+reconhecimento do final da conta dá-se pelo sinal = colocado após a
+última parcela como no exemplo abaixo:
+
+1234
+Caso se queira usar vírgulas e pontos, os milhares são repartidos por
+vírgulas e as casas decimais por pontos como no exemplo:
+
+1,00.50 (um mil e cinqüenta centavos)
+
+Caso o ponto esteja no lugar da vírgula, a calculadora  entende
+que a partir dele para a direita estarão as casas decimais e não o
+considera como marcação de milhar.
+Para maior velocidade na leitura da informação dos resultados,  e
+entendimento  imediato,  somente  aparecem as  casas  decimais
+quando são diferentes de 00 como nos exemplos:
+
+No caso de 10.00 a calculadora retira os dois zeros depois do ponto; e
+no caso 10.15 não sofre alteração e as duas casas decimais são
+mantidas. O mesmo é válido para um número maior, ou menor de casas
+decimais que pode ser editado no setor [EDIVOX] do dosvox.ini, na linha
+PARTEDECIMAL=X, onde X é o número de casas decimais.
+
+11.2) AS 11 OPERAÇÕES E AS 50 CONVERSÕES VÁLIDAS
+
+As sete operações e 50 conversões válidas executadas com precisão
+pela calculadora eletrônica do Edivox são:
+
++ adição
+- subtração
+* multiplicação
+/ divisão
+% porcento
+& elevação ao quadrado
+\ raiz quadrada
+| ou x potenciação
+@ ou X comprimento de uma circunferência
+ou y área de um círculo
+$ ou Y volume de uma esfera
+a- alqueire do norte para metros quadrados
+A- alqueire mineiro para metros quadrados
+b- alqueire paulista para metros quadrados
+B- centímetros para pés
+c- centímetros para  polegadas
+C- centímetros quadrados para pés quadrados
+d- galões para centímetros cúbicos
+D- galões para litros
+e- gramas para libras
+E- gramas para onças
+f- hectare para metros quadrados
+F- jardas para centímetros
+g- jardas para metros
+G- jardas quadradas para metros quadrados
+h- libras para gramas
+H- libras para quilogramas
+i- litros para quartos
+I- metros para jardas
+j- metros para pés
+J- metros para polegadas
+k- metros quadrados para jardas quadradas
+K- metros quadrados para pés quadrados
+l- metros por minuto para centímetros por segundo
+L- metros por minuto para pés por segundo
+m- milhas para quilômetros
+M- milhas para nós
+n- milhas quadradas para quilômetros quadrados
+N- milhas por hora para metros por segundo
+o- milhas por hora para quilômetros por hora
+O- nós para quilômetros por hora
+p- onças para gramas
+P- onças para quilogramas
+q- pés para centímetros
+Q- pés por minuto para centímetros por segundo
+r- polegadas para centímetros
+R- polegadas para pés
+s- quartos para litros
+S- quilogramas para libras
+t- quilômetros para milhas
+T- quilômetros para pés
+u- quilômetros quadrados para jardas quadradas
+U- quilômetros quadrados para milhas quadradas
+v- quilômetros por hora para milhas por hora
+V- quilômetros por hora para pés por minuto
+w- Fahrenheit para Celsius
+W- Celsius para Fahrenheit
+x potenciação
+X comprimento de uma circunferência
+y área de um círculo
+Y volume de uma esfera
+
+Esta  tabela  não  precisa  ser  consultada,  pois  ao se
+posicionar em uma linha onde haja um  valor  numérico  e  um
+sinal  de  igual,  ao  ser  ativada  com  CONTROL F6,    a
+calculadora  entra  automaticamente  em  modo    interativo,
+bastando que se selecione com as setas, o tipo de  conversão
+que deseja e se tecle ENTER.
+
+Não há limite para o número de parcelas  a  serem  calculadas.
+Em todas as operações normais fora  do  modo  interativo,  o
+cursor deve estar  posicionado  no  início  das  parcelas,
+exatamente em cima da primeira; quando se tecla CONTROL F6
+O cálculo é executado a partir dela até  a  última,  e  o
+total virá logo abaixo da última, onde o  cursor encontrar-se-á
+posicionado. Caso deseje iniciar o cálculo a partir
+de uma parcela intermediária, basta posicionar nela o cursor
+e teclar CONTROL F6.
+
+Importante: os sinais devem estar juntos  dos  algarismos,
+sem espaços em branco entre eles. Veja um exemplo do que não
+se deve fazer:
+
+100 +
+
+Essa parcela que contém um espaço em branco entre o 100 e o sinal
+de + será desconsiderada e o resultado não a levará em conta.
+
+Os sinais matemáticos das operações jamais devem estar antes e
+colados no primeiro algarismo da parcela como no exemplo:
+
++100
+
+Esse sinal é ignorado pela calculadora e  pode  induzi-la  a
+erro no cálculo.  Ela  está  programada  para  considerar  apenas
+sinais posteriores às parcelas e que estejam colados à elas.
+
+Caso haja uma linha em branco no meio das parcelas, a calculadora acusa
+erro de leitura nas parcelas, e posiciona o cursor na linha do erro para
+que seja corrigido e torne-se a repetir a operação. Caso falte algum
+sinal matemático, também é acusado um erro na leitura das parcelas e o
+cursor é posicionado na parcela onde falta o sinal para que seja
+colocado e possa prosseguir-se no cálculo.
+
+11.3) AS QUATRO OPERAÇÕES BÁSICAS
+
+Para efetuar uma adição, basta colocar o sinal de + após  os
+algarismos, e no final da última parcela o sinal de =  como  no
+exemplo:
+
+100+
+200.0+
+300.00Total: 600
+
+Observe que as casas decimais por serem zero foram ignoradas no
+resultado.
+
+Todas as operações dos demais casos mostrarão duas casas decimais
+nos resultados finais, ainda que para efeito de  cálculos  todos
+os algarismos sejam considerados como no exemplo:
+
+1.209+
+1.001Total: 2.21
+
+Se apenas fossem consideradas duas casas decimais para efeito  de
+cálculo, o resultado seria 2.20
+
+Para efetuar-se uma subtração, basta colocar o sinal de -  após
+os algarismos, e no final da última parcela o sinal de  =  como
+no exemplo abaixo:
+
+400-
+200.0-
+100.00Total: 100
+
+Pode se subtrair um número maior de um menor, e o resultado  será
+negativo como no exemplo:
+
+200.00-
+300Total: -100
+
+Para multiplicar, coloque o sinal  de  *
+após o último algarismo  das  parcelas,  e  no  final  da  última
+o sinal de = como no exemplo:
+
+2*
+20.20Total: 40.40
+
+Podem ser efetuadas multiplicações contendo  várias  parcelas  em
+seqüência como no exemplo:
+
+2*
+3*
+6Total: 36
+
+Para dividir colocque o sinal de / após o último algarismo das parcelas, e no
+final da última parcela o sinal de = como no exemplo:
+
+100.10/
+2Total: 50.05
+
+11.4) PORCENTAGEM
+
+Basta colocar o sinal de % após os algarismos, e no final da parcela
+seguinte o sinal de = como no exemplo:
+
+10%
+100Total: 10
+
+Pode combinar essa operação de % com outras como por exemplo:
+
+10%
+100*
+2Total: 20
+
+11.5) RADICIAÇÃO
+
+Para extrair a raiz quadrada de um número, basta colocar  o
+sinal de \ na linha anterior à da parcela e o número seguido do
+sinal de = como no exemplo:
+
+\
+81Total: 9
+
+Não deve haver parcela na linha acima do sinal de \ como para
+combinar duas ou mais operações, mas posterior ao número que está
+sendo radiciado como no exemplo:
+
+\
+81*
+10Total: 90
+
+11.6) POTÊNCIAS
+
+Eleve um número ao quadrado Colocando o sinal de & na linha anterior à
+da parcela, e o número seguido do sinal de = como no exemplo:
+
+&
+9=
+Total: 81
+
+Não deve haver parcela na linha acima do sinal de & como para
+combinar duas ou mais operações, mas posterior ao número que está
+sendo elevado ao quadrado como no exemplo:
+
+&
+9/
+3=
+Total: 27
+
+Há duas formas de elevar um número a uma potência: A primeira, que pode
+ser usada entre parcelas com cálculo automático é a seguinte:
+
+Se quiser calcular cinco elevado ao quadrado escreva assim:
+
+5|
+2=
+
+Em outro exemplo:
+dois mais três elevado ao quadrado mais 5
+escrevemos:
+
+2+
+3|
+2+
+5=
+
+Lembre que a calculadora soma primeiro, para depois
+fazer o cálculo da potência, ficando dois mais três que é
+cinco' elevado ao quadrado.
+
+A segunda forma de usar a potenciação é a a conversão, com a letra x
+minúscula da seguinte forma:
+
+Coloque a letra x na linha anterior à da parcela, e o número
+seguido do sinal de =.  Ao  acionamento,  seguirá  a  pergunta:
+"Qual a potência?". Digite o número desejado  e  tecle  ENTER.  A
+resposta será como no exemplo abaixo em que se digitou 2:
+
+|
+99 elevado a 2 é igual a 81
+
+Não deve haver parcela na linha acima do sinal de | como para
+combinar duas ou mais operações, mas posterior ao número que está
+sendo elevado ao quadrado como no exemplo:
+
+|
+9/
+3Total: 27
+
+11.7) COMPRIMENTO, ÁREA E VOLUME DA CIRCUNFERÊNCIA, CÍRCULO E ESFERA
+
+coloque o sinal correspondente @ para o comprimento do círculo,  #
+para a área da circunferência e $ para o volume da  esfera
+na linha anterior à da parcela e o valor do raio seguido  do
+sinal de = como nos exemplos:
+
+@
+4A circunferência com 4 unidades de raio tem 25.13 unidades de comprimento
+
+#
+4O círculo com 4 unidades de raio tem 25.13 unidades ao quadrado de área
+
+$
+4A esfera com 4 unidades de raio tem 268.08 unidades cúbicas de volume
+
+A  título  de  curiosidade  o  número  PI  utilizado  pela
+calculadora, com o máximo de 17 casas decimais é:
+
+Pi = 3.14159265358979312
+
+11.8) CONVERTENDO PESOS E MEDIDAS DE a a y e A a Y
+
+Para converter um número de acordo com as 50 conversões possíveis
+constantes da tabela de conversão da calculadora eletrônica do Edivox,
+basta colocar a letra correspondente entre a e y, maiúscula ou
+minúscula, na linha anterior à da parcela e o número seguido do sinal de
+= como no exemplo:
+
+e
+500500 gramas equivalem a 1.10 libras
+
+Não pode haver parcela na linha acima da letra correspondente à
+conversão que se deseja efetuar, como para combinar duas ou  mais
+operações, mas posterior ao número que está sendo convertido como
+no exemplo:
+
+e
+500*
+10Total: 11
+
+11.9) COMENTÁRIOS
+
+Esta  calculadora  permite  que  se  adicione  comentários
+anteriores a cada parcela, pois ela ignora qualquer caracter  que
+esteja colocado antes da parcela desde que esteja separado  desta
+com um espaço em branco como no exemplo onde se calcula o  número
+de horas existentes em um ano:
+
+Número de meses de um ano 12*
+Número de dias de um mês padrão 30*
+Número de horas de um dia 24Total: 8640
+
+Outro exemplo, acrescentando comentário  antes  da  letra  e
+correspondente a conversão de gramas em libras:
+
+Converta 500 gramas em libras e
+500500 gramas equivalem a 1.10 libras
+
+11.10) DUAS PARCELAS NUMA MESMA LINHA
+
+Se quisermos isolar um determinado cálculo, para que seja
+usado sem cumulatividade, devemos colocá-lo entre
+parênteses da seguinte forma:
+
+3+
+(2*4)=
+Total: 11
+
+A parcela com os dois argumentos  pode  estar  numa  única
+linha e o cálculo será realizado, desde  que  não faltem
+os parênteses e o sinal de igual.
+
+Seguem alguns exemplos de como devemos usar os sinais
+nesses cálculos:
+
+(2|3), dois elevado ao cubo.
+(\9), raiz quadrada de nove.
+(&4), quatro elevado ao quadrado.
+(4%90), quatro porcento de noventa.
+($30), volume da esfera com 30 unidades de raio.
+(4/2), quatro divididos por dois.
+
+E desse modo, todas as 11 operações e 50 conversões podem
+ser usadas entre parênteses.
+
+Observe a diferença:
+
+3+
+2|
+3=
+
+O cálculo realizado será de 5 (3 + 2) elevado ao cubo que
+resultará em 125.
+
+Mas se isolarmos as duas últimas  parcelas  com  parênteses,
+teremos:
+
+3+
+(2|3)=
+
+O resultado será 3 somados ao resultado de dois elevado ao
+cubo, que será igual a 11.
+
+Essa é a vantagem de podermos isolar duas determinadas
+parcelas no meio de outras.
+
+Caso se deseje, a calculadora pode processar apenas a  linha
+com parênteses, desde que haja um  sinal  de  igual  após  o
+sinal de fecha parênteses.
+
+11.11) MODO DE CONVERSÃO INTERATIVA.
+
+Para usar o modo interativo, basta posicionar-se numa linha onde haja um
+número seguido do sinal de igual. A calculadora interpretará que se
+deseja efetuar uma conversão e ativará o modo interativo automaticamente
+bastando digitar CONTROL F6. Nesse momento, caso deseje ouvir todas as
+50 conversões da calculadora, tecle F1, todavia, caso deseje usar as
+setas, caminhe entre elas e tecle ENTER na conversão desejada. Caso
+queira ir para uma conversão que fica no final, ou se desejar saber se
+ela existe, tecle a letra correspondente, após o primeiro toque na seta
+para baixo, e instantaneamente a calculadora posicionar-se-á na letra
+digitada. As conversões estão em ordem alfabética, facilitando uma
+eventual busca.

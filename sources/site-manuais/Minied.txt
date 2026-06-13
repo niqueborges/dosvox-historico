@@ -1,0 +1,156 @@
+MINI-EDITOR DE TEXTOS - MINIED
+
+
+SUMÁRIO
+
+1) INICIAR
+2) EDITAR
+3) MOVER O CURSOR
+4) REMOVER CARACTERES
+5) LER
+6) INSERIR LINHAS
+7)  PROCURAR PALAVRAS NO TEXTO
+8) ORDENAR
+9) ARQUIVAMENTO E SAÍDA DO MINIED
+
+
+1) INICIAR
+
+O Minied é um pequeno editor de textos destinado a introduzir o
+deficiente visual às tarefas de edição de textos. Ele edita apenas
+arquivos de texto sem controles de formatação; tem a capacidade de
+editar até 5.000 linhas.
+
+Para acionar o editor pressione a tecla E. Ele fala:
+Mini Editor - "Informe o nome do arquivo"
+Tecle até 256 letras para formar o nome do arquivo, seguido do caracter
+ponto e depois mais 3 letras; Para finalizar pressione a tecla ENTER. O
+programa dá a mensagem:
+"arquivo novo ", caso o arquivo seja novo;
+"arquivo carregado ", caso o arquivo esteja sendo reeditado.
+Aperte F9 para ajuda.
+O editor agora está pronto para ser usado.
+
+
+2) EDITAR
+
+A teclagem é idêntica a uma máquina de escrever convencional. Cada tecla é
+ecoada pela placa de som. Ao fim de cada linha, soa um bip para mostrar o
+final da linha.  Aperte a tecla ENTER para continuar a teclar o texto.
+
+Os acentos são colocados como numa máquina de escrever. Primeiro o acento,
+depois a letra.
+
+Ao mesmo tempo que a teclagem é realizada e ouvida, aparece também na tela
+do computador o texto, para que um eventual observador que não seja
+deficiente visual possa também acompanhar o trabalho.
+
+Um texto teclado é composto de uma série de letras, obviamente. A grande
+vantagem de um editor de textos é podermos alterar livremente cada uma destas
+letras, inserir novas letras, criar linhas novas, apagar linhas, etc.
+
+A posição da letra no texto onde vamos fazer qualquer alteração é chamada
+de cursor. O cursor, à medida que vamos teclando, vai andando para a direita,
+com a datilografia.
+
+O Mini-editor possui algumas teclas especiais para facilitar a elaboração do
+texto.  Basta pressionar a tecla F9 para ajuda.
+
+As opções são as seguintes:
+ENTER -  insere linha
+F1        -  fala palavra
+F2        -  grava
+F3        -  informa linha atual
+F4        -  controle da soletragem
+F5        -  busca trecho
+F6        -  ordena arquivo
+F7        -  remove linha atual
+F8        -  informa hora
+F9        -  ajuda
+ESC     -  termina
+
+
+3) MOVER O CURSOR
+
+SETA ESQUERDA - move o cursor um caracter para a esquerda.  Ao chegar
+no primeiro caracter da linha, dá um bip.  O caracter sobre o qual o cursor
+passou é falado.
+
+SETA DIREITA - move o cursor um caracter para a direita.   Ao chegar
+no último caracter da linha, soa um bip.   O caracter sobre o qual o cursor
+passou é falado.
+
+SETA ACIMA - move o cursor uma linha para cima.   Ao chegar na primeira
+linha, soa um bip.
+SETA ABAIXO - move o cursor uma linha para baixo.   Ao chegar na última
+linha do texto, soa um bip.
+HOME - posiciona na coluna 1 da linha.
+END - posiciona após a última coluna escrita da linha.
+ENTER - move o cursor uma linha para baixo. Se já estava na última linha
+insere uma nova linha após esta.
+
+PAGE UP - volta 20 linhas de texto.
+PAGE DOWN - avança 20 linhas de texto.
+CONTROL PAGE UP - posiciona o cursor na primeira linha do texto.
+CONTROL PAGE DOWN - posiciona o cursor na última linha do texto.
+CONTROL SETA ESQUERDA - retorna uma palavra na linha.
+CONTROL SETA DIREITA - avança uma palavra na linha.
+CONTROL  C - informa a coluna atual do cursor.
+
+
+4) REMOVER CARACTERES
+
+BACKSPACE  - remove o caracter anterior ao cursor.
+DEL - remove o caracter na posição do cursor.
+CONTROL  D - apaga desde a posição do cursor até o fim da linha.
+CONTROL  Y - remove a linha toda do texto.
+
+
+5) LER
+
+F1 - cada palavra da linha é falada. Após a última palavra da linha soará um
+bip.
+CONTROL  F1 - o editor fala a linha inteira do texto, a partir do ponto
+que o cursor está. Caso  queira interromper a fala pressione qualquer tecla.
+F4  - aciona ou desaciona fala durante a datilografia. Este comando pode
+agilizar muito a datilografia, pois a fala consome muito tempo. As falas dos
+comandos continuam ativas.
+
+6) INSERIR LINHAS
+
+ENTER - o cursor passa para a próxima linha.  Se for a última linha, uma nova
+é automaticamente criada abaixo desta.
+CONTROL ENTER - é usado para inserirmos nova linha no meio do texto; a linha
+atual é puxada para baixo abrindo espaço para uma nova linha.
+
+7)  PROCURAR PALAVRAS NO TEXTO
+
+F5 - procura uma palavra no texto,  se encontrar, o Minied lê a linha onde
+está a palavra.
+CONTROL  F5 - procura a mesma palavra do último F5 novamente. Se achar, do
+Minied lê a linha onde está a palavra.
+
+Obs.: Para procurar a palavra no texto todo é necessário posicionar o cursor
+no início do texto. Caso contrário a procura é realizada a partir do
+posicionamento do cursor.
+
+8) ORDENAR
+
+F6 - ordena as linhas do texto.  Este comando é útil quando se deseja obter
+uma lista de elementos em ordem alfabética.
+Como a operação de ordenação é destrutiva, antes de ser iniciada, é pedida a
+confirmação do comando.  Tecle S para confirmar.
+
+9) ARQUIVAMENTO E SAÍDA DO MINIED
+
+F2 - Grava o arquivo e continua teclando deste mesmo ponto.
+CONTROL  F2 - Semelhante ao F2 porém permite informar um novo nome para o
+arquivo.
+
+Para sair do Minied deve-se pressionar ESC.
+É pedida a confirmação da saída; tecle S;
+é perguntado se deseja gravar o texto teclado. Tecle novamente S.
+O texto teclado é copiado da memória do computador para o disco.
+Em caso de teclagens muito extensas, é prudente fazer gravações de tempos em
+tempos; para isso, teclando F2, o texto teclado é copiado para o disco, e a edição
+prossegue normalmente.

@@ -1,0 +1,87 @@
+IMPRIVOX - RESUMO DO FUNCIONAMENTO
+
+1 - Introdução
+
+    O programa de impressão formatada permite a saída em uma  impressora
+textos com boa qualidade gráfica podendo realizar diversas operações  de
+alinhamento automático de texto e inclusão  de  controles  especiais  de
+formatação, incluindo negritos, itálicos, subescritos e sobrescritos.
+
+    O texto é  totalmente  remargeado,  buscando-se  uma  impressão
+gráfica com qualidade, como aquela produzida por formatadores  de  texto
+profissionais.
+
+    O texto, entretanto, deve ser preparado com  algumas  especificações
+adicionais, incluindo margens e estilos de escrita (sublinhado, negrito,
+uso de cor, etc.), títulos e paginação.
+
+2 - Comandos do formatador
+
+    Os comandos de embelezamento do  texto  são  inseridos  no  meio  do
+texto, entre os caracteres menor e maior ("<"  e  ">").  Em  seguida  ao
+comando opcionalmente pode-se colocar um  sinal  de  igual  ("=")  e  um
+valor, por exemplo <ME=15>, quer dizer "margem esquerda 15". Os comandos
+podem  ser  digitados    em    letras    maiúsculas    ou    minúsculas,
+indiferentemente.
+
+     O programa  vai  tomando  as  linhas  do  texto,  rearrumando  para
+respeitar a margem, e introduzindo os  controles  de  embelezamento  que
+forem especificados. Ele controla o tamanho das linhas, quebrando linhas
+longas e juntando linhas curtas.
+
+    Ele passa para a próxima linha, terminando  este  parágrafo,  quando
+encontra uma linha começando com  um espaço  em  branco  ou  uma  linha
+totalmente vazia.
+
+    Os comandos do formatador são os seguintes:
+
+a) comandos de margem e espacejamento
+
+<MS=valor>     margem superior
+<MI=valor>     margem inferior
+<ME=valor>     margem esquerda
+<MD=valor>     margem direita
+<EL=valor>     espacejamento entre linhas
+
+b) título e paginação
+
+<TIT=texto>    Título
+<NTIT>         Não titula a partir deste local
+<P>            Força salto de pagina
+<IROD>         O texto asseguir é colocado no rodapé
+<FROD>         Fim do texto de rodapé
+
+c) alinhamento e separação de sílabas
+
+<AL>           Faz alinhamento à direita das linhas
+<NAL>          Não faz alinhamento à direita das linhas
+<SS>           Separa sílabas
+<NSS>          Não separa sílabas
+<AF>           Ativa a autoformatação de parágrafos (junta linhas)
+<NAF>               Desativa autoformatação
+<C>            Centraliza este parágrafo
+
+d) Tipo de letra
+
+<IN>           Início de texto negritado
+<FN>           Fim de texto negritado
+<IS>           Início de texto sublinhado
+<FS>           Fim de texto sublinhado
+<II>           Inicio de texto em itálico
+<FI>           Fim de texto em itálico
+<ISO>          Início de texto sobrescrito
+<FSO>          Fim de texto sobrescrito
+<ISU>          Início de texto subescrito
+<FSU>          Fim de texto subescrito
+<CE0> a <CE7>  Ativa cor de letra
+               0-preto     1-azul      2-verde     3-ciano
+               4-vermelho  5-magenta   6-marrom    7-cinza
+
+e) forçar quebra de parágrafo
+
+<NL>           Passa imediatamente para a próxima linha
+
+Obs.: esse comando é muito útil pois o formatador sempre tenta
+      juntar linhas subseqüentes formando parágrafos.  Caso
+      se deseje criar linhas parcialmente preenchidas, começando
+      na coluna 1, introduz-se este controle no início da linha.
