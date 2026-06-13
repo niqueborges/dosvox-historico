@@ -206,7 +206,10 @@ Documentos já inicializados:
 - `programming_model.md`
 - `design-philosophy.md`
 - `dependency-graph.md`
+- `dual-architecture.md`
 - `generations.md`
+- `public-api.md`
+- `evidence.md`
 
 ---
 

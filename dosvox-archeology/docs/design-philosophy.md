@@ -14,3 +14,21 @@ A longevidade do DOSVOX não se deve apenas a escolhas tecnológicas (como a lin
 6. **Preservação de compatibilidade:** O sistema manteve a estabilidade da interface e da voz por décadas, reconhecendo que a curva de aprendizado e o conforto sonoro do usuário cego têm mais valor do que modernizações estéticas desnecessárias.
 
 Essa filosofia de design é talvez o maior ativo a ser preservado em futuras reescritas do projeto.
+
+---
+
+## 7. A Inclusão Colaborativa (O Cego e o Vidente)
+
+O estudo combinado do código da `dvcrt`, das mensagens de UX e dos materiais oficiais de ensino revela um paradigma sutil e brilhante de convivência. Não se trata de uma arquitetura feita *apenas* para o cego isolado do mundo.
+
+**Evidência:**
+- Os manuais principais do sistema (`Dosvox.txt`, `Edivox.txt`, `Minied.txt`) são distribuídos em texto puro (.txt). 
+- Eles descrevem a interação exclusivamente por teclado e resposta sonora (sem mouse).
+- Os minicursos didáticos são distribuídos em PowerPoint (`.ppt`).
+- O manual do `Minied` afirma textualmente que a exibição na tela serve *"para que um eventual observador que não seja deficiente visual possa também acompanhar o trabalho"*.
+
+**Inferência:**
+O sistema foi concebido arquiteturalmente para privilegiar de forma absoluta a interação sonora (o `.txt` puro para o usuário cego), mas preservou deliberadamente vias de acesso gráficas (a tela emulada do `dvcrt` e os slides em `.ppt`) adequadas para aulas presenciais e para os professores/familiares videntes.
+
+**Hipótese Histórica:**
+A equipe do DOSVOX buscou resolver um problema sociotécnico: garantir a autonomia total e independente do usuário cego na máquina, sem impedir a participação ativa, a aprendizagem e a colaboração da sua família ou educadores. São dois modos de acesso perfeitamente orquestrados para coexistirem.
