@@ -1,43 +1,20 @@
-# Oportunidades de Refatoração e Dívida Arquitetural
+# Autópsia de Dívida Arquitetural Histórica
 
-Este documento acompanha a **Topologia Desejável** do DOSVOX, contraposta à *Topologia Observada* na Fase C.3 e C.4.
-Os itens descritos aqui não são classificados como "erros da época" ou "más decisões", mas sim como **Acoplamentos Históricos**. Eles representam a sedimentação natural de componentes que chegaram depois e acabaram se cristalizando no núcleo duro do sistema.
+Uma das descobertas mais raras na pesquisa arqueológica do DOSVOX é a transparência com que o ecossistema acumulou acoplamentos. Este documento não expõe "erros", mas descreve como tecnologias que chegaram depois acabaram se cristalizando na base por necessidades prementes, resultando em "Dívidas Arquiteturais" sedimentares que foram mantidas porque funcionavam.
 
-A prioridade de todas as dívidas aqui registradas é **Baixa**, pois o sistema é mantido estável e funcional há décadas. A correção destas dívidas beneficiaria a arquitetura, mas não é crítica para a operação.
+## 1. Dependências Inesperadas e Acoplamentos Universais
+O caso mais emblemático do ecossistema: a contaminação do Kernel.
+- **O Fato:** A biblioteca nuclear `dvcrt` possui um `uses` explícito para `dvmouse`. 
+- **O Teste Empírico:** O método "Knockout" mostrou que, ao apagar a `dvmouse` (uma biblioteca hiper-especializada de Classe C focada na rodinha do mouse), 100% da Amostra de Ouro falhou a compilação, incluindo editores, cálculos matemáticos estritos e jogos sem interface de clique.
+- **A Sedimentação:** A interceptação do `wm_MouseWheel` foi adicionada na janela virtual de texto (`dvcrt`) muito tempo depois do seu nascimento, transformando um periférico opcional numa âncora existencial para toda a plataforma.
 
----
+## 2. Wrappers Acumulados
+No esforço brutal para manter a interface com os programadores simples e imutável (o "SDK Implícito"), o DOSVOX precisou criar "Wrappers" em torno do Windows para isolar a complexidade do Ecossistema B (Delphi).
+- **A Dívida:** Ao longo do tempo, as bibliotecas de voz (`dvsapi4`, `dvsapi5`, `speechLib_TLB`) e de rede (`Synapse`) foram introduzidas empilhando invólucro sobre invólucro para se comunicarem com a `dvwin`, fazendo com que a malha de resolução de compilação da camada 1 carregue componentes pesados (COM, OLE) na partida inicial do software, quando na verdade poderiam ser plugins carregados dinamicamente apenas quando requisitados pelas Camadas 3 e 4.
 
-## AD-001: Acoplamento de `dvcrt` com `dvmouse`
+## 3. Retrocompatibilidades Preservadas (O Paradoxo Funcional)
+Alguns componentes continuam existindo e sendo compilados meramente porque as fundações confiam que eles ainda estão lá.
+- Muitas funções antigas de formatação CRT persistem emuladas na `dvcrt` e são importadas pelos programas clássicos não porque o Windows precisa, mas porque ferramentas do "Mutirão Vox" de 1996 utilizam a mesma sintaxe de Turbo Pascal. A dependência transitiva é tolerada e arrastada de geração em geração.
 
-**Evidência:** 
-A biblioteca `dvcrt` importa a `dvmouse`. O teste empírico (Knockout) da remoção de `dvmouse` causou a falha de compilação em 100% da Amostra de Ouro (de Edivox a PPTVOX), englobando até programas não interativos ou matemáticos.
-
-**Impacto:** 
-Uma biblioteca especializada de interface de apontador (Classe C) tornou-se, por acoplamento, uma dependência existencial obrigatória (Classe A). 
-
-**Arquitetura Desejável:**
-Isolar a captura do mouse num hook externo, invertendo a dependência.
-```text
-dvcrt
- ├── teclado
- ├── tela
- └── hook opcional
-        ↓
-     dvmouse
-```
-
-**Justificativa Histórica (Sedimentação):**
-A interceptação de rolagem de tela (`wm_MouseWheel`) provavelmente foi adicionada anos após o `dvcrt` nascer, numa época em que o Windows exigia tratar essa mensagem globalmente na janela procedural, sedimentando a `dvmouse` na base.
-
----
-
-## AD-002: Interfaces SAPI e Multimídia no Núcleo 
-
-**Evidência:**
-Dependências como `videovox` e bibliotecas `dvsapi5`, `speechLib_TLB` estão presentes na cascata recursiva do motor base (via `dvwin` e `dvsapglb`).
-
-**Impacto:**
-Componentes que poderiam ser *plugins* sob demanda são carregados na matriz de resolução primária de dependências.
-
-**Arquitetura Desejável:**
-Uma arquitetura onde serviços de mídia e TTS rodem como injeção de dependência na inicialização, mantendo o `dvwin` ignorante da implementação subjacente SAPI.
+## 4. Camadas que Sobreviveram por Conveniência
+O isolamento em binários paralelos (`DOSDOS`, `DOSED`) ou `executaProg` foi usado para manter velhas rotinas de disco ou acesso ao SO funcionando, mesmo quando as APIs do Delphi ou Windows já ofereciam abstrações modernas de `SysUtils`. Essa conveniência gerou um ecossistema com alta proliferação de EXEs que operam praticamente as mesmas tarefas nucleares, multiplicando o esforço de manutenção.
