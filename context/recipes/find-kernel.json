@@ -1,0 +1,9 @@
+{
+  "question": "Como o núcleo do DOSVOX foi descoberto?",
+  "steps": [
+    "dosvox-archeology/docs/methodology.md",
+    "dosvox-archeology/docs/dependencies.md",
+    "dosvox-archeology/research/dependency-knockout.md",
+    "dosvox-archeology/research/criticality-matrix.md"
+  ]
+}

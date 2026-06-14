@@ -1,0 +1,30 @@
+{
+  "knockout_test": {
+    "definition": "Remoção empírica e controlada de units ou bibliotecas para medir criticidade no grafo de dependências observando a quebra de compilação.",
+    "documents": [
+      "dosvox-archeology/docs/methodology.md",
+      "dosvox-archeology/research/dependency-knockout.md"
+    ]
+  },
+  "gold_sample": {
+    "definition": "Conjunto reduzido de artefatos de alto valor taxonômico (Amostra de Ouro), usado para focar as análises arquiteturais nas fundações essenciais.",
+    "documents": [
+      "dosvox-archeology/research/curation-log.md",
+      "dosvox-archeology/docs/taxonomy.md"
+    ]
+  },
+  "kernel_77": {
+    "definition": "A base procedural do DOSVOX (Camada C1/C2) que mascara as chamadas do Windows, permitindo a retrocompatibilidade da API de voz.",
+    "documents": [
+      "dosvox-archeology/docs/architecture.md",
+      "dosvox-archeology/research/dependency-layers.md"
+    ]
+  },
+  "sedimentation": {
+    "definition": "Crescimento arquitetural por sobreposição histórica de camadas (como estratos geológicos) sem destruição das camadas antigas.",
+    "documents": [
+      "dosvox-archeology/docs/stratigraphy.md",
+      "dosvox-archeology/docs/principles.md"
+    ]
+  }
+}

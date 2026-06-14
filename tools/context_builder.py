@@ -185,6 +185,27 @@ def validate_context(all_files):
                     if p not in available_paths and not p.endswith(".pas"):
                         errors.append(f"Topic '{topic}' references missing file: {p}")
 
+    # Verify recipes
+    recipes_dir = os.path.join(BASE_PATH, "context", "recipes")
+    if os.path.exists(recipes_dir):
+        for filename in os.listdir(recipes_dir):
+            if filename.endswith(".json"):
+                with open(os.path.join(recipes_dir, filename), "r", encoding="utf-8") as f:
+                    recipe = json.load(f)
+                for step in recipe.get("steps", []):
+                    if step not in available_paths and not step.endswith(".pas"):
+                        errors.append(f"Recipe '{filename}' references missing file: {step}")
+
+    # Verify concepts
+    concepts_file = os.path.join(BASE_PATH, "context", "concepts.json")
+    if os.path.exists(concepts_file):
+        with open(concepts_file, "r", encoding="utf-8") as f:
+            concepts = json.load(f)
+        for concept, data in concepts.items():
+            for doc in data.get("documents", []):
+                if doc not in available_paths and not doc.endswith(".pas"):
+                    errors.append(f"Concept '{concept}' references missing file: {doc}")
+
     if errors:
         print("CONTEXT VALIDATION FAILED:")
         for err in errors:
@@ -216,6 +237,8 @@ def build_master():
         "description": "Sistema Operacional de Contexto (Context OS) para agentes de IA.",
         "components": {
             "topics_router": "context/topics.json",
+            "concepts_dictionary": "context/concepts.json",
+            "recipes_dir": "context/recipes/",
             "catalogs": [
                 "context/catalogs/docs.json",
                 "context/catalogs/research.json",
