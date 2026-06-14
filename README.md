@@ -70,3 +70,17 @@ O repositório é indexado por um compilador rigoroso de contexto (`tools/knowle
 
 A reconstrução do meta-conhecimento foi estabilizada. O legado técnico e intelectual das décadas passadas agora respira na arquitetura do futuro.
 Para informações históricas dos módulos, confira o [STATUS_DO_PROJETO.md](file:///e:/Dev/projetos/dosvox-historico/STATUS_DO_PROJETO.md).
+
+## Proveniência da Arquitetura
+
+As estruturas de preservação descritas neste repositório não foram concebidas por uma única entidade.
+
+Entre 2026 e as fases finais da escavação, as hipóteses, modelos e refinamentos que culminaram no DOSVOX Memory OS emergiram de um processo iterativo de diálogo entre três agentes:
+
+- o pesquisador humano responsável pelo projeto;
+- o ChatGPT, utilizado como parceiro de raciocínio e revisão;
+- o Antigravity, utilizado como laboratório complementar de arquitetura.
+
+As ideias foram submetidas continuamente a crítica, reformulação e validação empírica. Nenhuma decisão importante foi atribuída a uma única fonte.
+
+Este registro é preservado deliberadamente como parte da história intelectual do projeto, da mesma forma que se preservam autores, versões e evidências do próprio ecossistema DOSVOX.
