@@ -21,3 +21,7 @@ A pesquisa no código do DOSVOX em 2026 nos ensinou tanto sobre os sistemas anti
 ## Lição 5: A memória humana e o código se complementam
 **O Conflito:** Nós baseamos toda a nossa pesquisa (Fase A até C) apenas na leitura isolada de matrizes compiláveis.
 **A Epifania:** O trabalho de engenharia empírico, que gerou todas as nossas hipóteses taxonômicas (descoberta do Mutirão, centralidade por sedimentação de verbos), foi surpreendente e explicitamente confirmado pela história contada pelo criador do DOSVOX, Antonio Borges. A arqueologia confirmou a memória, e a história validou as equações dos grafos de dependência construídos pelo computador. A documentação arqueológica funde a precisão cristalina e insensível do compilador às intenções emocionais e contextuais de quem escreveu o código 30 anos atrás.
+
+---
+
+*O DOSVOX não foi reconstruído para ser simplificado, mas para ser compreendido. Muitas coisas aconteceram. Em 2026, quando já não era possível lembrar de tudo, nós perguntamos ao compilador. E fomos documentando à medida que descobríamos.*
