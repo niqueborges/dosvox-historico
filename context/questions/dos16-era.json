@@ -1,0 +1,9 @@
+{
+  "status": "open",
+  "question": "Qual a origem exata do módulo DOSDOS e quais dependências da era 16-bits ainda subsistem ocultas?",
+  "known_evidence": [
+    "dosvox-archeology/docs/orphan-binaries.md",
+    "dosvox-archeology/docs/provenance.md"
+  ],
+  "confidence": "low"
+}

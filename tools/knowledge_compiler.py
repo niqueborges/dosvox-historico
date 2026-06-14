@@ -124,6 +124,8 @@ def validate(files, graph_links):
     concepts = load_json_dir("concepts")
     recipes = load_json_dir("recipes")
     playbooks = load_json_dir("playbooks")
+    events = load_json_dir("events")
+    questions = load_json_dir("questions")
 
     # Validate Personas
     for name, persona in personas.items():
@@ -174,6 +176,18 @@ def validate(files, graph_links):
                 if path not in available_paths:
                     errors.append(f"Semantic Graph node '{node}' references missing document: {path}")
 
+    # Validate Events
+    for name, event in events.items():
+        for path in event.get("artifacts", []):
+            if path not in available_paths and not path.endswith(".pas"):
+                errors.append(f"Event '{name}' references missing artifact: {path}")
+
+    # Validate Questions
+    for name, question in questions.items():
+        for path in question.get("known_evidence", []):
+            if path not in available_paths and not path.endswith(".pas"):
+                errors.append(f"Question '{name}' references missing evidence: {path}")
+
     if errors:
         print("CONTEXT VALIDATION FAILED:")
         for err in errors:
@@ -201,7 +215,9 @@ def generate_master():
                 "context/topics",
                 "context/concepts",
                 "context/recipes",
-                "context/playbooks"
+                "context/playbooks",
+                "context/events",
+                "context/questions"
             ]
         }
     }
