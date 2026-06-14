@@ -1,0 +1,7 @@
+{
+  "definition": "Método empírico baseado em remoção de units para observar dependências reais e quebras de compilação.",
+  "see": [
+    "dosvox-archeology/docs/methodology.md",
+    "dosvox-archeology/research/dependency-knockout.md"
+  ]
+}

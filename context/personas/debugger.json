@@ -1,0 +1,12 @@
+{
+  "role": "debugger",
+  "inherits": ["architect"],
+  "entrypoints": [],
+  "deep_dive": [],
+  "evidence": [
+    "dosvox-archeology/research/criticality-matrix.md"
+  ],
+  "recipes": [
+    "dvmouse.json"
+  ]
+}

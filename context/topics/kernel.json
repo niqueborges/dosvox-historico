@@ -1,0 +1,8 @@
+{
+  "question": "Como o núcleo procedural do DOSVOX sobreviveu até os dias de hoje?",
+  "documents": [
+    "dosvox-archeology/docs/architecture.md",
+    "dosvox-archeology/docs/stratigraphy.md",
+    "dosvox-archeology/research/dependency-layers.md"
+  ]
+}

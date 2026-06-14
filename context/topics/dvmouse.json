@@ -1,0 +1,8 @@
+{
+  "question": "Por que o dvmouse se tornou um acoplamento central?",
+  "documents": [
+    "dosvox-archeology/docs/architectural-debt.md",
+    "dosvox-archeology/research/dependency-knockout.md",
+    "dosvox-archeology/research/direct-dependencies.md"
+  ]
+}

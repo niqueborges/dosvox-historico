@@ -5,117 +5,127 @@
       "path": "dosvox-archeology/docs/applications-catalog.md",
       "title": "Catálogo de Aplicações do DOSVOX",
       "summary": "# Catálogo de Aplicações do DOSVOX  O DOSVOX é um ecossistema com cerca de 167 programas independentes. Este \"catálogo do museu\" lista algumas das aplicações mais notáveis e sua respectiva classificação de valor sob a lente da arqueologia sistêmica (Histórico, Arquitetural e Operacional).  | Programa | Valor Operacional | Valor Histórico | Valor Ar...",
-      "tags": []
+      "sha256": "f794a68f8d5fdbdc489f0160f9f8aadb4d770e6e60187584d1eb6877fe2e8f0d",
+      "modified": "2026-06-14T11:50:28.540019"
     },
     {
       "path": "dosvox-archeology/docs/architectural-debt.md",
       "title": "Autópsia de Dívida Arquitetural Histórica",
       "summary": "# Autópsia de Dívida Arquitetural Histórica  Uma das descobertas mais raras na pesquisa arqueológica do DOSVOX é a transparência com que o ecossistema acumulou acoplamentos. Este documento não expõe \"erros\", mas descreve como tecnologias que chegaram depois acabaram se cristalizando na base por necessidades prementes, resultando em \"Dívidas Arquite...",
-      "tags": []
+      "sha256": "976b7dd920a4e655e807608f61b10807759437f0fa6f7fc74b0525c9f6245c93",
+      "modified": "2026-06-14T11:42:09.006282"
     },
     {
       "path": "dosvox-archeology/docs/architecture.md",
       "title": "Arquitetura do DOSVOX",
       "summary": "# Arquitetura do DOSVOX  O DOSVOX é um ecossistema estruturado em camadas claras, o que explica sua incrível longevidade. A arqueologia revelou que a arquitetura não é monolítica, mas sustentada por um forte princípio de abstração e pela coexistência pacífica de diferentes gerações de código.  ## 1. Mapa Arquitetural  1. **Núcleo (Framework / Runti...",
-      "tags": [
-        "architecture"
-      ]
+      "sha256": "39e648766f300f9b61794845ae1f60c20d461fe0e195651d58b245b9795c2044",
+      "modified": "2026-06-14T10:49:25.201332"
     },
     {
       "path": "dosvox-archeology/docs/contributors.md",
       "title": "Arqueologia Sociotécnica: Genealogia dos Autores",
       "summary": "# Arqueologia Sociotécnica: Genealogia dos Autores  O código do DOSVOX não é o resultado do trabalho isolado de uma única pessoa, mas sim o produto de um \"Mutirão\". Entender o software exige entender a rede de atores que o moldaram em diferentes períodos.  Esta genealogia mapeia as contribuições sociais e técnicas ao longo das eras:  ## Antonio Bor...",
-      "tags": []
+      "sha256": "f0c0e85a784591aba43c8e49b71190875643059602f3a3f6518cb51eac8ee0f1",
+      "modified": "2026-06-14T11:41:43.706432"
     },
     {
       "path": "dosvox-archeology/docs/dependencies.md",
       "title": "Arquitetura de Dependências",
       "summary": "# Arquitetura de Dependências  O estudo das dependências entre os módulos do DOSVOX provou que o sistema opera como um ecossistema rigorosamente estratificado, e não como um aglomerado desordenado (\"spaghetti code\").   ## Estratificação (As Camadas do DOSVOX)  A compilação experimental validou a existência de **5 Camadas (C0 a C4)** de dependência...",
-      "tags": []
+      "sha256": "a980c82ec5cc67b8246cb7bf45d79bb706da7f848ca1644826cf739de6e0832b",
+      "modified": "2026-06-14T10:50:01.125310"
     },
     {
       "path": "dosvox-archeology/docs/future-work.md",
       "title": "Trabalhos Futuros",
       "summary": "# Trabalhos Futuros  Uma boa arqueologia nunca termina; ela apenas deixa perguntas melhores para a próxima geração. A reconstrução da arquitetura principal do DOSVOX concluiu o mapeamento das fundações sistêmicas. Se outros pesquisadores desejarem continuar a escavação deste ecossistema formidável, aqui estão as trilhas mais promissoras:  1. **Loca...",
-      "tags": []
+      "sha256": "96abeb4a0d9149eeaca46d42190ee041014d2464e3c7e976f06a539d6da0bf5a",
+      "modified": "2026-06-14T11:50:44.635371"
     },
     {
       "path": "dosvox-archeology/docs/history-crosswalk.md",
       "title": "Validação Histórica (History Crosswalk)",
       "summary": "# Validação Histórica (History Crosswalk)  A história oral e os relatos do criador do DOSVOX (Antonio Borges) confirmam diversas hipóteses levantadas puramente pela análise estática e arqueológica do código-fonte. A tabela abaixo relaciona trechos da documentação histórica, evidências encontradas no código, as hipóteses originais e o grau de confir...",
-      "tags": [
-        "history"
-      ]
+      "sha256": "9efa545922d41586249ff977cddc17dd4506228667eca554f4549d5873af7c6e",
+      "modified": "2026-06-14T10:18:08.083506"
     },
     {
       "path": "dosvox-archeology/docs/lessons-learned.md",
       "title": "Lições Aprendidas na Arqueologia de Software",
       "summary": "# Lições Aprendidas na Arqueologia de Software  A pesquisa no código do DOSVOX em 2026 nos ensinou tanto sobre os sistemas antigos quanto sobre as armadilhas de se realizar arqueologia de software de forma negligente. Se no futuro um novo pesquisador tentar reconstruir o legado de qualquer plataforma viva por várias décadas, estes princípios provar...",
-      "tags": [
-        "methodology"
-      ]
+      "sha256": "20011255112169e5e75e638211fba5e43cdf9185d3e8196158ae564e5d746bde",
+      "modified": "2026-06-14T11:59:30.988884"
     },
     {
       "path": "dosvox-archeology/docs/methodology.md",
       "title": "Metodologia Arqueológica do DOSVOX",
       "summary": "# Metodologia Arqueológica do DOSVOX  A análise, documentação e extração arquitetural do ecossistema DOSVOX em 2026 foram conduzidas sob um rigoroso conjunto de princípios metodológicos. Inspirada pela história do projeto e pautada no respeito pelo legado de três décadas, esta metodologia serviu para evitar que reconstruíssemos a arquitetura com ba...",
-      "tags": []
+      "sha256": "4055f61479a98714d43eaf0f5415984bace24270119be1699bcf39b3fff48ac6",
+      "modified": "2026-06-14T11:36:11.587337"
     },
     {
       "path": "dosvox-archeology/docs/orphan-binaries.md",
       "title": "Caçada aos Binários Órfãos",
       "summary": "# Caçada aos Binários Órfãos  A arqueologia do ecossistema DOSVOX revelou executáveis presentes nas distribuições cujo código-fonte pode não estar diretamente mapeado ou cuja procedência exige verificação cruzada. Esta tabela consolida o rastreamento dos binários órfãos e suas funções.  | Nome do Binário | Função Inferida / Conhecida | Origem Conhe...",
-      "tags": []
+      "sha256": "27d3b049f4838dee2446dc9b70f86437732c120017b06ad0713e11b20a0fdd55",
+      "modified": "2026-06-14T11:41:41.724350"
     },
     {
       "path": "dosvox-archeology/docs/principles.md",
       "title": "Princípios Arquiteturais e de Sobrevivência do DOSVOX",
       "summary": "# Princípios Arquiteturais e de Sobrevivência do DOSVOX  Este documento não descreve \"como o código funciona\", mas sim **\"quais princípios permitiram que o código sobrevivesse\"**. A longevidade do DOSVOX não se deve apenas a escolhas tecnológicas, mas principalmente a uma **filosofia rigorosa e consistente de interação humano-computador** e engenha...",
-      "tags": []
+      "sha256": "bc4057f575e22b83405a6e6d2a5eb860131f7f3945b298549982521a258e4f9c",
+      "modified": "2026-06-14T10:49:03.681736"
     },
     {
       "path": "dosvox-archeology/docs/provenance.md",
       "title": "Proveniência e Licenciamento (D.1)",
       "summary": "# Proveniência e Licenciamento (D.1)  A varredura pelos códigos-fonte do Sítio Original (`C:\\winvox\\Fontes`) em busca de proveniência legal revelou um mosaico de titularidades e licenças. O DOSVOX cresceu absorvendo tecnologias de código aberto, bibliotecas comerciais antigas e código proprietário acadêmico.  ## 1. Titularidade Principal (Core) A e...",
-      "tags": []
+      "sha256": "0fd2db081661b07c45d847643993907ecb6f8c333ea1a368cb252885dedf229d",
+      "modified": "2026-06-13T15:39:41.694232"
     },
     {
       "path": "dosvox-archeology/docs/README.md",
       "title": "Arqueologia do DOSVOX (Documentação Consolidada)",
       "summary": "# Arqueologia do DOSVOX (Documentação Consolidada)  Este diretório contém a documentação final e consolidada (o \"Museu\") do esforço de arqueologia de software realizado sobre o ecossistema DOSVOX em 2026. Para acessar os logs detalhados, grafos empíricos e notas de laboratório que fundamentam estas conclusões, consulte o diretório de pesquisa bruta...",
-      "tags": []
+      "sha256": "e40a09061ca9b7159599aaa10e821ddff16ee28b0ed060876c36c667fb427f6b",
+      "modified": "2026-06-14T11:50:27.270807"
     },
     {
       "path": "dosvox-archeology/docs/references.md",
       "title": "Bibliografia e Fontes",
       "summary": "# Bibliografia e Fontes  As deduções apresentadas neste projeto baseiam-se tanto na observação empírica do compilador quanto nos registros históricos sobreviventes. As seguintes referências formam o alicerce sociotécnico deste trabalho:  - **Site Oficial do DOSVOX:** Onde os binários modernos e parte dos manuais ainda são distribuídos. - **Textos d...",
-      "tags": []
+      "sha256": "578b4886a992099c19c49f35858fa73d030cba48e90cd26d13a6219a3fac1d35",
+      "modified": "2026-06-14T11:50:42.608104"
     },
     {
       "path": "dosvox-archeology/docs/stratigraphy.md",
       "title": "Estratigrafia Temporal do DOSVOX",
       "summary": "# Estratigrafia Temporal do DOSVOX  Como em um sítio arqueológico de geologia contínua, a arquitetura do DOSVOX não substituiu eras, mas sedimentou-as. É possível identificar estratos tecnológicos perfeitos operando simultaneamente no código-fonte de 2026.  ## Camada 0 (1987) - A Pré-História **A Fundação da Síntese.** A unit `dvtradut.pas` carrega...",
-      "tags": []
+      "sha256": "3f4813d05a6f4d213f4afeea2d3cbdedeea6ddf58a390d2c2e8967d3ac735c3b",
+      "modified": "2026-06-14T11:42:07.869592"
     },
     {
       "path": "dosvox-archeology/docs/taxonomy.md",
       "title": "Taxonomia do Ecossistema DOSVOX",
       "summary": "# Taxonomia do Ecossistema DOSVOX  Para catalogar os milhares de arquivos e dezenas de módulos do DOSVOX, a arqueologia utilizou um método analítico baseado em três dimensões de valor e testes práticos de distribuição.  ## As Três Dimensões de Valor  Um módulo ou arquivo fonte do DOSVOX não é julgado de forma binária (\"útil\" ou \"inútil\"). O projeto...",
-      "tags": [
-        "taxonomy"
-      ]
+      "sha256": "ba6f170e097fe80ebbc51f00d30f32022bf72570342452f5f9ab2547a2e44453",
+      "modified": "2026-06-14T10:50:00.110062"
     },
     {
       "path": "dosvox-archeology/docs/timeline.md",
       "title": "Linha do Tempo Evolutiva do DOSVOX (D.2)",
       "summary": "# Linha do Tempo Evolutiva do DOSVOX (D.2)  O DOSVOX não é um software criado num único momento, mas um ecossistema construído por sedimentação geológica. Este documento traça a evolução da sua arquitetura, mapeando como cada \"camada\" de dependência que descobrimos surgiu na história.  - **1987 — Sistema Tradutor Fonético NRL**   O embrião absoluto...",
-      "tags": []
+      "sha256": "16a9732d2df7093196d23ec74e690857a28fe37fd252ff43db6188ecd0a579de",
+      "modified": "2026-06-13T15:39:53.959714"
     },
     {
       "path": "dosvox-archeology/docs/verb-genealogy.md",
       "title": "Genealogia dos Verbos (D.3)",
       "summary": "# Genealogia dos Verbos (D.3)  O DOSVOX é programado através de um dialeto muito peculiar de Pascal. Os desenvolvedores não utilizavam a biblioteca padrão do Delphi diretamente (como `WriteLn` ou controles visuais tradicionais). Eles moldaram a plataforma através de uma série de \"verbos\" globais.   Este documento mapeia o nascimento e o propósito d...",
-      "tags": []
+      "sha256": "afe33031a1dcfad2f676b4f9aacfff63856f43b5851ed986ae2971e65685c84d",
+      "modified": "2026-06-13T15:40:09.577669"
     }
   ]
 }

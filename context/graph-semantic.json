@@ -1,0 +1,15 @@
+{
+  "dvmouse": [
+    "dosvox-archeology/docs/architectural-debt.md",
+    "dosvox-archeology/research/dependency-knockout.md"
+  ],
+  "kernel": [
+    "dosvox-archeology/docs/architecture.md",
+    "dosvox-archeology/research/criticality-matrix.md"
+  ],
+  "history": [
+    "dosvox-archeology/docs/contributors.md",
+    "dosvox-archeology/docs/history-crosswalk.md",
+    "sources/site-historia/historia-antonio-borges.md"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "question": "Problema de execução relacionado a áudio?",
+  "if": {
+    "wav": [
+      "dosvox-archeology/docs/architecture.md"
+    ],
+    "sapi": [
+      "dosvox-archeology/docs/orphan-binaries.md"
+    ]
+  }
+}

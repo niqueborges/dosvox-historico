@@ -1,20 +1,18 @@
 {
-  "project": "DOSVOX Archeology",
-  "description": "Sistema Operacional de Contexto (Context OS) para agentes de IA.",
+  "project": "DOSVOX Memory Architecture",
+  "timestamp": "2026-06-14T14:42:11.877273",
   "components": {
-    "topics_router": "context/topics.json",
-    "catalogs": [
-      "context/catalogs/docs.json",
-      "context/catalogs/research.json",
-      "context/catalogs/sources.json"
+    "graphs": [
+      "context/graph-links.json",
+      "context/graph-semantic.json"
     ],
-    "profiles": [
-      "context/profiles/core.json",
-      "context/profiles/architect.json",
-      "context/profiles/historian.json",
-      "context/profiles/curator.json",
-      "context/profiles/researcher.json",
-      "context/profiles/debugger.json"
+    "directories": [
+      "context/catalogs",
+      "context/personas",
+      "context/topics",
+      "context/concepts",
+      "context/recipes",
+      "context/playbooks"
     ]
   }
 }

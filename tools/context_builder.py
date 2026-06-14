@@ -1,8 +1,22 @@
 import os
 import json
 import sys
+import re
+import hashlib
+from datetime import datetime
 
 BASE_PATH = ".." # Since script is in tools/
+
+def get_hash(path):
+    h = hashlib.sha256()
+    with open(path, 'rb') as f:
+        while chunk := f.read(8192):
+            h.update(chunk)
+    return h.hexdigest()
+
+def get_modified(path):
+    mtime = os.path.getmtime(path)
+    return datetime.fromtimestamp(mtime).isoformat()
 
 def read_text(path):
     try:
@@ -22,20 +36,8 @@ def extract_summary(content, max_chars=350):
     text = content.replace("\n", " ").strip()
     return text if len(text) <= max_chars else text[:max_chars].rstrip() + "..."
 
-def infer_tags(path):
-    p = path.lower()
-    tags = []
-    if "dependency" in p: tags.append("dependencies")
-    if "knockout" in p: tags.append("knockout")
-    if "taxonomy" in p: tags.append("taxonomy")
-    if "history" in p: tags.append("history")
-    if "architecture" in p: tags.append("architecture")
-    if "lesson" in p: tags.append("methodology")
-    return tags
-
 def get_allowed_files():
     files = []
-    # Only map specific known directories
     allowed_dirs = ["dosvox-archeology/docs", "dosvox-archeology/research", "sources"]
     
     for allowed_dir in allowed_dirs:
@@ -44,167 +46,133 @@ def get_allowed_files():
             continue
         for root, _, filenames in os.walk(dir_path):
             for filename in filenames:
-                if not filename.endswith((".md", ".txt", ".json")):
+                if not filename.endswith((".md", ".txt", ".json", ".pas")):
                     continue
                 full_path = os.path.normpath(os.path.join(root, filename)).replace("\\", "/")
-                # Store relative to project root
                 rel_path = os.path.relpath(full_path, BASE_PATH).replace("\\", "/")
-                content = read_text(full_path)
+                
+                # We only extract content/metadata for text-based documentation
+                content = ""
+                title = os.path.basename(filename)
+                summary = ""
+                if filename.endswith((".md", ".txt", ".json")):
+                    content = read_text(full_path)
+                    title = extract_title(content, rel_path)
+                    summary = extract_summary(content)
+
                 files.append({
                     "path": rel_path,
-                    "title": extract_title(content, rel_path),
-                    "summary": extract_summary(content),
-                    "tags": infer_tags(rel_path)
+                    "title": title,
+                    "summary": summary,
+                    "sha256": get_hash(full_path),
+                    "modified": get_modified(full_path),
+                    "content": content
                 })
     return files
 
-# The Profiles Configuration
-PROFILES = {
-    "core": {
-        "role": "core",
-        "description": "Conhecimento base para todos os agentes.",
-        "load_order": [],
-        "entrypoints": [
-            "dosvox-archeology/docs/README.md",
-            "dosvox-archeology/docs/methodology.md"
-        ],
-        "deep_dive": [],
-        "evidence": [],
-        "references": []
-    },
-    "architect": {
-        "role": "architect",
-        "description": "Foco estrutural, acoplamentos e dívida técnica histórica.",
-        "load_order": ["core"],
-        "entrypoints": [
-            "dosvox-archeology/docs/architecture.md"
-        ],
-        "deep_dive": [
-            "dosvox-archeology/docs/dependencies.md",
-            "dosvox-archeology/docs/architectural-debt.md"
-        ],
-        "evidence": [
-            "dosvox-archeology/research/dependency-knockout.md",
-            "dosvox-archeology/research/direct-dependencies.md"
-        ],
-        "references": []
-    },
-    "historian": {
-        "role": "historian",
-        "description": "Foco sociotécnico, evolução e pessoas envolvidas.",
-        "load_order": ["core"],
-        "entrypoints": [
-            "dosvox-archeology/docs/history-crosswalk.md",
-            "dosvox-archeology/docs/contributors.md"
-        ],
-        "deep_dive": [
-            "dosvox-archeology/docs/stratigraphy.md",
-            "dosvox-archeology/docs/timeline.md"
-        ],
-        "evidence": [],
-        "references": [
-            "sources/site-historia/historia-antonio-borges.md"
-        ]
-    },
-    "curator": {
-        "role": "curator",
-        "description": "Foco no patrimônio, binários órfãos e catálogos.",
-        "load_order": ["core"],
-        "entrypoints": [
-            "dosvox-archeology/docs/applications-catalog.md"
-        ],
-        "deep_dive": [
-            "dosvox-archeology/docs/orphan-binaries.md",
-            "dosvox-archeology/docs/provenance.md"
-        ],
-        "evidence": [],
-        "references": [
-            "dosvox-archeology/docs/references.md"
-        ]
-    },
-    "researcher": {
-        "role": "researcher",
-        "description": "Foco na taxonomia empírica e métricas do sistema.",
-        "load_order": ["core"],
-        "entrypoints": [
-            "dosvox-archeology/docs/taxonomy.md"
-        ],
-        "deep_dive": [
-            "dosvox-archeology/research/taxonomic-confidence.md",
-            "dosvox-archeology/research/classification.md"
-        ],
-        "evidence": [
-            "dosvox-archeology/research/taxonomy-metrics.md",
-            "dosvox-archeology/research/compilation-matrix.md"
-        ],
-        "references": []
-    },
-    "debugger": {
-        "role": "debugger",
-        "description": "Acesso focado em resolução de anomalias arquiteturais.",
-        "load_order": ["core", "architect"],
-        "entrypoints": [],
-        "deep_dive": [],
-        "evidence": [
-            "dosvox-archeology/research/criticality-matrix.md",
-            "dosvox-archeology/research/dependency-knockout.md"
-        ],
-        "references": []
-    }
-}
+def generate_catalogs(files):
+    docs = [f for f in files if f["path"].startswith("dosvox-archeology/docs/")]
+    research = [f for f in files if f["path"].startswith("dosvox-archeology/research/")]
+    sources = [f for f in files if f["path"].startswith("sources/")]
 
-def validate_context(all_files):
-    available_paths = {f["path"] for f in all_files}
+    # Remove content to keep catalogs small
+    def clean(file_list):
+        return [{"path": f["path"], "title": f["title"], "summary": f["summary"], "sha256": f["sha256"], "modified": f["modified"]} for f in file_list]
+
+    save_json("context/catalogs/docs.json", {"scope": "docs", "files": clean(docs)})
+    save_json("context/catalogs/research.json", {"scope": "research", "files": clean(research)})
+    save_json("context/catalogs/sources.json", {"scope": "sources", "files": clean(sources)})
+
+def generate_graph_links(files):
+    graph = {}
+    # Extract [text](link) markdown links
+    link_pattern = re.compile(r'\[.*?\]\((.*?)\)')
+    for f in files:
+        if not f["path"].endswith(".md"):
+            continue
+        links = link_pattern.findall(f["content"])
+        valid_links = []
+        for link in links:
+            # resolve relative to the current file
+            base_dir = os.path.dirname(os.path.join(BASE_PATH, f["path"]))
+            abs_target = os.path.normpath(os.path.join(base_dir, link)).replace("\\", "/")
+            rel_target = os.path.relpath(abs_target, BASE_PATH).replace("\\", "/")
+            valid_links.append(rel_target)
+        if valid_links:
+            graph[f["path"]] = valid_links
+    
+    save_json("context/graph-links.json", graph)
+    return graph
+
+def load_json_dir(dir_name):
+    data = {}
+    dir_path = os.path.join(BASE_PATH, "context", dir_name)
+    if not os.path.exists(dir_path):
+        return data
+    for filename in os.listdir(dir_path):
+        if filename.endswith(".json"):
+            with open(os.path.join(dir_path, filename), "r", encoding="utf-8") as f:
+                data[filename] = json.load(f)
+    return data
+
+def validate(files, graph_links):
+    available_paths = {f["path"] for f in files}
     errors = []
 
-    # Verify profiles
-    for name, profile in PROFILES.items():
-        # Check load_order
-        for dep in profile.get("load_order", []):
-            if dep not in PROFILES:
-                errors.append(f"Profile '{name}' depends on unknown profile '{dep}'")
-            if dep == name:
-                errors.append(f"Profile '{name}' has a circular dependency on itself")
+    personas = load_json_dir("personas")
+    topics = load_json_dir("topics")
+    concepts = load_json_dir("concepts")
+    recipes = load_json_dir("recipes")
+    playbooks = load_json_dir("playbooks")
 
-        # Check paths
-        for key in ["entrypoints", "deep_dive", "evidence", "references"]:
-            for file_path in profile.get(key, []):
-                if file_path not in available_paths:
-                    # Ignore .pas files in the source sample for debugger for now, as they might not be parsed if we only parse md/txt
-                    if not file_path.endswith(".pas"):
-                        errors.append(f"Profile '{name}' references missing file: {file_path}")
+    # Validate Personas
+    for name, persona in personas.items():
+        for dep in persona.get("inherits", []):
+            if f"{dep}.json" not in personas:
+                errors.append(f"Persona '{name}' inherits missing persona '{dep}'")
+        for key in ["entrypoints", "deep_dive", "evidence"]:
+            for path in persona.get(key, []):
+                if path not in available_paths:
+                    errors.append(f"Persona '{name}' references missing document: {path}")
+        for rec in persona.get("recipes", []):
+            rec_basename = os.path.basename(rec)
+            if rec_basename not in recipes:
+                errors.append(f"Persona '{name}' references missing recipe: {rec}")
 
-    # Verify topics
-    topics_file = os.path.join(BASE_PATH, "context", "topics.json")
-    if os.path.exists(topics_file):
-        with open(topics_file, "r", encoding="utf-8") as f:
-            topics = json.load(f)
-        for topic, sections in topics.items():
-            for section, paths in sections.items():
-                for p in paths:
-                    if p not in available_paths and not p.endswith(".pas"):
-                        errors.append(f"Topic '{topic}' references missing file: {p}")
+    # Validate Topics
+    for name, topic in topics.items():
+        for path in topic.get("documents", []):
+            if path not in available_paths:
+                errors.append(f"Topic '{name}' references missing document: {path}")
 
-    # Verify recipes
-    recipes_dir = os.path.join(BASE_PATH, "context", "recipes")
-    if os.path.exists(recipes_dir):
-        for filename in os.listdir(recipes_dir):
-            if filename.endswith(".json"):
-                with open(os.path.join(recipes_dir, filename), "r", encoding="utf-8") as f:
-                    recipe = json.load(f)
-                for step in recipe.get("steps", []):
-                    if step not in available_paths and not step.endswith(".pas"):
-                        errors.append(f"Recipe '{filename}' references missing file: {step}")
+    # Validate Concepts
+    for name, concept in concepts.items():
+        for path in concept.get("see", []) + concept.get("documents", []):
+            if path not in available_paths:
+                errors.append(f"Concept '{name}' references missing document: {path}")
 
-    # Verify concepts
-    concepts_file = os.path.join(BASE_PATH, "context", "concepts.json")
-    if os.path.exists(concepts_file):
-        with open(concepts_file, "r", encoding="utf-8") as f:
-            concepts = json.load(f)
-        for concept, data in concepts.items():
-            for doc in data.get("documents", []):
-                if doc not in available_paths and not doc.endswith(".pas"):
-                    errors.append(f"Concept '{concept}' references missing file: {doc}")
+    # Validate Recipes
+    for name, recipe in recipes.items():
+        for path in recipe.get("steps", []):
+            if path not in available_paths:
+                errors.append(f"Recipe '{name}' references missing step document: {path}")
+
+    # Validate Playbooks
+    for name, playbook in playbooks.items():
+        for branch, paths in playbook.get("if", {}).items():
+            for path in paths:
+                if path not in available_paths:
+                    errors.append(f"Playbook '{name}' branch '{branch}' references missing document: {path}")
+
+    # Validate Manual Semantic Graph
+    semantic_graph_path = os.path.join(BASE_PATH, "context", "graph-semantic.json")
+    if os.path.exists(semantic_graph_path):
+        with open(semantic_graph_path, "r", encoding="utf-8") as f:
+            semantic_graph = json.load(f)
+        for node, paths in semantic_graph.items():
+            for path in paths:
+                if path not in available_paths:
+                    errors.append(f"Semantic Graph node '{node}' references missing document: {path}")
 
     if errors:
         print("CONTEXT VALIDATION FAILED:")
@@ -218,47 +186,41 @@ def save_json(rel_path, data):
     with open(full_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-def build_catalogs(files):
-    docs = [f for f in files if f["path"].startswith("dosvox-archeology/docs/")]
-    research = [f for f in files if f["path"].startswith("dosvox-archeology/research/")]
-    sources = [f for f in files if f["path"].startswith("sources/")]
-
-    save_json("context/catalogs/docs.json", {"scope": "docs", "files": docs})
-    save_json("context/catalogs/research.json", {"scope": "research", "files": research})
-    save_json("context/catalogs/sources.json", {"scope": "sources", "files": sources})
-
-def build_profiles():
-    for name, data in PROFILES.items():
-        save_json(f"context/profiles/{name}.json", data)
-
-def build_master():
+def generate_master():
     master = {
-        "project": "DOSVOX Archeology",
-        "description": "Sistema Operacional de Contexto (Context OS) para agentes de IA.",
+        "project": "DOSVOX Memory Architecture",
+        "timestamp": datetime.now().isoformat(),
         "components": {
-            "topics_router": "context/topics.json",
-            "concepts_dictionary": "context/concepts.json",
-            "recipes_dir": "context/recipes/",
-            "catalogs": [
-                "context/catalogs/docs.json",
-                "context/catalogs/research.json",
-                "context/catalogs/sources.json"
+            "graphs": [
+                "context/graph-links.json",
+                "context/graph-semantic.json"
             ],
-            "profiles": [f"context/profiles/{p}.json" for p in PROFILES.keys()]
+            "directories": [
+                "context/catalogs",
+                "context/personas",
+                "context/topics",
+                "context/concepts",
+                "context/recipes",
+                "context/playbooks"
+            ]
         }
     }
     save_json("context/master.json", master)
 
 if __name__ == "__main__":
-    print("Collecting files...")
+    print("1. Discovering knowledge nodes...")
     files = get_allowed_files()
     
-    print("Validating context graph...")
-    validate_context(files)
+    print("2. Generating catalogs (with hashes)...")
+    generate_catalogs(files)
+
+    print("3. Generating graphs...")
+    graph_links = generate_graph_links(files)
     
-    print("Building Context OS...")
-    build_catalogs(files)
-    build_profiles()
-    build_master()
+    print("4. Validating context constraints...")
+    validate(files, graph_links)
     
-    print("Context OS generated successfully!")
+    print("5. Generating master index...")
+    generate_master()
+    
+    print("DOSVOX Memory Architecture compiled successfully!")

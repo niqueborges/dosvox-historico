@@ -1,12 +1,11 @@
 {
   "role": "core",
-  "description": "Conhecimento base para todos os agentes.",
-  "load_order": [],
+  "inherits": [],
   "entrypoints": [
     "dosvox-archeology/docs/README.md",
     "dosvox-archeology/docs/methodology.md"
   ],
   "deep_dive": [],
   "evidence": [],
-  "references": []
+  "recipes": []
 }
