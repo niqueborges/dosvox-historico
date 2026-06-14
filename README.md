@@ -38,27 +38,35 @@ O DOSVOX é composto por dezenas de aplicações integradas, incluindo editor de
 
 ## Estrutura do Projeto
 
-Abaixo estão os principais documentos gerados pela pesquisa, organizados por categoria:
+A escavação consolidou-se em uma arquitetura limpa de diretórios e em um **Knowledge Graph de 6 Dimensões**.
 
-- **Documentação Geral (`docs/`):**
-  - [Linha do Tempo](file:///e:/Dev/projetos/dosvox-historico/docs/timeline.md) - Cronologia detalhada do projeto, reunindo marcos históricos do site oficial e evidências técnicas.
-  - [Arquitetura Comprovada](file:///e:/Dev/projetos/dosvox-historico/docs/arquitetura.md) - Estudo consolidado sobre o ecossistema, modularidade e bibliotecas compartilhadas do DOSVOX.
-  - [Mapeamento de Módulos](file:///e:/Dev/projetos/dosvox-historico/docs/projetos.md) - Inventário e categorização de todas as aplicações e executáveis do ecossistema.
-  - [Autores e Colaboradores](file:///e:/Dev/projetos/dosvox-historico/docs/autores.md) - Mapeamento da equipe de desenvolvimento do núcleo e evoluções.
+### As Camadas do Repositório:
+- `dosvox-history/` (Espelho bruto e inalterado)
+- `dosvox-core/` (Infraestrutura principal, o framework)
+- `dosvox-shell/` (Orquestração e menu do sistema)
+- `dosvox-apps/` (Aplicações independentes)
+- `dosvox-thirdparty/` (Ferramentas externas encapsuladas)
+- `sources/` (Materiais brutos, manuais, entrevistas, instaladores)
+- `dosvox-archeology/` (A camada documental: narrativas, lições, matrizes e evidências)
 
-- **Fontes de Informação (`fontes/`):**
-  - [Mapa do Portal DOSVOX](file:///e:/Dev/projetos/dosvox-historico/fontes/mapa-portal-dosvox.md) - Inventário completo e estruturado das páginas internas do site oficial.
+### Pastas Antigas (Congeladas)
+> O material das pastas legadas abaixo migrou para `dosvox-archeology/` e `sources/`. Elas foram mantidas temporariamente por fidelidade aos commits antigos:
+- `docs/` (Congelada)
+- `fontes/` (Congelada)
+- `pesquisas/` (Congelada)
 
-- **Pesquisas e Análises (`pesquisas/`):**
-  - [Análise da Instalação do Winvox](file:///e:/Dev/projetos/dosvox-historico/pesquisas/analise-instalacao-winvox.md) - Raio-X técnico de uma instalação real do sistema e suas dependências.
-  - [Análise de Preservação Digital](file:///e:/Dev/projetos/dosvox-historico/pesquisas/analise-preservacao-digital.md) - Priorização e triagem das páginas do portal oficial para fins de conservação digital.
-  - **Motor Principal (`pesquisas/motor-principal/`)**: Pasta dedicada ao estudo profundo da espinha dorsal do DOSVOX. Destaque para a [Análise Técnica do DvCrt](file:///e:/Dev/projetos/dosvox-historico/pesquisas/motor-principal/analise-dvcrt.md) e o [Guia de Preservação do DOSVOX](file:///e:/Dev/projetos/dosvox-historico/pesquisas/motor-principal/guia-preservacao.md).
-  - **Registros (`pesquisas/registros/`)**: Registros de investigações brutas sobre a pasta local de instalação.
+## O DOSVOX Memory OS
 
-## Utilitários
+O repositório é indexado por um compilador rigoroso de contexto (`tools/knowledge_compiler.py`) que constrói o `context/` — um verdadeiro Sistema Operacional de Memória mapeando as 6 dimensões da arqueologia:
 
-- **[Builder de Contexto](file:///e:/Dev/projetos/dosvox-historico/context_builder.py)**: Script em Python que compila todo o conhecimento destas pastas num único arquivo Markdown (`context.md`) para alimentar rapidamente o contexto de qualquer Inteligência Artificial.
+1. **Espaço** (`catalogs`, `topics`, `concepts`): O que é, onde está e o que significa.
+2. **Relações** (`graph-links`, `graph-semantic`): As pontes textuais e abstratas.
+3. **Procedimentos** (`personas`, `recipes`, `playbooks`): Como investigar falhas, ler código ou navegar no repositório assumindo posturas intelectuais (Debugger, Architect).
+4. **Tempo** (`events/`): O eixo cronológico (logs de fases da expedição e descobertas).
+5. **Incerteza** (`questions/`): A manutenção explícita do não-saber. Questões não respondidas, preservadas com grau de confiança, evitando que hipóteses provisórias virem dogmas no futuro.
+6. **Proveniência**: A dimensão oculta que sustenta todo o sistema (evidências, matrizes de dependência e testes destrutivos como o *knockout* que garantem a autenticidade das respostas acima).
 
 ## Status
 
-Pesquisa ativa e em franca documentação. Para acompanhar o progresso mais detalhado e os próximos passos, consulte o arquivo [STATUS_DO_PROJETO.md](file:///e:/Dev/projetos/dosvox-historico/STATUS_DO_PROJETO.md).
+A reconstrução do meta-conhecimento foi estabilizada. O legado técnico e intelectual das décadas passadas agora respira na arquitetura do futuro.
+Para informações históricas dos módulos, confira o [STATUS_DO_PROJETO.md](file:///e:/Dev/projetos/dosvox-historico/STATUS_DO_PROJETO.md).
