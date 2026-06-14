@@ -1,6 +1,6 @@
 {
   "project": "DOSVOX Memory Architecture",
-  "timestamp": "2026-06-14T14:42:11.877273",
+  "timestamp": "2026-06-14T14:46:34.873215",
   "components": {
     "graphs": [
       "context/graph-links.json",
@@ -12,7 +12,9 @@
       "context/topics",
       "context/concepts",
       "context/recipes",
-      "context/playbooks"
+      "context/playbooks",
+      "context/events",
+      "context/questions"
     ]
   }
 }
