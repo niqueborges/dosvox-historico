@@ -1,0 +1,19 @@
+{
+  "role": "historian",
+  "description": "Foco sociotécnico, evolução e pessoas envolvidas.",
+  "load_order": [
+    "core"
+  ],
+  "entrypoints": [
+    "dosvox-archeology/docs/history-crosswalk.md",
+    "dosvox-archeology/docs/contributors.md"
+  ],
+  "deep_dive": [
+    "dosvox-archeology/docs/stratigraphy.md",
+    "dosvox-archeology/docs/timeline.md"
+  ],
+  "evidence": [],
+  "references": [
+    "sources/site-historia/historia-antonio-borges.md"
+  ]
+}

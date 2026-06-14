@@ -1,0 +1,20 @@
+{
+  "project": "DOSVOX Archeology",
+  "description": "Sistema Operacional de Contexto (Context OS) para agentes de IA.",
+  "components": {
+    "topics_router": "context/topics.json",
+    "catalogs": [
+      "context/catalogs/docs.json",
+      "context/catalogs/research.json",
+      "context/catalogs/sources.json"
+    ],
+    "profiles": [
+      "context/profiles/core.json",
+      "context/profiles/architect.json",
+      "context/profiles/historian.json",
+      "context/profiles/curator.json",
+      "context/profiles/researcher.json",
+      "context/profiles/debugger.json"
+    ]
+  }
+}

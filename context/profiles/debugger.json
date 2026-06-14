@@ -1,0 +1,15 @@
+{
+  "role": "debugger",
+  "description": "Acesso focado em resolução de anomalias arquiteturais.",
+  "load_order": [
+    "core",
+    "architect"
+  ],
+  "entrypoints": [],
+  "deep_dive": [],
+  "evidence": [
+    "dosvox-archeology/research/criticality-matrix.md",
+    "dosvox-archeology/research/dependency-knockout.md"
+  ],
+  "references": []
+}

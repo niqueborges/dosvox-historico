@@ -1,0 +1,35 @@
+{
+  "dvmouse": {
+    "docs": [
+      "dosvox-archeology/docs/architectural-debt.md"
+    ],
+    "research": [
+      "dosvox-archeology/research/dependency-knockout.md"
+    ]
+  },
+  "taxonomy": {
+    "docs": [
+      "dosvox-archeology/docs/taxonomy.md"
+    ],
+    "research": [
+      "dosvox-archeology/research/taxonomy-metrics.md",
+      "dosvox-archeology/research/classification.md",
+      "dosvox-archeology/research/taxonomic-confidence.md"
+    ]
+  },
+  "mini_distribution": {
+    "research": [
+      "dosvox-archeology/research/complete-intersection-mini.md"
+    ]
+  },
+  "history_and_authors": {
+    "docs": [
+      "dosvox-archeology/docs/contributors.md",
+      "dosvox-archeology/docs/history-crosswalk.md",
+      "dosvox-archeology/docs/stratigraphy.md"
+    ],
+    "sources": [
+      "sources/site-historia/historia-antonio-borges.md"
+    ]
+  }
+}

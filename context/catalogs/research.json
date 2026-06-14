@@ -1,0 +1,166 @@
+{
+  "scope": "research",
+  "files": [
+    {
+      "path": "dosvox-archeology/research/classification.md",
+      "title": "Classificação dos Artefatos Arqueológicos",
+      "summary": "# Classificação dos Artefatos Arqueológicos  Este documento cataloga a taxonomia dos módulos do sistema, categorizando-os por Tipo, Geração, Estado e descrevendo a Evidência de cada classificação.  ---  ### `dvtradut.pas` - **Tipo:** Core - **Geração:** G0 (1987) - **Estado:** Ativo - **Evidência:** Cabeçalho do arquivo indica criação em julho de 1...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/compilation-log.md",
+      "title": "DOSVOX Compilation Log",
+      "summary": "# DOSVOX Compilation Log  Este diário registra os experimentos do Laboratório de Compilação (Fase C.3). Em vez de descobrir dependências \"olhando\", nós as descobrimos de forma empírica (via falhas de compilação reais `File not found`). Este processo preserva a história de *como* descobrimos o Kernel definitivo.  ## Entradas  *(As sessões de compila...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/compilation-matrix.md",
+      "title": "Matriz de Compilação (Sandbox)",
+      "summary": "# Matriz de Compilação (Sandbox)  Esta matriz acompanha o status da compilação laboratorial da Amostra de Ouro contra o núcleo experimental `dosvox-core/`. O sucesso valida a estratificação; a falha (erro) mapeia dependências invisíveis.  | Programa | Grupo | Valor Principal | Status de Compilação | Dependências Descobertas / Faltantes | | --- | --...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/complete-intersection-mini.md",
+      "title": "complete-intersection-mini.md",
+      "summary": "﻿7z.dll 7z.exe agenda.exe agenda\\compromissos da agenda agenda\\desperta\\galo.wav agenda\\desperta\\jobim.mid agenda\\desperta\\picapau.wav agenda\\desperta\\relax.mp3 agenda\\desperta\\sirene.wav agenda\\gastos\\viagem ajustaini.exe ambcode.cfg ambcode2.cfg asciimathml.js atuvox.exe baronvox.exe blastbay_oggdec.dll blb2txt.dic blb2txt.exe brailex.amb braille...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/complete-minus-mini.md",
+      "title": "complete-minus-mini.md",
+      "summary": "﻿agenvox.exe bass.dll bass_aac.dll basshls.dll cartex.exe casino.exe catavox.exe cdmp3.exe cdmp3\\tm3\\use_a_opção_x.tm3 cdrec.exe cheqvox.exe chessvox.exe clockvox.exe colossal.exe colossal\\advpor1.txt colossal\\advpor2.txt colossal\\advpor3.txt colossal\\advpor4.txt colossal\\advpor5.txt colossal\\advpor6.txt colossal\\advpor7.txt contavox.cnf contavox.e...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/core-files.md",
+      "title": "Inventário do Core (O \"Kernel\" do DOSVOX)",
+      "summary": "# Inventário do Core (O \"Kernel\" do DOSVOX)  Este catálogo documenta as units vitais que compõem a infraestrutura base do sistema. Elas residem originariamente em `C:\\winvox\\Fontes\\tradutor` e serão o alicerce da pasta `dosvox-core`.  ---  ## `dvtradut.pas` - **Geração:** G0 (1987 / 1994) - **Papel:** Motor fonético original (Tradução texto-fala ba...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/criticality-matrix.md",
+      "title": "Matriz de Criticidade Taxonômica",
+      "summary": "# Matriz de Criticidade Taxonômica  A Fase C.3 revelou dependências ocultas, e a Fase C.4 as classificou por gravidade de impacto. Esta matriz formaliza as quatro classes de infraestrutura descobertas pelo compilador.  ## Classe A — Infraestrutura Existencial Sem elas, nada no ecossistema DOSVOX vive. O próprio \"Paradigma DOSVOX\" depende ontologica...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/curation-log.md",
+      "title": "DOSVOX Curation Log",
+      "summary": "# DOSVOX Curation Log  Este diário registra as decisões de curadoria durante a arqueologia e engenharia reversa do DOSVOX. O objetivo é preservar o raciocínio por trás de cada classificação, visto que os diretórios experimentais (`dosvox-apps`, `dosvox-core`) são ambientes temporários de testes.  ## Entradas  ### 13/06/2026  **Artefato:** `edivox`...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/dead-code.md",
+      "title": "Código Morto e Fósseis",
+      "summary": "# Código Morto e Fósseis  Em sistemas que evoluem por 30 anos como o DOSVOX, o acúmulo de arquivos sem uso real (\"fósseis\") é o comportamento padrão e esperado.  Exemplos encontrados na raiz da pasta `Dosvox`: - `DOSDOS.PAS` - `DOSED.PAS` - `DOSJANEL.PAS` - `T.PAS`  ## A Postura Conservadora da Arqueologia de Software  Apesar de não haver nenhuma r...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/dependency-frequency.md",
+      "title": "dependency-frequency.md",
+      "summary": "﻿# Frequência de Dependências (Ecossistema)  | Unit | Ocorrências (Amostra) | |---|---| | dvcrt | 9 | | DVWin | 9 | | dvform | 6 | | dvWav | 5 | | dvexec | 5 | | dvHora | 5 | | dvArq | 5 | | videoVox | 4 | | dvinet | 3 | | dvjpeg | 2 | | dvssl | 2 | | miniReg | 2 | | dvDic | 2 | | dvlenum | 2 | | ACTIVEVOICEPROJECTLib_TLB | 1 | | comutils | 1 | | u...",
+      "tags": [
+        "dependencies"
+      ]
+    },
+    {
+      "path": "dosvox-archeology/research/dependency-graph.md",
+      "title": "Árvore Genealógica das Units (Grafo de Dependências)",
+      "summary": "# Árvore Genealógica das Units (Grafo de Dependências)  *(Documento em construção)*  A investigação no código-fonte revela que o \"Kernel 77\" (o framework do DOSVOX) não é uma *Big Ball of Mud*, mas sim um sistema incrivelmente bem estratificado e sem ciclos de dependência em seu núcleo principal. O crescimento se deu em camadas limpas (sedimentação...",
+      "tags": [
+        "dependencies"
+      ]
+    },
+    {
+      "path": "dosvox-archeology/research/dependency-knockout.md",
+      "title": "Relatório de Teste de Destruição (Knockout)",
+      "summary": "# Relatório de Teste de Destruição (Knockout)  Em vez de verificar o que compila com a presença, testamos o que falha com a ausência. Este experimento mede a resiliência do ecossistema e revela se os módulos estão acoplados por necessidade ou por acidente estrutural.  *Ambiente:* `dosvox-core-knockout/`  ## KO-001: Remoção de `dvcrt` (Classe A) **H...",
+      "tags": [
+        "dependencies",
+        "knockout"
+      ]
+    },
+    {
+      "path": "dosvox-archeology/research/dependency-layers.md",
+      "title": "Camadas de Dependência (Dependency Layers)",
+      "summary": "# Camadas de Dependência (Dependency Layers)  O Laboratório de Compilação (Fase C.3) nos permitiu reconstruir empiricamente a estratificação do DOSVOX. Partimos do \"Núcleo Experimental\" e descobrimos as raízes em cascata que definem a topologia de engenharia real do sistema.  ## Camada 0: A Base Física / Drivers / SO Bibliotecas pré-compiladas, dep...",
+      "tags": [
+        "dependencies"
+      ]
+    },
+    {
+      "path": "dosvox-archeology/research/direct-dependencies.md",
+      "title": "edivox",
+      "summary": "﻿# Dependências Imediatas (Amostra de Ouro)  ### edivox **Usa:** - activex *(Delphi)* - classes *(Delphi)* - comobj *(Delphi)* - crt *(Delphi)* - dos *(Delphi)* - **dvamplia** *(DOSVOX Core)* - **dvArq** *(DOSVOX Core)* - **dvArqLog** *(DOSVOX Core)* - **dvcrt** *(DOSVOX Core)* - **DVdde** *(DOSVOX Core)* - **dvDic** *(DOSVOX Core)* - **dvdigitexto...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/distribution-model.md",
+      "title": "O Modelo de Distribuição do DOSVOX (Taxonomia Nativa)",
+      "summary": "# O Modelo de Distribuição do DOSVOX (Taxonomia Nativa)  A análise da página oficial de downloads do DOSVOX 6.3 revela uma \"documentação em forma de instaladores\". Em vez de inferirmos a taxonomia apenas pelo código-fonte, podemos observar o que os próprios mantenedores consideravam essencial, acessório ou obsoleto através do empacotamento.  ## 1....",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/evidence.md",
+      "title": "Metodologia Arqueológica e Consolidação de Evidências",
+      "summary": "# Metodologia Arqueológica e Consolidação de Evidências  A pesquisa no código-fonte do DOSVOX adota uma separação científica rigorosa para evitar interpretações precipitadas. Qualquer afirmação técnica sobre a arquitetura e história do sistema deve ser classificada em um dos três níveis:  1. **Evidência:** O fato cru e observável diretamente no cód...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/fossil-comparison.md",
+      "title": "O Paradoxo dos Fósseis: DOSDOS.PAS e DOSED.PAS",
+      "summary": "# O Paradoxo dos Fósseis: DOSDOS.PAS e DOSED.PAS  A inclusão de `DOSDOS.PAS` e `DOSED.PAS` na Amostra de Ouro (Grupo D - Fósseis) gerou uma descoberta arquitetural fascinante: **Eles não são fósseis puros pré-Windows.**  Ao verificarmos suas cláusulas `uses`, notamos: ```pascal unit dosdos; interface uses windows, sysutils,      dvcrt, dvwin, dvFor...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/generations.md",
+      "title": "As Gerações do Código-Fonte do DOSVOX",
+      "summary": "# As Gerações do Código-Fonte do DOSVOX  A estratificação do DOSVOX se revela nas datas e cabeçalhos encontrados nos arquivos principais da infraestrutura. A suspeita de que o sistema **\"quase nunca foi reescrito, apenas sedimentado\"** é confirmada pela presença simultânea de camadas de diferentes décadas rodando juntas no mesmo executável.  Podemo...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/kernel77.md",
+      "title": "O \"Kernel 77\" (Framework Base / Runtime)",
+      "summary": "# O \"Kernel 77\" (Framework Base / Runtime)  **Evidência:**  Partindo de `dosvox.dpr`, `dvcrt`, `dvwin` e `dvform`, o grafo de dependências encontrado envolve aproximadamente 71 a 77 units localizadas majoritariamente na pasta `tradutor`.  **Inferência:**  Existe um subconjunto relativamente pequeno e coeso responsável pela infraestrutura principal...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/public-api.md",
+      "title": "A API Pública do DOSVOX (O SDK de Acessibilidade)",
+      "summary": "# A API Pública do DOSVOX (O SDK de Acessibilidade)  A genialidade arquitetural do DOSVOX não reside na complexidade do código, mas na sua simplicidade intencional. O sistema ofereceu a programadores (frequentemente com deficiência visual) uma \"máquina virtual\" ou SDK conceitual estável por décadas.   Os desenvolvedores pensavam de forma procedural...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/reduzido-minus-mini.md",
+      "title": "reduzido-minus-mini.md",
+      "summary": "﻿agenvox.exe bass.dll bass_aac.dll basshls.dll cartex.exe casino.exe catavox.exe cdmp3.exe cdmp3\\tm3\\use_a_opção_x.tm3 cdrec.exe cheqvox.exe chessvox.exe clockvox.exe colossal.exe colossal\\advpor1.txt colossal\\advpor2.txt colossal\\advpor3.txt colossal\\advpor4.txt colossal\\advpor5.txt colossal\\advpor6.txt colossal\\advpor7.txt contavox.cnf contavox.e...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/taxonomic-confidence.md",
+      "title": "Matriz de Confiança Taxonômica",
+      "summary": "# Matriz de Confiança Taxonômica  Este artefato mede a confiança probabilística (rigidez científica) das deduções arquiteturais feitas durante a pesquisa, em vez de assumir conclusões binárias. Ele separa a evidência observável da teoria.  | Artefato / Estrutura | Confiança | Evidência / Motivo | | --- | --- | --- | | **`dvtradut` como fundação (Ca...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/taxonomy-metrics.md",
+      "title": "DOSVOX 6.3 - Análise Conjuntista de Instaladores",
+      "summary": "# DOSVOX 6.3 - Análise Conjuntista de Instaladores  Esta análise foi conduzida extraindo os instaladores oficiais da versão 6.3 de forma isolada e calculando as interseções e diferenças entre as distribuições. O objetivo é deduzir a taxonomia arquitetural baseada nas escolhas de empacotamento dos mantenedores.  ## Métricas de Distribuição  - **Comp...",
+      "tags": [
+        "taxonomy"
+      ]
+    },
+    {
+      "path": "dosvox-archeology/research/transitive-dependencies.md",
+      "title": "Fecho Transitivo e o \"Kernel 77\"",
+      "summary": "# Fecho Transitivo e o \"Kernel 77\"  O mapeamento de frequência das dependências (C.2.2) apontou que as aplicações do DOSVOX compartilham uma base de código altíssimamente coesa. O fecho transitivo das dependências revela um núcleo emergente, que chamamos provisoriamente de \"Kernel 77\".  ## O Núcleo Arquitetural Empírico  Com base no Sandbox de Cura...",
+      "tags": []
+    },
+    {
+      "path": "dosvox-archeology/research/value-dimensions.md",
+      "title": "As Três Dimensões de Valor (DOSVOX)",
+      "summary": "# As Três Dimensões de Valor (DOSVOX)  A arqueologia de sistemas legados de longa vida, como o DOSVOX, exige que evitemos classificar módulos ou artefatos de forma binária (\"importante\" vs \"descartável\").  Um executável ou trecho de código pode ter altíssima relevância em uma dimensão e nenhuma em outra. Para nortear nossa taxonomia e os \"Cortes de...",
+      "tags": []
+    }
+  ]
+}

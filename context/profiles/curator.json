@@ -1,0 +1,18 @@
+{
+  "role": "curator",
+  "description": "Foco no patrimônio, binários órfãos e catálogos.",
+  "load_order": [
+    "core"
+  ],
+  "entrypoints": [
+    "dosvox-archeology/docs/applications-catalog.md"
+  ],
+  "deep_dive": [
+    "dosvox-archeology/docs/orphan-binaries.md",
+    "dosvox-archeology/docs/provenance.md"
+  ],
+  "evidence": [],
+  "references": [
+    "dosvox-archeology/docs/references.md"
+  ]
+}

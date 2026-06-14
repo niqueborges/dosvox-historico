@@ -1,0 +1,19 @@
+{
+  "role": "architect",
+  "description": "Foco estrutural, acoplamentos e dívida técnica histórica.",
+  "load_order": [
+    "core"
+  ],
+  "entrypoints": [
+    "dosvox-archeology/docs/architecture.md"
+  ],
+  "deep_dive": [
+    "dosvox-archeology/docs/dependencies.md",
+    "dosvox-archeology/docs/architectural-debt.md"
+  ],
+  "evidence": [
+    "dosvox-archeology/research/dependency-knockout.md",
+    "dosvox-archeology/research/direct-dependencies.md"
+  ],
+  "references": []
+}
