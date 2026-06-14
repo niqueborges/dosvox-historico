@@ -75,12 +75,14 @@ Para informações históricas dos módulos, confira o [STATUS_DO_PROJETO.md](fi
 
 As estruturas de preservação descritas neste repositório não foram concebidas por uma única entidade.
 
-Entre 2026 e as fases finais da escavação, as hipóteses, modelos e refinamentos que culminaram no DOSVOX Memory OS emergiram de um processo iterativo de diálogo entre três agentes:
+Entre 2026 e as fases finais da escavação, as hipóteses, modelos e refinamentos que culminaram no DOSVOX Memory OS emergiram de um processo iterativo de diálogo entre três participantes:
 
 - o pesquisador humano responsável pelo projeto;
-- o ChatGPT, utilizado como parceiro de raciocínio e revisão;
-- o Antigravity, utilizado como laboratório complementar de arquitetura.
+- o ChatGPT, utilizado como parceiro de raciocínio, crítica e revisão;
+- o Antigravity, utilizado como ambiente complementar de experimentação arquitetural.
 
-As ideias foram submetidas continuamente a crítica, reformulação e validação empírica. Nenhuma decisão importante foi atribuída a uma única fonte.
+As ideias foram continuamente submetidas a questionamento, reformulação e validação empírica. Nenhuma decisão importante foi atribuída a uma única fonte.
 
 Este registro é preservado deliberadamente como parte da história intelectual do projeto, da mesma forma que se preservam autores, versões e evidências do próprio ecossistema DOSVOX.
+
+Assim como a arqueologia do DOSVOX busca preservar a memória técnica das gerações anteriores, este documento preserva também as circunstâncias e os interlocutores que participaram da reconstrução desse conhecimento.
